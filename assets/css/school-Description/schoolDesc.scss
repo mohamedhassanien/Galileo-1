@@ -97,6 +97,79 @@ nav{
 
 section#about{
     .custom-container{
+        .head{
+            margin: 27px 2px 0 1px;
+            padding: 40px 0 0 50px;
+            border-radius: 5px;
+            background-color: var(--lighter-color);
+            .layer{
+                display: flex;
+                background-image: url('../../images/Group 1158@3x.png');
+                .box{
+                    .title{
+                        margin: 0 52px 12px 0;
+                        font-size: 24px;
+                        font-weight: 500;
+                        letter-spacing: 0.24px;
+                    }
+                    .school{
+                        margin: 12px 83px 26px 0;
+                        font-size: 20px;
+                        letter-spacing: 0.2px;
+                    }
+                    .details{
+                        display: flex;
+                        div{
+                            margin: 0 60px 42px 0;
+                            span{
+                                opacity: 0.6;
+                                font-size: 18px;
+                                letter-spacing: 0.18px;
+                            }
+                            img{
+                                width: 15px;
+                                height: 24px;
+                                object-fit: contain;
+                            }
+                        }
+                        .apply-btn{
+                            padding:0;
+                            margin: 0;
+                            button{
+                                margin: 0;
+                                border: none;
+                                a{
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    letter-spacing: 0.36px;
+                                    color: var(--white-color)
+                                }
+                            }
+                        }
+                    }
+                }
+                .box:nth-child(2){
+                    width: 123px;
+                    background-color: var(--white-color);
+                    height: 123px;
+                    margin: 2px 151px 42px 211px;
+                    .layer{
+                        display: flex;
+                        background: url('../../images/franceflag.png');
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100%;
+                        .school-img{
+                            width: 90px;
+                            margin: auto;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .wrapper .ranking{
             .title{
                 margin: 50px 40px 25px 1px;
@@ -122,6 +195,7 @@ section#about{
                         }
                     }
                     .rank-num{
+                        margin: 6px 288.8px 5px 15.2px;
                         opacity: 0.4;
                         font-size: 24px;
                         font-weight: 500;
@@ -230,7 +304,6 @@ section#about{
                     }
                 }
                 .doing, .studies{
-                    flex: 0 0 50%;
                     .title{
                         margin: 40px 17px 20px 1px;
                         opacity: 0.6;
@@ -254,6 +327,8 @@ section#about{
                             .progress{
                                 background-color: var(--lighter-color);
                                 border-radius: 15px;
+                                width: 423px;
+                                height: 20px;
                                 .progress-bar{
                                     border-radius: 15px;
                                     background-color: var(--main-dark-color);
@@ -267,7 +342,47 @@ section#about{
     }
 }
 
-section#photo-school{
+section#program__description{
+    .custom-container{
+        .wrapper{
+            .title{
+                margin: 50px 50px 20px 0;
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 0.24px;
+                color: var(--main-dark-color)
+            }
+            .body{
+                margin: 20px 27px 20px 0;
+                width: 968px;
+                opacity: 0.6;
+                font-size: 18px;
+                line-height: 1.39;
+                letter-spacing: 0.18px;
+            }
+            ul.list{
+                li{
+                    font-size: 16px;
+                    letter-spacing: 0.16px;
+                    margin: 0 8px 15px 0;
+                    color: rgba(0 , 0 , 0 , .6)
+                }
+                li::before{
+                    content: '';
+                    width:15px;
+                    height:15px;
+                    display: inline-block;
+                    background-color: var(--main-light-color);
+                    opacity: 1;
+                    border-radius: 50%;
+                    margin: 0 10px 0px 0;
+                }
+            }
+        }
+    }
+}
+
+section#school__photos{
     .custom-container{
         .title{
             margin: 50px 31px 20px 0;
@@ -315,7 +430,7 @@ section#photo-school{
     }
 }
 
-section#school-program{
+section#school__program{
     .custom-container{
         display: flex;
         .contentWrapper{
@@ -410,6 +525,7 @@ section#review{
                             opacity: 1;
                         }
                     }
+                    
                 }
             }
         }

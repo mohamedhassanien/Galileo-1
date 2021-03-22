@@ -107,6 +107,99 @@ nav .container-fluid .navbar-collapse form .login {
   letter-spacing: 0.36px;
 }
 
+section#about .custom-container .head {
+  margin: 27px 2px 0 1px;
+  padding: 40px 0 0 50px;
+  border-radius: 5px;
+  background-color: var(--lighter-color);
+}
+
+section#about .custom-container .head .layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../../images/Group 1158@3x.png");
+}
+
+section#about .custom-container .head .layer .box .title {
+  margin: 0 52px 12px 0;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+}
+
+section#about .custom-container .head .layer .box .school {
+  margin: 12px 83px 26px 0;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+section#about .custom-container .head .layer .box .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#about .custom-container .head .layer .box .details div {
+  margin: 0 60px 42px 0;
+}
+
+section#about .custom-container .head .layer .box .details div span {
+  opacity: 0.6;
+  font-size: 18px;
+  letter-spacing: 0.18px;
+}
+
+section#about .custom-container .head .layer .box .details div img {
+  width: 15px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+section#about .custom-container .head .layer .box .details .apply-btn {
+  padding: 0;
+  margin: 0;
+}
+
+section#about .custom-container .head .layer .box .details .apply-btn button {
+  margin: 0;
+  border: none;
+}
+
+section#about .custom-container .head .layer .box .details .apply-btn button a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  color: var(--white-color);
+}
+
+section#about .custom-container .head .layer .box:nth-child(2) {
+  width: 123px;
+  background-color: var(--white-color);
+  height: 123px;
+  margin: 2px 151px 42px 211px;
+}
+
+section#about .custom-container .head .layer .box:nth-child(2) .layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("../../images/franceflag.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+section#about .custom-container .head .layer .box:nth-child(2) .layer .school-img {
+  width: 90px;
+  margin: auto;
+}
+
+section#about .custom-container .head .layer .box:nth-child(2) .layer .school-img img {
+  width: 100%;
+}
+
 section#about .custom-container .wrapper .ranking .title {
   margin: 50px 40px 25px 1px;
   font-size: 24px;
@@ -145,6 +238,7 @@ section#about .custom-container .wrapper .ranking .wrapper .organization .img-or
 }
 
 section#about .custom-container .wrapper .ranking .wrapper .organization .rank-num {
+  margin: 6px 288.8px 5px 15.2px;
   opacity: 0.4;
   font-size: 24px;
   font-weight: 500;
@@ -285,12 +379,6 @@ section#about .custom-container .alumni .wrapper .live .custom-progress .box .ci
   text-align: center;
 }
 
-section#about .custom-container .alumni .wrapper .doing, section#about .custom-container .alumni .wrapper .studies {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-}
-
 section#about .custom-container .alumni .wrapper .doing .title, section#about .custom-container .alumni .wrapper .studies .title {
   margin: 40px 17px 20px 1px;
   opacity: 0.6;
@@ -314,6 +402,8 @@ section#about .custom-container .alumni .wrapper .doing .custom-progress .box .t
 section#about .custom-container .alumni .wrapper .doing .custom-progress .box .progress, section#about .custom-container .alumni .wrapper .studies .custom-progress .box .progress {
   background-color: var(--lighter-color);
   border-radius: 15px;
+  width: 423px;
+  height: 20px;
 }
 
 section#about .custom-container .alumni .wrapper .doing .custom-progress .box .progress .progress-bar, section#about .custom-container .alumni .wrapper .studies .custom-progress .box .progress .progress-bar {
@@ -321,7 +411,42 @@ section#about .custom-container .alumni .wrapper .doing .custom-progress .box .p
   background-color: var(--main-dark-color);
 }
 
-section#photo-school .custom-container .title {
+section#program__description .custom-container .wrapper .title {
+  margin: 50px 50px 20px 0;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  color: var(--main-dark-color);
+}
+
+section#program__description .custom-container .wrapper .body {
+  margin: 20px 27px 20px 0;
+  width: 968px;
+  opacity: 0.6;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.18px;
+}
+
+section#program__description .custom-container .wrapper ul.list li {
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  margin: 0 8px 15px 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+section#program__description .custom-container .wrapper ul.list li::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: var(--main-light-color);
+  opacity: 1;
+  border-radius: 50%;
+  margin: 0 10px 0px 0;
+}
+
+section#school__photos .custom-container .title {
   margin: 50px 31px 20px 0;
   font-size: 24px;
   font-weight: 500;
@@ -329,25 +454,25 @@ section#photo-school .custom-container .title {
   color: var(--main-dark-color);
 }
 
-section#photo-school .custom-container #primary-slider .splide__arrows {
+section#school__photos .custom-container #primary-slider .splide__arrows {
   display: none;
 }
 
-section#photo-school .custom-container #secondary-slider #secondary-slider-track {
+section#school__photos .custom-container #secondary-slider #secondary-slider-track {
   margin-top: 10px;
 }
 
-section#photo-school .custom-container #secondary-slider #secondary-slider-track #secondary-slider-list div.splide__slide {
+section#school__photos .custom-container #secondary-slider #secondary-slider-track #secondary-slider-list div.splide__slide {
   width: 250px !important;
   height: 160px !important;
   border-radius: 5px;
 }
 
-section#photo-school .custom-container #secondary-slider #secondary-slider-track #secondary-slider-list div.splide__slide.is-active {
+section#school__photos .custom-container #secondary-slider #secondary-slider-track #secondary-slider-list div.splide__slide.is-active {
   border: none;
 }
 
-section#photo-school .custom-container #secondary-slider .splide__arrows button {
+section#school__photos .custom-container #secondary-slider .splide__arrows button {
   height: 100%;
   border-radius: 5px;
   -webkit-backdrop-filter: blur(30px);
@@ -357,21 +482,21 @@ section#photo-school .custom-container #secondary-slider .splide__arrows button 
   height: 160px;
 }
 
-section#photo-school .custom-container #secondary-slider .splide__arrows button.splide__arrow--prev {
+section#school__photos .custom-container #secondary-slider .splide__arrows button.splide__arrow--prev {
   left: 0%;
 }
 
-section#photo-school .custom-container #secondary-slider .splide__arrows button.splide__arrow--next {
+section#school__photos .custom-container #secondary-slider .splide__arrows button.splide__arrow--next {
   right: 0%;
 }
 
-section#school-program .custom-container {
+section#school__program .custom-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-section#school-program .custom-container .contentWrapper .program-content .program .row .title {
+section#school__program .custom-container .contentWrapper .program-content .program .row .title {
   margin: 30px 192px 0 0;
   font-size: 18px;
   font-weight: 500;
@@ -379,18 +504,18 @@ section#school-program .custom-container .contentWrapper .program-content .progr
   color: var(--black-color);
 }
 
-section#school-program .custom-container .contentWrapper .program-content .program .row .title.first {
+section#school__program .custom-container .contentWrapper .program-content .program .row .title.first {
   margin-top: 23px;
 }
 
-section#school-program .custom-container .contentWrapper .program-content .program .row .deadline {
+section#school__program .custom-container .contentWrapper .program-content .program .row .deadline {
   margin: 5px 0 15px;
   opacity: 0.6;
   font-size: 18px;
   letter-spacing: 0.18px;
 }
 
-section#school-program .custom-container .contentWrapper .program-content .program .row .fee {
+section#school__program .custom-container .contentWrapper .program-content .program .row .fee {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
@@ -400,7 +525,7 @@ section#school-program .custom-container .contentWrapper .program-content .progr
   color: var(--main-dark-color);
 }
 
-section#school-program .custom-container .contentWrapper .program-content .program .row .fee span {
+section#school__program .custom-container .contentWrapper .program-content .program .row .fee span {
   text-transform: capitalize;
   margin-right: 8px;
   opacity: 0.4;
@@ -409,7 +534,7 @@ section#school-program .custom-container .contentWrapper .program-content .progr
   color: var(--black-color);
 }
 
-section#school-program .custom-container .contentWrapper .program-content .program .row .more-btn {
+section#school__program .custom-container .contentWrapper .program-content .program .row .more-btn {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 34%;
           flex: 0 0 34%;
@@ -424,18 +549,18 @@ section#school-program .custom-container .contentWrapper .program-content .progr
           justify-content: flex-end;
 }
 
-section#school-program .custom-container .contentWrapper .program-content .program .row .more-btn button {
+section#school__program .custom-container .contentWrapper .program-content .program .row .more-btn button {
   padding: 0;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.32px;
 }
 
-section#school-program .custom-container .contentWrapper .program-content .program .row .more-btn button a {
+section#school__program .custom-container .contentWrapper .program-content .program .row .more-btn button a {
   color: var(--main-light-color);
 }
 
-section#school-program .custom-container .map {
+section#school__program .custom-container .map {
   margin-top: 102px;
 }
 
@@ -623,5 +748,19 @@ section#articles .custom-container .wrapper .article .details .desc {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.18px;
+}
+
+section#articles .custom-container .wrapper .article .details .read-more {
+  margin: 15px 0px 100px 0px;
+  letter-spacing: 0.32px;
+}
+
+section#articles .custom-container .wrapper .article .details .read-more button {
+  font-size: 16px;
+  color: #1c85c8;
+  border: none;
+  background-color: unset;
+  font-weight: 500;
+  padding: 0;
 }
 /*# sourceMappingURL=schoolDesc.css.map */

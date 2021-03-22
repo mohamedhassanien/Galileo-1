@@ -37,7 +37,7 @@ var reviewSecondarySlider = new Splide( '#review-secondary-slider', {
 	fixedHeight : 64,
 	isNavigation: true,
 	arrows      : false,
-	// focus       : 'left',
+	focus       : 'center',
 	pagination  : false,
 	cover       : true,
 	breakpoints : {
@@ -59,3 +59,10 @@ var reviewPrimarySlider = new Splide( '#review-primary-slider', {
 
 // Set the thumbnails slider as a sync target and then call mount.
 reviewPrimarySlider.sync( reviewSecondarySlider ).mount();
+document.querySelectorAll('#review-secondary-slider-list .splide__slide')
+.forEach( slide => { 
+	if(slide.classList = 'is-active'){
+		this.style.order = 2
+		
+	}
+})
