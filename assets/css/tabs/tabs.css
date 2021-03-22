@@ -1,0 +1,81 @@
+/* GLOBAL STYLING*/
+:root {
+  --main-light-color: #1c85c8;
+  --main-dark-color: #283c8c;
+  --black-color: #000000;
+  --white-color: #ffffff;
+}
+
+.wrapper .buttonWrapper, .programs-wrapper .buttonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .buttonWrapper button, .programs-wrapper .buttonWrapper button {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: none;
+  background-color: unset;
+  padding: 0;
+  color: var(--black-color);
+  opacity: 0.4;
+}
+
+.wrapper .buttonWrapper button[data-id="school-info"], .wrapper .buttonWrapper button[data-id="all-programs"], .programs-wrapper .buttonWrapper button[data-id="school-info"], .programs-wrapper .buttonWrapper button[data-id="all-programs"] {
+  margin: 50px 48px 3px 0;
+}
+
+.wrapper .buttonWrapper button[data-id="city-info"], .wrapper .buttonWrapper button[data-id="related-programs"], .programs-wrapper .buttonWrapper button[data-id="city-info"], .programs-wrapper .buttonWrapper button[data-id="related-programs"] {
+  margin: 50px 45px 3px 0;
+}
+
+.wrapper .buttonWrapper button.active, .programs-wrapper .buttonWrapper button.active {
+  cursor: pointer;
+  position: relative;
+  color: var(--main-dark-color);
+  opacity: 1;
+}
+
+.wrapper .buttonWrapper button.active::after, .programs-wrapper .buttonWrapper button.active::after {
+  content: '';
+  width: 33px;
+  height: 3px;
+  display: inline-block;
+  background-color: var(--main-dark-color);
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
+
+.wrapper .contentWrapper .content, .wrapper .contentWrapper .program-content, .programs-wrapper .contentWrapper .content, .programs-wrapper .contentWrapper .program-content {
+  display: none;
+}
+
+.wrapper .contentWrapper .content .title, .wrapper .contentWrapper .program-content .title, .programs-wrapper .contentWrapper .content .title, .programs-wrapper .contentWrapper .program-content .title {
+  margin: 30px 98px 20px 1px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: 0.24px;
+  color: var(--main-dark-color);
+}
+
+.wrapper .contentWrapper .content .desc, .wrapper .contentWrapper .program-content .desc, .programs-wrapper .contentWrapper .content .desc, .programs-wrapper .contentWrapper .program-content .desc {
+  width: 968px;
+  height: 97px;
+  margin: 20px 26px 30px 1px;
+  opacity: 0.6;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.18px;
+}
+
+.wrapper .contentWrapper .content.active, .wrapper .contentWrapper .program-content.active, .programs-wrapper .contentWrapper .content.active, .programs-wrapper .contentWrapper .program-content.active {
+  display: block;
+}
+/*# sourceMappingURL=tabs.css.map */

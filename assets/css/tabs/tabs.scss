@@ -1,0 +1,71 @@
+/* GLOBAL STYLING*/
+:root{
+    --main-light-color: #1c85c8;
+    --main-dark-color: #283c8c;
+    --black-color: #000000;
+    --white-color: #ffffff;
+}
+.wrapper, .programs-wrapper{
+    .buttonWrapper {
+        display: flex;
+        button{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
+            transition: 0.5s;
+            border: none;
+            background-color: unset;
+            padding: 0;
+            color: var(--black-color);
+            opacity: 0.4;
+        }
+        button[data-id="school-info"], button[data-id="all-programs"]{
+            margin: 50px 48px 3px 0;
+        }
+        button[data-id="city-info"], button[data-id="related-programs"]{
+            margin: 50px 45px 3px 0;
+        }
+        button.active{
+            cursor: pointer;
+            position: relative;
+            color: var(--main-dark-color);
+            opacity: 1;
+        }
+        button.active::after{
+            content: '';
+            width: 33px;
+            height: 3px;
+            display: inline-block;
+            background-color: var(--main-dark-color);
+            position: absolute;
+            top: 100%;
+            left: 0%;
+        }
+    }
+    .contentWrapper{
+        .content, .program-content{
+            display: none;
+            .title{
+                margin: 30px 98px 20px 1px;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.21;
+                letter-spacing: 0.24px;
+                color: var(--main-dark-color);
+            }
+            .desc{
+                width: 968px;
+                height: 97px;
+                margin: 20px 26px 30px 1px;
+                opacity: 0.6;
+                font-size: 18px;
+                line-height: 1.39;
+                letter-spacing: 0.18px;
+            }
+        }
+        .content.active, .program-content.active {
+            display: block;
+        }
+    }
+}

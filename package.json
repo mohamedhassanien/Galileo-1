@@ -1,0 +1,16 @@
+{
+  "name": "galileo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@splidejs/splide": "^2.4.21",
+    "bootstrap": "^5.0.0-beta2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

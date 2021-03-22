@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Global Styling*/
+:root {
+  --main-light-color: #1c85c8;
+  --black-color: #000000;
+  --white-color: #ffffff;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.custom-container {
+  margin: 0 100px;
+  padding: 0;
+}
+
+/* Login Section */
+section#login {
+  height: 100vh;
+  overflow: hidden;
+}
+
+section#login .custom-container {
+  -ms-grid-rows: 183px auto;
+      grid-template-rows: 183px auto;
+  row-gap: 0;
+  margin: 0 0 0 100px;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+section#login .custom-container .logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+section#login .custom-container .logo img {
+  width: 119.8px;
+  height: 42px;
+  margin: 16px 371.2px 125.4px 0.2px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+section#login .custom-container form {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+section#login .custom-container form > p, section#login .custom-container form .title {
+  text-align: left;
+  color: var(--black-color);
+}
+
+section#login .custom-container form > p {
+  margin: 0 201px 10px 0.2px;
+  opacity: 0.6;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.18px;
+}
+
+section#login .custom-container form .title {
+  margin: 0 330px 0 0.2px;
+  opacity: 0.8;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: 0.24px;
+}
+
+section#login .custom-container form .mb-3 {
+  margin-bottom: 0 !important;
+}
+
+section#login .custom-container form .mb-3 label {
+  opacity: 0.9;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.16px;
+  color: var(--black-color);
+}
+
+section#login .custom-container form .mb-3 label.email-label {
+  margin: 25px 351px 10px 0.2px;
+}
+
+section#login .custom-container form .mb-3 label.password-label {
+  margin: 25px 319px 10px 0.2px;
+}
+
+section#login .custom-container form .mb-3 input {
+  width: 391px;
+  height: 45px;
+  margin: 0 0 0px 0.2px;
+  border: none;
+  padding: 13px 39px 13px 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--white-color);
+}
+
+section#login .custom-container form .mb-3 input::-webkit-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.16px;
+  text-align: left;
+  color: #000000;
+}
+
+section#login .custom-container form .mb-3 input:-ms-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.16px;
+  text-align: left;
+  color: #000000;
+}
+
+section#login .custom-container form .mb-3 input::-ms-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.16px;
+  text-align: left;
+  color: #000000;
+}
+
+section#login .custom-container form .mb-3 input::placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.16px;
+  text-align: left;
+  color: #000000;
+}
+
+section#login .custom-container form .mb-3 .form-text1 a {
+  margin: 10px 278px 0 0.2px;
+  opacity: 0.4;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.14px;
+  display: inline-block;
+  color: var(--black-color);
+}
+
+section#login .custom-container form .mb-3 .form-text2 {
+  margin: 25px 151.2px 0 0;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+section#login .custom-container form .mb-3 .form-text2 a {
+  color: var(--main-light-color);
+}
+
+section#login .custom-container form .login-btn {
+  width: 391px;
+  height: 45px;
+  margin: 25px 0 0 0.2px;
+  padding: 13px 175.5px;
+  line-height: 0;
+  color: var(--white-color);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--main-light-color);
+}
+
+section#login .custom-container .bg-login-img {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  width: 775px;
+  height: 766px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+section#login .custom-container .bg-login-img img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=login.css.map */
