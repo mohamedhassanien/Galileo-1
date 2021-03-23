@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, p{
     margin: 0;
 }
 .custom-container{
-    margin: 0 100px;
+    margin: 0 20px;
     padding: 0;
 }
 .custom-btn{
@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, p{
 }
 /* GLOBAL STYLING*/
 nav{
+    padding-bottom: 0;
     .container-fluid{
         .navbar-toggler{
             border: none;
@@ -98,29 +99,29 @@ nav{
 section#about{
     .custom-container{
         .head{
-            margin: 27px 2px 0 1px;
-            padding: 40px 0 0 50px;
+            margin: 40px 0px 48px 0;
+            padding: 16px 16px 16px 16px;
             border-radius: 5px;
             background-color: var(--lighter-color);
             .layer{
-                display: flex;
                 background-image: url('../../images/Group 1158@3x.png');
                 .box{
                     .title{
-                        margin: 0 52px 12px 0;
-                        font-size: 24px;
+                        margin: 0 0 12px 0;
+                        font-size: 20px;
                         font-weight: 500;
-                        letter-spacing: 0.24px;
+                        letter-spacing: 0.2px;
                     }
                     .school{
-                        margin: 12px 83px 26px 0;
-                        font-size: 20px;
+                        margin: 12px 0 26px 0;
+                        font-size: 18px;
                         letter-spacing: 0.2px;
                     }
                     .details{
                         display: flex;
+                        flex-wrap: wrap;
                         div{
-                            margin: 0 60px 42px 0;
+                            margin: 0 48px 17px 0px;
                             span{
                                 opacity: 0.6;
                                 font-size: 18px;
@@ -130,6 +131,9 @@ section#about{
                                 width: 15px;
                                 height: 24px;
                                 object-fit: contain;
+                            }
+                            &.fee{
+                                margin: 0 48px 26px 0px;
                             }
                         }
                         .apply-btn{
@@ -149,6 +153,7 @@ section#about{
                     }
                 }
                 .box:nth-child(2){
+                    display: none;
                     width: 123px;
                     background-color: var(--white-color);
                     height: 123px;
@@ -170,168 +175,214 @@ section#about{
                 }
             }
         }
-        .wrapper .ranking{
-            .title{
-                margin: 50px 40px 25px 1px;
-                font-size: 24px;
-                font-weight: 500;
-                line-height: 1.21;
-                letter-spacing: 0.24px;
-                color: var(--main-dark-color);
+        .wrapper {
+            .buttonWrapper{
+                display: none;
             }
-            .wrapper{
-                display: flex;
-                justify-content: space-between;
-                .organization{
-                    display: flex;
-                    .img-organization{
-                        width: 123px;
-                        height: 40px;
-                        margin: 0 15.2px 0 0;
-                        object-fit: contain;
-                        margin: 0;
-                        img{
-                            height: 100%;
-                        }
-                    }
-                    .rank-num{
-                        margin: 6px 288.8px 5px 15.2px;
-                        opacity: 0.4;
+            .contentWrapper{
+                #school-info{
+                    .title{
+                        margin: 48px 0px 24px 0;
                         font-size: 24px;
                         font-weight: 500;
-                        line-height: 1.21;
+                        line-height: normal;
                         letter-spacing: 0.24px;
                     }
-                }
-            }
-        }
-        .alumni{
-            margin-top: 50px;
-            .title{
-                display: flex;
-                margin: 0 16px 0 0;
-                font-size: 24px;
-                font-weight: 500;
-                line-height: 1.21;
-                letter-spacing: 0.24px;
-                color: var(--main-dark-color);
-                p{
-                    margin: 6px 4px 1px 16px;
-                    opacity: 0.4;
-                    font-size: 18px;
-                    line-height: 1.22;
-                    letter-spacing: 0.18px;
-                    color: var(--black-color);
-                    img{
-                        width: 25px;
-                        height: 17px;
+                    .desc{
+                        width: auto;
+                        height: auto;
+                        margin: 0;
+                        p{
+                            opacity: 0.6;
+                            font-size: 16px;
+                            line-height: 1.56;
+                            letter-spacing: 0.16px;
+                        }
                     }
-                }
-            }
-            .wrapper{
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                .live{
-                    flex: 0 0 50%;
-                }
-                .live, .work{
-                    .title{
-                        margin: 30px 0 20px;
-                        opacity: 0.6;
-                        font-size: 18px;
-                        font-weight: 500;
-                        line-height: 1.22;
-                        letter-spacing: 0.18px;
-                        color: var(--black-color)
-                    }
-                    .custom-progress{
-                        display: flex;
-                        .box{
-                            margin: 0px 30px 0 0 ;
-                            .percent{
-                                position: relative;
-                                width: fit-content;
-                                margin: auto;
-                                svg{
-                                    position: relative;
+                    .ranking{
+                        .title{
+                            margin: 50px 40px 0 1px;
+                            font-size: 24px;
+                            font-weight: 500;
+                            line-height: 1.21;
+                            letter-spacing: 0.24px;
+                            color: var(--main-dark-color);
+                        }
+                        .wrapper{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            .organization{
+                                display: flex;
+                                margin-top: 25px;
+                                .img-organization{
                                     width: 100px;
-                                    height: 100px;
-                                    z-index: 1000;
-                                    circle{
-                                        width: 100%;
+                                    height: 40px;
+                                    margin: 0 15.2px 0 0;
+                                    object-fit: contain;
+                                    margin: 0;
+                                    img{
                                         height: 100%;
-                                        fill: none;
-                                        stroke: var(--lighter-color);
-                                        stroke-width: 10;
-                                        stroke-linecap: round;
-                                    }
-                                    circle:nth-child(2){
-                                        stroke-dasharray: 440;
-                                        stroke-dashoffset: 440;
-                                        stroke: var(--main-dark-color);
+                                        width: 100%;
                                     }
                                 }
-                                .number{
-                                    position: absolute;
-                                    top: 0;
-                                    width: 100%;
-                                    right: 0%;
-                                    text-align: center;
-                                    bottom: 0%;
-                                    left: 0%;
-                                    height: 100%;
-                                    display: flex;
-                                    justify-content: center;
-                                    h2{
-                                        opacity: 0.7;
-                                        font-size: 16px;
-                                        line-height: 1.19;
-                                        letter-spacing: 0.16px;
-                                        align-self: center;
-                                    }
+                                .rank-num{
+                                    margin: 6px auto 5px 15.2px;
+                                    opacity: 0.4;
+                                    font-size: 24px;
+                                    font-weight: 500;
+                                    line-height: 1.21;
+                                    letter-spacing: 0.24px;
                                 }
-                            }
-                            .city{
-                                margin: 8px 0;
-                                opacity: 0.7;
-                                font-size: 16px;
-                                line-height: 1.19;
-                                letter-spacing: 0.16px;
-                                text-align: center;
                             }
                         }
                     }
-                }
-                .doing, .studies{
-                    .title{
-                        margin: 40px 17px 20px 1px;
-                        opacity: 0.6;
-                        font-size: 18px;
-                        font-weight: 500;
-                        line-height: 1.22;
-                        letter-spacing: 0.18px;
-                        color: var(--black-color);
-                    }
-                    .custom-progress{
-                        .box{
+                    .media{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 62px;
+                        .accreditation, .social-media{
+                            margin-right: 214px;
                             .title{
-                                margin: 20px 41px 10px 1px;
-                                font-size: 16px;
-                                line-height: 1.19;
-                                letter-spacing: 0.16px;
-                                text-align: left;
-                                color: var(--black-color);
-                                opacity: .8;
+                                margin-top: 0;
                             }
-                            .progress{
-                                background-color: var(--lighter-color);
-                                border-radius: 15px;
-                                width: 423px;
-                                height: 20px;
-                                .progress-bar{
-                                    border-radius: 15px;
-                                    background-color: var(--main-dark-color);
+                            .imgs{
+                                display: flex;
+                                .img-holder{
+                                    margin-right: 48px;
+                                }
+                            }
+                        }
+                    }
+                    .alumni{
+                        margin-top: 50px;
+                        .title{
+                            display: flex;
+                            margin: 0 16px 0 0;
+                            font-size: 24px;
+                            font-weight: 500;
+                            line-height: 1.21;
+                            letter-spacing: 0.24px;
+                            color: var(--main-dark-color);
+                            p{
+                                margin: 6px 4px 1px 16px;
+                                opacity: 0.4;
+                                font-size: 18px;
+                                line-height: 1.22;
+                                letter-spacing: 0.18px;
+                                color: var(--black-color);
+                                img{
+                                    width: 25px;
+                                    height: 17px;
+                                }
+                            }
+                        }
+                        .wrapper{
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            .live, .work{
+                                .title{
+                                    margin: 30px 0 20px;
+                                    opacity: 0.6;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    line-height: 1.22;
+                                    letter-spacing: 0.18px;
+                                    color: var(--black-color)
+                                }
+                                .custom-progress{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    .box{
+                                        margin: 0px 30px 0 0 ;
+                                        flex: 0 0 50%;
+                                        .percent{
+                                            position: relative;
+                                            width: fit-content;
+                                            margin: auto;
+                                            svg{
+                                                position: relative;
+                                                width: 100px;
+                                                height: 100px;
+                                                z-index: 1000;
+                                                circle{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    fill: none;
+                                                    stroke: var(--lighter-color);
+                                                    stroke-width: 10;
+                                                    stroke-linecap: round;
+                                                }
+                                                circle:nth-child(2){
+                                                    stroke-dasharray: 440;
+                                                    stroke-dashoffset: 440;
+                                                    stroke: var(--main-dark-color);
+                                                }
+                                            }
+                                            .number{
+                                                position: absolute;
+                                                top: 0;
+                                                width: 100%;
+                                                right: 0%;
+                                                text-align: center;
+                                                bottom: 0%;
+                                                left: 0%;
+                                                height: 100%;
+                                                display: flex;
+                                                justify-content: center;
+                                                h2{
+                                                    opacity: 0.7;
+                                                    font-size: 16px;
+                                                    line-height: 1.19;
+                                                    letter-spacing: 0.16px;
+                                                    align-self: center;
+                                                }
+                                            }
+                                        }
+                                        .city{
+                                            margin: 8px 0;
+                                            opacity: 0.7;
+                                            font-size: 16px;
+                                            line-height: 1.19;
+                                            letter-spacing: 0.16px;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                            .doing, .studies{
+                                .title{
+                                    margin: 40px 17px 20px 1px;
+                                    opacity: 0.6;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    line-height: 1.22;
+                                    letter-spacing: 0.18px;
+                                    color: var(--black-color);
+                                }
+                                .custom-progress{
+                                    .box{
+                                        .title{
+                                            margin: 20px 41px 10px 1px;
+                                            font-size: 16px;
+                                            line-height: 1.19;
+                                            letter-spacing: 0.16px;
+                                            text-align: left;
+                                            color: var(--black-color);
+                                            opacity: .8;
+                                        }
+                                        .progress{
+                                            background-color: var(--lighter-color);
+                                            border-radius: 15px;
+                                            width: 423px;
+                                            height: 20px;
+                                            .progress-bar{
+                                                border-radius: 15px;
+                                                background-color: var(--main-dark-color);
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -342,8 +393,51 @@ section#about{
     }
 }
 
+section#city__expense{
+    .wrapper{
+        display: flex;
+        table{
+            thead tr{
+                border:none;
+                th{
+                    margin: 30px 110px 20px 1px;
+                    opacity: 0.8;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.22;
+                    letter-spacing: 0.18px;
+                    border: none;
+                }
+            }
+            tbody tr{
+                th, td{
+                    border: none;
+                    margin: 20px 249px 15px 1px;
+                    opacity: 0.6;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 1.19;
+                    letter-spacing: 0.16px;
+                }
+                td{
+                    margin: 20px 0 15px;
+                }
+            }
+        }
+        .city-img{
+            display: flex;
+            justify-content: flex-end;
+            img{
+                width: 276px;
+            }
+        }
+        table, .city-img{
+            flex: 0 0 50%
+        }
+    }
+}
 section#program__description{
-    .custom-container{
+    .school-custom-container{
         .wrapper{
             .title{
                 margin: 50px 50px 20px 0;
@@ -383,7 +477,7 @@ section#program__description{
 }
 
 section#school__photos{
-    .custom-container{
+    .school-custom-container{
         .title{
             margin: 50px 31px 20px 0;
             font-size: 24px;
@@ -431,7 +525,7 @@ section#school__photos{
 }
 
 section#school__program{
-    .custom-container{
+    .school-custom-container{
         display: flex;
         .contentWrapper{
             .program-content{
@@ -496,7 +590,7 @@ section#school__program{
 
 section#review{
     margin-top: 50px;
-    .custom-container{
+    .school-custom-container{
         .title{
             margin: 0 513px 20px;
             font-size: 24px;
@@ -518,11 +612,18 @@ section#review{
                         border-radius: 50%;
                         opacity: .5;
                         position: relative;
-                        left: 12%;
+                        z-index: -1;
+                        &:nth-child(1){
+                            left: 1%;
+                        }
+                        &:nth-child(3){
+                            right: 1%;
+                        }
                         &.is-active{
                             width: 73px !important;
                             height: 73px !important;
                             opacity: 1;
+                            z-index: 12;
                         }
                     }
                     
@@ -565,7 +666,7 @@ section#review{
                             font-weight: 500;
                             line-height: 1.39;
                             letter-spacing: 0.18px;
-                            color: rgba(0, 0, 0, 0.6);
+                            color: var(--black-color);
                         }
                         p.position{
                             text-align: center;
@@ -580,7 +681,7 @@ section#review{
 
 section#videos{
     margin-top: 50px;
-    .custom-container{
+    .school-custom-container{
         .wrapper{
             display: grid;
             column-gap: 10px;
@@ -662,6 +763,90 @@ section#articles{
                             background-color: unset;
                             font-weight: 500;
                             padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .custom-container{
+        margin: 0 100px;
+    }
+    section#about .custom-container{
+        .head {
+            margin: 27px 2px 0 1px;
+            padding: 40px 0 0 50px;
+            .layer{
+                display: flex;
+                .box{
+                    .title{
+                        margin: 0 52px 12px 0;
+                        font-size: 24px;
+                        letter-spacing: 0.24px;
+                    }
+                    .school{
+                        margin: 12px 83px 26px 0;
+                        font-size: 20px;
+                    }
+                    .details{
+                        
+                    }
+                }
+                
+                .box:nth-child(2){
+                    display: block;
+                }
+            }
+        }
+        .wrapper {
+            .buttonWrapper{
+                display: block;
+            }
+            .contentWrapper{
+                #school-info{
+                    .title{
+                        margin: 30px 98px 20px 1px;
+                        font-size: 24px;
+                        line-height: 1.21;
+                        letter-spacing: 0.24px;
+                    }
+                    .desc{
+                        width: 968px;
+                        height: 97px;
+                        margin: 20px 26px 30px 1px;
+                        opacity: 0.6;
+                        line-height: 1.39;
+                        letter-spacing: 0.18px;
+                    }
+                    .ranking{
+                        .title{
+                            margin-bottom: 25px;
+                        }
+                        .wrapper{
+                            .organization{
+                                margin-top: 0;
+                                .img-organization{
+                                    width: 123px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .alumni{
+                        .wrapper{
+                            .live, .work{
+                                .custom-progress{
+                                    flex-wrap: wrap;
+                                    .box{
+                                        margin: 0px 30px 0 0 ;
+                                        flex: 0 0 50%;
+                                        
+                                    }
+                                }
+                            }
                         }
                     }
                 }
