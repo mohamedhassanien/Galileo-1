@@ -119,7 +119,7 @@ section#about .custom-container .head {
 }
 
 section#about .custom-container .head .layer {
-  background-image: url("../../images/Group 1158@3x.png");
+  background-image: unset;
 }
 
 section#about .custom-container .head .layer .box .title {
@@ -293,6 +293,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info .media {
 }
 
 section#about .custom-container .wrapper .contentWrapper #school-info .media .accreditation, section#about .custom-container .wrapper .contentWrapper #school-info .media .social-media {
+  margin-top: 48px;
   margin-right: 214px;
 }
 
@@ -370,7 +371,9 @@ section#about .custom-container .wrapper .contentWrapper #school-info .alumni .w
 }
 
 section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live .custom-progress .box, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .work .custom-progress .box {
-  margin: 0px 30px 0 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
 
 section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live .custom-progress .box .percent, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .work .custom-progress .box .percent {
@@ -450,9 +453,13 @@ section#about .custom-container .wrapper .contentWrapper #school-info .alumni .w
 }
 
 section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .doing .custom-progress .box .title, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .studies .custom-progress .box .title {
-  margin: 20px 41px 10px 1px;
+  margin: 20px 0 10px 1px;
   font-size: 16px;
   line-height: 1.19;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
   letter-spacing: 0.16px;
   text-align: left;
   color: var(--black-color);
@@ -462,7 +469,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info .alumni .w
 section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .doing .custom-progress .box .progress, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .studies .custom-progress .box .progress {
   background-color: var(--lighter-color);
   border-radius: 15px;
-  width: 423px;
+  width: 335px;
   height: 20px;
 }
 
@@ -534,7 +541,7 @@ section#program__description .school-custom-container .wrapper .title {
 
 section#program__description .school-custom-container .wrapper .body {
   margin: 20px 27px 20px 0;
-  width: 968px;
+  width: auto;
   opacity: 0.6;
   font-size: 18px;
   line-height: 1.39;
@@ -571,13 +578,18 @@ section#school__photos .school-custom-container #primary-slider .splide__arrows 
   display: none;
 }
 
+section#school__photos .school-custom-container #primary-slider .splide__slide {
+  width: 335px;
+  height: 251px;
+}
+
 section#school__photos .school-custom-container #secondary-slider #secondary-slider-track {
   margin-top: 10px;
 }
 
 section#school__photos .school-custom-container #secondary-slider #secondary-slider-track #secondary-slider-list div.splide__slide {
-  width: 250px !important;
-  height: 160px !important;
+  width: 159px !important;
+  height: 117px !important;
   border-radius: 5px;
 }
 
@@ -592,7 +604,7 @@ section#school__photos .school-custom-container #secondary-slider .splide__arrow
           backdrop-filter: blur(30px);
   background-color: var(--white-color);
   width: 37px;
-  height: 160px;
+  height: 100%;
 }
 
 section#school__photos .school-custom-container #secondary-slider .splide__arrows button.splide__arrow--prev {
@@ -603,78 +615,87 @@ section#school__photos .school-custom-container #secondary-slider .splide__arrow
   right: 0%;
 }
 
-section#school__program .school-custom-container {
+section#about section#school__program .school-custom-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-section#school__program .school-custom-container .contentWrapper .program-content .program .row .title {
-  margin: 30px 192px 0 0;
+section#about section#school__program .school-custom-container .contentWrapper .program-content .program {
+  margin-top: 21px;
+}
+
+section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .title {
+  margin: 0 44px 10px 0;
   font-size: 18px;
   font-weight: 500;
+  line-height: normal;
   letter-spacing: 0.18px;
+  text-align: left;
   color: var(--black-color);
 }
 
-section#school__program .school-custom-container .contentWrapper .program-content .program .row .title.first {
-  margin-top: 23px;
-}
-
-section#school__program .school-custom-container .contentWrapper .program-content .program .row .deadline {
-  margin: 5px 0 15px;
+section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .deadline {
+  margin: 0px 22px 20px 0;
   opacity: 0.6;
-  font-size: 18px;
-  letter-spacing: 0.18px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.16px;
 }
 
-section#school__program .school-custom-container .contentWrapper .program-content .program .row .fee {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  margin: 0 8px 0px 0;
+section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .fee {
+  margin: 0 0px 0.5px 0;
   font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
   letter-spacing: 0.16px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 67%;
+          flex: 0 0 67%;
   color: var(--main-dark-color);
 }
 
-section#school__program .school-custom-container .contentWrapper .program-content .program .row .fee span {
+section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .fee span {
+  opacity: .4;
   text-transform: capitalize;
   margin-right: 8px;
-  opacity: 0.4;
-  font-size: 16px;
-  letter-spacing: 0.16px;
   color: var(--black-color);
 }
 
-section#school__program .school-custom-container .contentWrapper .program-content .program .row .more-btn {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 34%;
-          flex: 0 0 34%;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: end;
-      align-self: end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-section#school__program .school-custom-container .contentWrapper .program-content .program .row .more-btn button {
-  padding: 0;
+section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .more-btn {
   font-size: 16px;
   font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
   letter-spacing: 0.32px;
+  text-align: left;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
 }
 
-section#school__program .school-custom-container .contentWrapper .program-content .program .row .more-btn button a {
+section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .more-btn button {
+  line-height: normal;
+  padding: 0;
+}
+
+section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .more-btn button a {
   color: var(--main-light-color);
 }
 
-section#school__program .school-custom-container .map {
-  margin-top: 102px;
+section#about section#school__program .school-custom-container .map {
+  margin-top: 49px;
+}
+
+section#about section#school__program .school-custom-container .map iframe {
+  width: 335px;
+  height: 331px;
 }
 
 section#review {
@@ -708,11 +729,11 @@ section#review .school-custom-container #review-secondary-slider .splide__track 
 }
 
 section#review .school-custom-container #review-secondary-slider .splide__track #review-secondary-slider-list div.splide__slide:nth-child(1) {
-  left: 1%;
+  left: 10%;
 }
 
 section#review .school-custom-container #review-secondary-slider .splide__track #review-secondary-slider-list div.splide__slide:nth-child(3) {
-  right: 1%;
+  right: 10%;
 }
 
 section#review .school-custom-container #review-secondary-slider .splide__track #review-secondary-slider-list div.splide__slide.is-active {
@@ -720,6 +741,10 @@ section#review .school-custom-container #review-secondary-slider .splide__track 
   height: 73px !important;
   opacity: 1;
   z-index: 12;
+}
+
+section#review .school-custom-container #review-primary-slider .splide__arrows {
+  display: none;
 }
 
 section#review .school-custom-container #review-primary-slider .splide__arrows button {
@@ -737,7 +762,6 @@ section#review .school-custom-container #review-primary-slider .splide__track #r
 }
 
 section#review .school-custom-container #review-primary-slider .splide__track #review-primary-slider-list div.splide__slide {
-  width: 778px !important;
   height: -webkit-fit-content !important;
   height: -moz-fit-content !important;
   height: fit-content !important;
@@ -778,50 +802,23 @@ section#videos {
 }
 
 section#videos .school-custom-container .wrapper {
-  display: -ms-grid;
-  display: grid;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  row-gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section#videos .school-custom-container .wrapper .video {
+  width: 335px;
+  height: 211px;
+  margin-bottom: 16px;
 }
 
 section#videos .school-custom-container .wrapper .video video {
   border-radius: 10px;
   width: 100%;
   height: 100%;
-}
-
-section#videos .school-custom-container .wrapper .video:nth-child(1) {
-  width: 824px;
-  height: 510px;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
-}
-
-section#videos .school-custom-container .wrapper .video:nth-child(2) {
-  width: 332px;
-  height: 250px;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-section#videos .school-custom-container .wrapper .video:nth-child(3) {
-  width: 332px;
-  height: 250px;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
 }
 
 section#articles .custom-container .title {
@@ -836,6 +833,8 @@ section#articles .custom-container .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -843,10 +842,15 @@ section#articles .custom-container .wrapper {
 
 section#articles .custom-container .wrapper .article {
   margin-right: 30px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
 section#articles .custom-container .wrapper .article .article-img {
   width: 369px;
+  height: 259px;
+  width: 335px;
   height: 259px;
   margin: 0 0 15px 0px;
   border-radius: 5px;
@@ -873,7 +877,7 @@ section#articles .custom-container .wrapper .article .details .desc {
 }
 
 section#articles .custom-container .wrapper .article .details .read-more {
-  margin: 15px 0px 100px 0px;
+  margin: 15px 0px 24px 0px;
   letter-spacing: 0.32px;
 }
 
@@ -895,6 +899,7 @@ section#articles .custom-container .wrapper .article .details .read-more button 
     padding: 40px 0 0 50px;
   }
   section#about .custom-container .head .layer {
+    background-image: url("../../images/Group 1158@3x.png");
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -936,6 +941,162 @@ section#articles .custom-container .wrapper .article .details .read-more button 
   }
   section#about .custom-container .wrapper .contentWrapper #school-info .ranking .wrapper .organization .img-organization {
     width: 123px;
+  }
+  section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live .custom-progress, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .work .custom-progress {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live .custom-progress .box, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .work .custom-progress .box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+  section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .doing .custom-progress .box .progress, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .studies .custom-progress .box .progress {
+    width: 423px;
+    height: 20px;
+  }
+  section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .doing {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .studies {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  section#about .custom-container .wrapper .contentWrapper #school-info .media .social-media {
+    margin-top: 0;
+  }
+  section#program__description .school-custom-container .wrapper .body {
+    width: 968px;
+  }
+  section#school__photos .school-custom-container #primary-slider .splide__slide {
+    width: auto;
+    height: 355px !important;
+  }
+  section#school__photos .school-custom-container #secondary-slider #secondary-slider-track #secondary-slider-list div.splide__slide {
+    width: 250px !important;
+    height: 160px !important;
+  }
+  section#about section#school__program .school-custom-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  section#about section#school__program .school-custom-container .contentWrapper .program-content .program {
+    margin-top: 30px;
+  }
+  section#about section#school__program .school-custom-container .contentWrapper .program-content .program.first {
+    margin-top: 21px;
+  }
+  section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .title {
+    margin: 0;
+  }
+  section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .deadline {
+    margin: 5px 0 15px;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+  }
+  section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .fee {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    margin: 0 8px 0px 0;
+    color: var(--main-dark-color);
+  }
+  section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .more-btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  section#about section#school__program .school-custom-container .contentWrapper .program-content .program .row .more-btn button {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+  }
+  section#about section#school__program .school-custom-container .map {
+    display: block;
+    margin-top: 102px;
+  }
+  section#about section#school__program .school-custom-container .map iframe {
+    width: 392px;
+    height: 316px;
+  }
+  section#review .school-custom-container #review-primary-slider .splide__arrows {
+    display: block;
+  }
+  section#review .school-custom-container #review-primary-slider .splide__track #review-primary-slider-list div.splide__slide {
+    width: 778px !important;
+  }
+  section#articles .custom-container .wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  section#articles .custom-container .wrapper .article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+  section#articles .custom-container .wrapper .article .article-img {
+    width: 369px;
+    height: 259px;
+  }
+  section#videos .school-custom-container .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+  }
+  section#videos .school-custom-container .wrapper .video {
+    margin-bottom: 0;
+  }
+  section#videos .school-custom-container .wrapper .video:nth-child(1) {
+    width: 824px;
+    height: 510px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+  section#videos .school-custom-container .wrapper .video:nth-child(2) {
+    width: 332px;
+    height: 250px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  section#videos .school-custom-container .wrapper .video:nth-child(3) {
+    width: 332px;
+    height: 250px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
   }
 }
 /*# sourceMappingURL=schoolDesc.css.map */

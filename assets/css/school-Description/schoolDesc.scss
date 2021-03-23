@@ -104,7 +104,7 @@ section#about{
             border-radius: 5px;
             background-color: var(--lighter-color);
             .layer{
-                background-image: url('../../images/Group 1158@3x.png');
+                background-image: unset;
                 .box{
                     .title{
                         margin: 0 0 12px 0;
@@ -242,6 +242,7 @@ section#about{
                         flex-wrap: wrap;
                         margin-top: 62px;
                         .accreditation, .social-media{
+                            margin-top: 48px;
                             margin-right: 214px;
                             .title{
                                 margin-top: 0;
@@ -295,7 +296,6 @@ section#about{
                                     display: flex;
                                     flex-wrap: wrap;
                                     .box{
-                                        margin: 0px 30px 0 0 ;
                                         flex: 0 0 50%;
                                         .percent{
                                             position: relative;
@@ -364,9 +364,13 @@ section#about{
                                 .custom-progress{
                                     .box{
                                         .title{
-                                            margin: 20px 41px 10px 1px;
+                                            margin: 20px 0 10px 1px;
                                             font-size: 16px;
                                             line-height: 1.19;
+                                            font-weight: normal;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: normal;
                                             letter-spacing: 0.16px;
                                             text-align: left;
                                             color: var(--black-color);
@@ -375,7 +379,7 @@ section#about{
                                         .progress{
                                             background-color: var(--lighter-color);
                                             border-radius: 15px;
-                                            width: 423px;
+                                            width: 335px;
                                             height: 20px;
                                             .progress-bar{
                                                 border-radius: 15px;
@@ -448,12 +452,13 @@ section#program__description{
             }
             .body{
                 margin: 20px 27px 20px 0;
-                width: 968px;
+                width: auto;
                 opacity: 0.6;
                 font-size: 18px;
                 line-height: 1.39;
                 letter-spacing: 0.18px;
             }
+            
             ul.list{
                 li{
                     font-size: 16px;
@@ -489,14 +494,18 @@ section#school__photos{
             .splide__arrows{
                 display: none ;
             }
+            .splide__slide{
+                width: 335px;
+                height: 251px;
+            }
         }
         #secondary-slider{
             #secondary-slider-track{
                 margin-top: 10px;
                 #secondary-slider-list{
                     div.splide__slide{
-                        width: 250px !important;
-                        height: 160px !important;
+                        width: 159px !important;
+                        height: 117px !important;
                         border-radius: 5px;
                         &.is-active{
                             border: none;
@@ -511,7 +520,7 @@ section#school__photos{
                     backdrop-filter: blur(30px);
                     background-color: var(--white-color);
                     width: 37px;
-                    height: 160px;
+                    height: 100%;
                     &.splide__arrow--prev{
                         left: 0%;
                     }
@@ -524,57 +533,63 @@ section#school__photos{
     }
 }
 
-section#school__program{
+section#about section#school__program{
     .school-custom-container{
         display: flex;
+        flex-wrap: wrap;
         .contentWrapper{
             .program-content{
                 .program{
+                    margin-top: 21px;
                     .row{
                         .title{
-                            margin: 30px 192px 0 0;
+                            margin: 0 44px 10px 0;
                             font-size: 18px;
                             font-weight: 500;
+                            line-height: normal;
                             letter-spacing: 0.18px;
+                            text-align: left;
                             color: var(--black-color);
                         }
-                        .title.first{
-                            margin-top: 23px;
-                        }
                         .deadline{
-                            margin: 5px 0 15px;
+                            margin: 0px 22px 20px 0;
                             opacity: 0.6;
-                            font-size: 18px;
-                            letter-spacing: 0.18px;
+                            font-size: 16px;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: 0.16px;
                         }
                         .fee{
-                            flex: 0 0 50%;
-                            margin: 0 8px 0px 0;
+                            margin: 0 0px 0.5px 0;
                             font-size: 16px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
                             letter-spacing: 0.16px;
+                            flex: 0 0 67%;
                             color: var(--main-dark-color);
                             span{
+                                opacity: .4;
                                 text-transform: capitalize;
                                 margin-right: 8px;
-                                opacity: 0.4;
-                                font-size: 16px;
-                                letter-spacing: 0.16px;
                                 color: var(--black-color);
                             }
                         }
                         .more-btn{
-                            flex: 0 0 34%;
-                            padding: 0;
-                            display: flex;
-                            align-self: end;
-                            justify-content: flex-end;
+                            font-size: 16px;
+                            font-weight: 500;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: 0.32px;
+                            text-align: left;
+                            flex: 0 0 33%;
                             button{
+                                line-height: normal;
                                 padding: 0;
-                                font-size: 16px;
-                                font-weight: 500;
-                                letter-spacing: 0.32px;
                                 a{
-                                    color: var(--main-light-color);
+                                    color:var(--main-light-color)
                                 }
                             }
                         }
@@ -583,7 +598,11 @@ section#school__program{
             }
         }
         .map{
-            margin-top: 102px;
+            margin-top: 49px;
+            iframe{
+                width: 335px;
+                height: 331px;
+            }
         }
     }
 }
@@ -614,10 +633,10 @@ section#review{
                         position: relative;
                         z-index: -1;
                         &:nth-child(1){
-                            left: 1%;
+                            left: 10%;
                         }
                         &:nth-child(3){
-                            right: 1%;
+                            right: 10%;
                         }
                         &.is-active{
                             width: 73px !important;
@@ -633,6 +652,7 @@ section#review{
         // primary
         #review-primary-slider{
             .splide__arrows{
+                display: none;
                 button{
                     background-color: unset;
                 }
@@ -643,7 +663,7 @@ section#review{
                     display: flex;
                     justify-content: center;
                     div.splide__slide{
-                        width: 778px !important;
+                        // width: 778px !important;
                         height: fit-content !important;
                         top: 0%;
                         left: 0%;
@@ -683,34 +703,19 @@ section#videos{
     margin-top: 50px;
     .school-custom-container{
         .wrapper{
-            display: grid;
-            column-gap: 10px;
-            row-gap:10px;
+            display: flex;
+            flex-wrap: wrap;
             .video{
+                width: 335px;
+                height: 211px;
+                margin-bottom:16px;
                 video{
                     border-radius: 10px;
                     width: 100%;
                     height: 100%;
                 }
             }
-            .video:nth-child(1){
-                width: 824px;
-                height: 510px;
-                grid-column: 1/2;
-                grid-row: 1/3;
-            }
-            .video:nth-child(2){
-                width:332px;
-                height:250px;
-                grid-column: 2/3;
-                grid-row: 1/2;
-            }
-            .video:nth-child(3){
-                width:332px;
-                height:250px;
-                grid-column: 2/3;
-                grid-row: 2/3;
-            }
+            
         }
     }
 }
@@ -726,11 +731,15 @@ section#articles{
         }
         .wrapper{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             .article{
                 margin-right: 30px;
+                flex: 0 0 100%;
                 .article-img{
                     width: 369px;
+                    height: 259px;
+                    width: 335px;
                     height: 259px;
                     margin: 0 0 15px 0px;
                     border-radius: 5px;
@@ -754,7 +763,7 @@ section#articles{
                         letter-spacing: 0.18px;
                     }
                     .read-more{
-                        margin: 15px 0px 100px 0px;
+                        margin: 15px 0px 24px 0px;
                         letter-spacing: 0.32px;
                         button{
                             font-size: 16px;
@@ -775,11 +784,13 @@ section#articles{
     .custom-container{
         margin: 0 100px;
     }
+
     section#about .custom-container{
         .head {
             margin: 27px 2px 0 1px;
             padding: 40px 0 0 50px;
             .layer{
+                background-image: url('../../images/Group 1158@3x.png');
                 display: flex;
                 .box{
                     .title{
@@ -790,9 +801,6 @@ section#articles{
                     .school{
                         margin: 12px 83px 26px 0;
                         font-size: 20px;
-                    }
-                    .details{
-                        
                     }
                 }
                 
@@ -841,14 +849,191 @@ section#articles{
                                 .custom-progress{
                                     flex-wrap: wrap;
                                     .box{
-                                        margin: 0px 30px 0 0 ;
-                                        flex: 0 0 50%;
-                                        
+                                        flex: 0 0 25%;
                                     }
+                                }
+                            }
+                            
+                            .doing, .studies{
+                                .custom-progress{
+                                    .box{
+                                        .progress{
+                                            width: 423px;
+                                            height: 20px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .live{
+                                order: 1;
+                            }
+
+                            .doing{
+                                order: 3;
+                            }
+                            .studies{
+                                order: 4;
+                            }
+                        }
+                    }
+
+                    .media{
+                        .social-media{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#program__description{
+        .school-custom-container{
+            .wrapper{
+                .body{
+                    width: 968px;
+                }
+            }
+        }
+    }
+
+        
+    section#school__photos{
+        .school-custom-container{
+            
+            #primary-slider{
+                .splide__slide{
+                    width: auto;
+                    height: 355px !important;
+                }
+            }
+            #secondary-slider{
+                #secondary-slider-track{
+                    #secondary-slider-list{
+                        div.splide__slide{
+                            width: 250px !important;
+                            height: 160px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#about section#school__program{
+        .school-custom-container{
+            display: flex;
+            flex-wrap: nowrap;
+            .contentWrapper{
+                .program-content{
+                    .program{
+                        margin-top: 30px;
+                        &.first{
+                            margin-top: 21px;
+                        }
+                        .row{
+                            .title{
+                                margin: 0;
+                            }
+                            .deadline{
+                                margin: 5px 0 15px;
+                                font-size: 18px;
+                                letter-spacing: 0.18px;
+                            }
+                            .fee{
+                                flex: 0 0 50%;
+                                margin: 0 8px 0px 0;
+                                color: var(--main-dark-color);
+                                
+                            }
+                            .more-btn{
+                                flex: 0 0 33%;
+                                padding: 0;
+                                display: flex;
+                                align-self: end;
+                                justify-content: flex-end;
+                                button{
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    letter-spacing: 0.32px;
                                 }
                             }
                         }
                     }
+                }
+            }
+            .map{
+                display: block;
+                margin-top: 102px;
+                iframe{
+                    width: 392px;
+                    height: 316px;
+                }
+            }
+        }
+    }
+    
+    section#review{
+        .school-custom-container{
+            // primary
+            #review-primary-slider{
+                .splide__arrows{
+                    display: block;
+                }
+                .splide__track{
+                    #review-primary-slider-list{
+                        div.splide__slide{
+                            width: 778px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    section#articles{
+        .custom-container{
+            .wrapper{
+                flex-wrap: nowrap;
+                .article{
+                    flex: 0 0 30%;
+                    .article-img{
+                        width: 369px;
+                        height: 259px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    section#videos{
+        .school-custom-container{
+            .wrapper{
+                display: grid;
+                column-gap: 10px;
+                row-gap:10px;
+                .video{
+                    margin-bottom:0;
+                }
+                .video:nth-child(1){
+                    width: 824px;
+                    height: 510px;
+                    grid-column: 1/2;
+                    grid-row: 1/3;
+                }
+                .video:nth-child(2){
+                    width:332px;
+                    height:250px;
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                .video:nth-child(3){
+                    width:332px;
+                    height:250px;
+                    grid-column: 2/3;
+                    grid-row: 2/3;
                 }
             }
         }
