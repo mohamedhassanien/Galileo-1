@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Global Styling*/
+:root {
+  --main-light-color: #1c85c8;
+  --black-color: #000000;
+  --white-color: #ffffff;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.custom-container {
+  margin: 0 20px;
+  padding: 0;
+}
+
+.show-menu {
+  display: block !important;
+}
+
+.show-menu ul.navbar-nav li.nav-item {
+  margin: 11px 45px 0px 0px !important;
+}
+
+.show-menu form {
+  margin: 11px 45px 0 0px !important;
+}
+
+.show-menu form button {
+  margin: 0 !important;
+  margin-top: 11px !important;
+}
+
+.custom-container {
+  margin: 0 20px;
+  padding: 0;
+}
+
+.custom-btn {
+  margin: 1px 1px 28px 45px;
+  padding: 9px 41px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+          box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+  background-color: var(--main-light-color);
+  color: var(--white-color);
+}
+
+/* GLOBAL STYLING */
+nav {
+  padding-bottom: 0;
+}
+
+nav .container-fluid .navbar-toggler {
+  border: none;
+}
+
+nav .container-fluid .navbar-toggler:focus {
+  outline: none;
+}
+
+nav .container-fluid .navbar-collapse ul.navbar-nav {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.program {
+  margin: 11px 45px 39px 51px;
+}
+
+nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.school {
+  margin: 11px 0px 39px 0;
+  color: var(--main-light-color);
+  opacity: 1;
+}
+
+nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.school a {
+  color: var(--main-light-color);
+}
+
+nav .container-fluid .navbar-collapse ul.navbar-nav li {
+  font-size: 16px;
+  color: var(--black-color);
+  letter-spacing: 0.16px;
+  opacity: 0.6;
+  line-height: 1.19;
+}
+
+nav .container-fluid .navbar-collapse ul.navbar-nav li .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+  color: var(--black-color);
+}
+
+nav .container-fluid .navbar-collapse form .login {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.36px;
+}
+
+section#home {
+  margin-top: 95px;
+}
+
+section#home .custom-container .title {
+  margin: 0 0 24px;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: 0.32px;
+  text-align: center;
+}
+
+section#home .custom-container .desc {
+  margin: 24px 10px 0;
+}
+
+section#home .custom-container .desc p {
+  opacity: 0.6;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.39;
+  letter-spacing: 0.18px;
+  text-align: center;
+}
+
+section#home .custom-container .img-holder {
+  margin-top: 49px;
+}
+
+section#home .custom-container .img-holder img {
+  width: 100%;
+}
+/*# sourceMappingURL=schoolFilter.css.map */

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- SMALL SCREEN'S VIEW  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- WEBSITE ICON  -->
+    <link rel="shortcut icon" href="assets/images/galileo-global-education-logo-vector.png" type="image/x-icon">
+    <!-- BOOTSRAP -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- STYLING FILE SHEET  -->
+    <link rel="stylesheet" href="assets/css/schools-Filtration/schoolFilter.css">
+    <title>Schools</title>
+</head>
+<body>
+    <!-- header  -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid custom-container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/galileo-global-education-logo-vector.png"
+                srcset="assets/images/galileo-global-education-logo-vector@2x.png 2x,
+                assets/images/galileo-global-education-logo-vector@3x.png 3x">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="assets/images/menuIconSS.png" alt="">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item program">
+                        <a class="nav-link">Progams</a>
+                    </li>
+                    <li class="nav-item school">
+                        <a class="nav-link" href="#">Schools</a>
+                    </li>
+                </ul>
+                <form class="d-flex" autocomplete="off">
+                    <button class="btn login custom-btn" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="custom-container">
+            <div class="title">
+                Assist student in their quest to study abroad
+            </div>
+            <div class="desc">
+                <p>Galileo supports you throughout your
+                    study project free of charge.</p>
+            </div>
+            <div class="img-holder">
+                <img src="assets/images/worldMap.png" 
+                    srcset="assets/images/worldMap@2x.png 2x
+                    , assets/images/worldMap@3x.png 3x"
+                alt="Worldmap">
+            </div>
+        </div>
+    </section>
+
+    <section id="schools" class="schools">
+        <div class="custom-container">
+            <div class="search">             
+                <form class="search-form" autocomplete="off">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="field-select" placeholder="what do you want to learn?">
+                        <select class="form-select" id="city-select">
+                            <option selected>Write or choose City</option>
+                        </select>
+                        <button class="btn custom-btn search" type="button" id="search">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="filter">
+                <form action="">
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/schoolFilter.js"></script>
+</body>
+</html>

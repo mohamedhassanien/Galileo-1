@@ -1,35 +1,15 @@
+// show menu in small devices 
+document.querySelector('button.navbar-toggler').addEventListener('click', function(){
+    document.getElementById('navbarSupportedContent').classList.toggle("show-menu")
+})
 // CITY PHOTOS SLIDER
 // Create and mount the thumbnails slider.
-var citySecondarySlider = new Splide( '#city-secondary-slider', {
-	rewind      : true,
-	fixedWidth  : 250,
-	fixedHeight : 160,
-	isNavigation: true,
-    arrows      : true,
-	gap         : 10,
-	focus       : 'center',
-	pagination  : false,
-	cover       : true,
-	breakpoints : {
-		'600': {
-			fixedWidth  : 66,
-			fixedHeight : 40,
-		}
-	}
-} ).mount();
-
-// Create the main slider.
-var cityPrimarySlider = new Splide( '#city-primary-slider', {
-	type       : 'fade',
-	heightRatio: 0.5,
-	pagination : false,
-	arrows     : false,
-	cover      : true,
-} );
-
-// Set the thumbnails slider as a sync target and then call mount.
-cityPrimarySlider.sync( citySecondarySlider ).mount();
-
+let imgs = Array.from(document.querySelectorAll('li.splide__slide img'))
+imgs.forEach(img => {
+    img.addEventListener('click', function(){
+        document.querySelector('div.full-screen img').src = img.src
+    })
+})
 
 // SCHOOL PHOTOS SLIDER
 // Create and mount the thumbnails slider.

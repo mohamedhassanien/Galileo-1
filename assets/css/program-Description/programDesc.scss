@@ -34,6 +34,21 @@ a{
 h1, h2, h3, h4, h5, p{
     margin: 0;
 }
+.show-menu{
+    display: block !important;
+    ul.navbar-nav{
+        li.nav-item{
+            margin: 11px 45px 0px 0px !important;
+        }
+    }
+    form{
+        margin: 11px 45px 0 0px !important;
+        button{
+            margin: 0 !important;
+            margin-top: 11px !important;
+        }
+    }
+}
 .custom-container{
     margin: 0 20px;
     padding: 0;
@@ -187,10 +202,10 @@ section#about{
                         height: auto;
                         margin: 0;
                         p{
-                            opacity: 0.6;
-                            font-size: 16px;
+                            font-size: 18px;
                             line-height: 1.56;
                             letter-spacing: 0.16px;
+                            text-align: justify;
                         }
                     }
                     .ranking{
@@ -386,10 +401,31 @@ section#about{
                         }
                     }
                 }
+                
             }
         }
     }
 }
+
+section#city__photos{
+    .city-custom-container{
+        display: flex;
+        .full-screen{
+            flex: 0 0 80%;
+            img{
+                width: 100%;
+                height: 451px;
+            }
+        }
+        .imgs{
+            li img{
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+
 
 section#city__expense{
     .wrapper{
@@ -913,8 +949,8 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
         .head {
             margin: 27px 2px 0 1px;
             padding: 40px 0 0 50px;
+            overflow: hidden;
             .layer{
-                background-image: url('../../images/Group 1158@3x.png');
                 display: flex;
                 .box{
                     .title{
@@ -934,12 +970,21 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                 .box:nth-child(2){
                     display: block;
                     background-color: var(--white-color);
+                    position: relative;
+                    z-index: 1;
                     .layer{
                         width: 123px;
                         height: 123px;
                         background: url(../../images/franceflag.png);
                         background-repeat: no-repeat;
                     }
+                }
+                img.img-bg{
+                    position: relative;
+                    right: 45px;
+                    z-index: 0;
+                    top: 50px;
+                    opacity: .5;
                 }
             }
         }
@@ -959,7 +1004,6 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                         width: 968px;
                         height: 97px;
                         margin: 20px 26px 30px 1px;
-                        opacity: 0.6;
                         line-height: 1.39;
                         letter-spacing: 0.18px;
                     }
@@ -979,7 +1023,13 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                     .media{
                         margin-top: 50px;
                         .accreditation{
+                            margin-right: 0 !important;
+                            flex: 2 0 auto;
                             margin-top: 0;
+                        }
+                        .social-media{
+                            flex: 0 0 auto;
+                            margin-top: 0 ;
                         }
                     }
                     .alumni{
@@ -1014,12 +1064,6 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                             .studies{
                                 order: 4;
                             }
-                        }
-                    }
-
-                    .media{
-                        .social-media{
-                            margin-top: 0;
                         }
                     }
                 }
