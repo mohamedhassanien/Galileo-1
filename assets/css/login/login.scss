@@ -33,18 +33,16 @@ h1, h2, h3, h4, h5, p{
     margin: 0;
 }
 .custom-container{
-    margin: 0 100px;
+    margin: 0 20px;
     padding: 0;
 }
 
 /* Login Section */
 section#login{
-    height: 100vh;
     overflow: hidden;
     .custom-container{
         grid-template-rows: 183px auto;
         row-gap: 0;
-        margin: 0 0 0 100px;
         padding: 0;
         display: grid;
         grid-column: 2;
@@ -97,7 +95,7 @@ section#login{
                     margin: 25px 319px 10px 0.2px;
                 }
                 input{
-                    width: 391px;
+                    width: 334.8px;
                     height: 45px;
                     margin: 0 0 0px 0.2px;
                     border: none;
@@ -137,10 +135,9 @@ section#login{
                 }
             }
             .login-btn{
-                width: 391px;
+                width: 334.8px;
                 height: 45px;
                 margin: 25px 0 0 0.2px;
-                padding: 13px 175.5px;
                 line-height: 0;
                 color: var(--white-color);
                 border-radius: 5px;
@@ -161,4 +158,51 @@ section#login{
             }
         }
     }
+}
+
+@media only screen and (min-width: 692px) {
+    .custom-container{
+        margin: 0 50px;
+    }
+    section#login{
+        .custom-container{
+     
+            form {
+                .mb-3{
+                    input{
+                        width: 668px;
+                        height: 45px;
+                        margin: 15px 0 0 0.2px;
+                    }
+                } 
+                .login-btn{
+                    width: 668px;
+                    height: 45px;
+                    margin: 15px 0 0 0.2px;
+                }
+            }
+                
+            .bg-login-img{
+                display: none;
+            }
+        } 
+    } 
+}
+@media only screen and (min-width: 992px) {
+    .custom-container{
+        margin: 0 100px;
+    }
+    section#login .custom-container{
+        form{
+            .mb-3 input{
+                width: 391px;
+            }
+            .login-btn{
+                width: 391px;   
+            }
+        } 
+        .bg-login-img{
+            display: block
+        }
+    } 
 }

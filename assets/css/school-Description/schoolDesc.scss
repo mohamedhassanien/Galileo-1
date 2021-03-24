@@ -154,14 +154,8 @@ section#about{
                 }
                 .box:nth-child(2){
                     display: none;
-                    width: 123px;
-                    background-color: var(--white-color);
-                    height: 123px;
-                    margin: 2px 151px 42px 211px;
                     .layer{
                         display: flex;
-                        background: url('../../images/franceflag.png');
-                        background-repeat: no-repeat;
                         width: 100%;
                         height: 100%;
                         .school-img{
@@ -436,10 +430,12 @@ section#city__expense{
             }
         }
         table, .city-img{
+            width: 50%;
             flex: 0 0 50%
         }
     }
 }
+
 section#program__description{
     .school-custom-container{
         .wrapper{
@@ -532,7 +528,11 @@ section#school__photos{
         }
     }
 }
-
+section#city__photos{
+    #city-secondary-slider-list{
+        margin: auto !important;
+    }
+}
 section#about section#school__program{
     .school-custom-container{
         display: flex;
@@ -720,8 +720,8 @@ section#videos{
     }
 }
 
-section#articles{
-    .custom-container{
+section#about .custom-container .wrapper .contentWrapper #school-info section#articles{
+    .school-custom-container{
         .title{
             margin: 50px 70px 20px 0px;
             font-size: 24px;
@@ -756,7 +756,7 @@ section#articles{
                         font-weight: 500;
                         letter-spacing: 0.16px;
                     }
-                    .desc{
+                    .article-desc{
                         opacity: 0.8;
                         font-size: 18px;
                         font-weight: 500;
@@ -780,11 +780,135 @@ section#articles{
     }
 }
 
+@media only screen and (min-width: 692px) {
+    .custom-container{
+        margin: 0 50px;
+    }
+
+    section#about .custom-container{
+        .head{
+            .layer{
+                display: flex;
+                background-image: unset;
+                .box {
+                    flex: 0 0 70%;
+                    .details .apply-btn{
+                        flex: 0 0 100%;
+                    }
+                }
+                .box:nth-child(2){
+                    display: block;
+                    background-color: unset;
+                    width: 30%;
+                    flex: 0 0 7%;
+                    margin: 0;
+                    align-self: flex-start;
+                    .layer{
+                        background-image: unset;
+                        img{
+                            margin: 0 ;
+                        }
+                    }
+                }
+            } 
+        } 
+        .wrapper{
+            .buttonWrapper{
+                display: none;
+            }
+            .contentWrapper{
+                #school-info .alumni .wrapper{
+                    .live, .doing, .studies, .work{
+                        flex: 0 0 100%;
+                        .custom-progress .box{
+                            flex: 0 0 25%;
+                        }
+                    }
+                    .doing, .studies {
+                        .custom-progress .box .progress{
+                            width: 658px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    section#school__photos {
+        .school-custom-container{
+            #primary-slider .splide__slide{
+                height: 251px !important;
+            }
+            #secondary-slider{
+                #secondary-slider-track{
+                    #secondary-slider-list div.splide__slide{
+                        width: 212px !important;
+                        height: 154px !important;
+                    }
+                }
+            } 
+    
+        } 
+    }
+    section#about section#school__program{
+        .school-custom-container{
+            
+            .map iframe{
+                width: 668px;
+                height: 331px;
+            }
+        }
+    } 
+    section#review .school-custom-container{
+        #review-secondary-slider{
+            .splide__track{
+                #review-secondary-slider-list{
+                    div.splide__slide:nth-child(1){
+                        left: 4%;
+                    }
+                    div.splide__slide:nth-child(3){
+                        right: 4%;
+                    }
+                } 
+            } 
+        }
+    }
+    section#videos{
+        .school-custom-container .wrapper{
+            display: grid;
+            grid-gap: 16px;
+            .video{
+                width: 325px;
+                height: 242px;
+                margin-bottom: 0;
+            }
+            .video:nth-child(1){
+                grid-column: 1/3;
+                grid-row: 1/2;
+                width: 668px;
+                height: 415px;
+            }
+        }
+    }
+
+    section#about .custom-container .wrapper .contentWrapper #school-info section#articles .school-custom-container{
+        .wrapper{
+            .article{
+                flex: 0 0 47%;
+                margin-right: 0;
+                .article-img{
+                    width: 318px;
+                    height: 259px;
+                }
+            }
+        }
+
+    }
+}
 @media only screen and (min-width: 992px) {
     .custom-container{
         margin: 0 100px;
     }
-
     section#about .custom-container{
         .head {
             margin: 27px 2px 0 1px;
@@ -802,10 +926,20 @@ section#articles{
                         margin: 12px 83px 26px 0;
                         font-size: 20px;
                     }
+                    .details .apply-btn{
+                        flex: 0 0 auto;
+                    }
                 }
                 
                 .box:nth-child(2){
                     display: block;
+                    background-color: var(--white-color);
+                    .layer{
+                        width: 123px;
+                        height: 123px;
+                        background: url(../../images/franceflag.png);
+                        background-repeat: no-repeat;
+                    }
                 }
             }
         }
@@ -842,9 +976,17 @@ section#articles{
                             }
                         }
                     }
-                    
+                    .media{
+                        margin-top: 50px;
+                        .accreditation{
+                            margin-top: 0;
+                        }
+                    }
                     .alumni{
                         .wrapper{
+                            .live, .work, .doing, .studies{
+                                flex: 0 0 41.6666666667%;
+                            }
                             .live, .work{
                                 .custom-progress{
                                     flex-wrap: wrap;
@@ -853,7 +995,6 @@ section#articles{
                                     }
                                 }
                             }
-                            
                             .doing, .studies{
                                 .custom-progress{
                                     .box{
@@ -864,11 +1005,9 @@ section#articles{
                                     }
                                 }
                             }
-
                             .live{
                                 order: 1;
                             }
-
                             .doing{
                                 order: 3;
                             }
@@ -897,7 +1036,6 @@ section#articles{
             }
         }
     }
-
         
     section#school__photos{
         .school-custom-container{
@@ -992,8 +1130,8 @@ section#articles{
         }
     }
     
-    section#articles{
-        .custom-container{
+    section#about .custom-container .wrapper .contentWrapper #school-info  section#articles{
+        .school-custom-container{
             .wrapper{
                 flex-wrap: nowrap;
                 .article{

@@ -2,8 +2,8 @@
 // Create and mount the thumbnails slider.
 var citySecondarySlider = new Splide( '#city-secondary-slider', {
 	rewind      : true,
-	fixedWidth  : 100,
-	fixedHeight : 64,
+	fixedWidth  : 250,
+	fixedHeight : 160,
 	isNavigation: true,
     arrows      : true,
 	gap         : 10,
