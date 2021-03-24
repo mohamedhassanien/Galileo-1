@@ -4,7 +4,7 @@ document.querySelector('button.navbar-toggler').addEventListener('click', functi
 })
 // CITY PHOTOS SLIDER
 // Create and mount the thumbnails slider.
-let imgs = Array.from(document.querySelectorAll('li.splide__slide img'))
+let imgs = Array.from(document.querySelectorAll('li.img img'))
 imgs.forEach(img => {
     img.addEventListener('click', function(){
         document.querySelector('div.full-screen img').src = img.src

@@ -219,6 +219,10 @@ section#about .custom-container .head .layer .box:nth-child(2) .layer .school-im
   width: 100%;
 }
 
+section#about .custom-container .head .layer .img-bg {
+  display: none;
+}
+
 section#about .custom-container .wrapper .buttonWrapper {
   display: none;
 }
@@ -489,31 +493,70 @@ section#about .custom-container .wrapper .contentWrapper #school-info .alumni .w
   background-color: var(--main-dark-color);
 }
 
+section#about .custom-container .wrapper .contentWrapper #city-info .desc {
+  width: auto;
+  height: auto;
+}
+
+section#about .custom-container .wrapper .contentWrapper #city-info .desc p {
+  text-align: justify;
+}
+
 section#city__photos .city-custom-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 section#city__photos .city-custom-container .full-screen {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 80%;
-          flex: 0 0 80%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
 section#city__photos .city-custom-container .full-screen img {
   width: 100%;
-  height: 451px;
+  height: auto;
 }
 
-section#city__photos .city-custom-container .imgs li img {
+section#city__photos .city-custom-container .imgs {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+section#city__photos .city-custom-container .imgs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#city__photos .city-custom-container .imgs ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+section#city__photos .city-custom-container .imgs ul li img {
   cursor: pointer;
+  width: 100%;
 }
 
 section#city__expense .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 section#city__expense .wrapper table thead tr {
@@ -554,14 +597,14 @@ section#city__expense .wrapper .city-img {
 }
 
 section#city__expense .wrapper .city-img img {
+  margin: auto;
   width: 276px;
 }
 
 section#city__expense .wrapper table, section#city__expense .wrapper .city-img {
-  width: 50%;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
 section#program__description .school-custom-container .wrapper .title {
@@ -1075,6 +1118,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
     z-index: 0;
     top: 50px;
     opacity: .5;
+    display: block;
   }
   section#about .custom-container .wrapper .buttonWrapper {
     display: block;
@@ -1274,6 +1318,38 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
+  }
+  section#city__expense .wrapper table, section#city__expense .wrapper .city-img {
+    width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  section#city__photos .city-custom-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section#city__photos .city-custom-container .full-screen {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+  }
+  section#city__photos .city-custom-container .full-screen img {
+    width: 100%;
+    height: 451px;
+  }
+  section#city__photos .city-custom-container .imgs {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+  }
+  section#city__photos .city-custom-container .imgs ul {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=programDesc.css.map */

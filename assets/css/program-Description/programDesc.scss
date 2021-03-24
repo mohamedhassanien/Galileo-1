@@ -110,7 +110,6 @@ nav{
         }
     }
 }
-
 section#about{
     .custom-container{
         .head{
@@ -181,6 +180,9 @@ section#about{
                             }
                         }
                     }
+                }
+                .img-bg{
+                    display: none;
                 }
             }
         }
@@ -401,7 +403,16 @@ section#about{
                         }
                     }
                 }
-                
+
+                #city-info{
+                    .desc{
+                        width:auto;
+                        height: auto;
+                        p{
+                            text-align: justify
+                        }
+                    }
+                }
             }
         }
     }
@@ -410,16 +421,27 @@ section#about{
 section#city__photos{
     .city-custom-container{
         display: flex;
+        flex-wrap:wrap;
         .full-screen{
-            flex: 0 0 80%;
+            flex: 0 0 100%;
             img{
                 width: 100%;
-                height: 451px;
+                height: auto;
             }
         }
         .imgs{
-            li img{
-                cursor: pointer;
+            flex: 0 0 100%;
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                li{
+                    flex: 0 0 30%;
+                    img{
+                        cursor: pointer;
+                        width: 100%;
+                    }
+                } 
             }
         }
         
@@ -430,6 +452,7 @@ section#city__photos{
 section#city__expense{
     .wrapper{
         display: flex;
+        flex-wrap: wrap;
         table{
             thead tr{
                 border:none;
@@ -462,12 +485,12 @@ section#city__expense{
             display: flex;
             justify-content: flex-end;
             img{
+                margin: auto;
                 width: 276px;
             }
         }
         table, .city-img{
-            width: 50%;
-            flex: 0 0 50%
+            flex: 0 0 100%
         }
     }
 }
@@ -985,6 +1008,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                     z-index: 0;
                     top: 50px;
                     opacity: .5;
+                    display: block;
                 }
             }
         }
@@ -1216,6 +1240,35 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                     height:250px;
                     grid-column: 2/3;
                     grid-row: 2/3;
+                }
+            }
+        }
+    }
+
+    section#city__expense{
+        .wrapper{
+            table, .city-img{
+                width: 50%;
+                flex: 0 0 50%;
+            }
+        }
+    }
+    
+    section#city__photos{
+        .city-custom-container{
+            display: flex;
+            .full-screen{
+                flex: 0 0 80%;
+                img{
+                    width: 100%;
+                    height: 451px;
+                }
+            }
+            .imgs{
+                flex: 0 0 20%;
+                ul{
+                    height: 100%;
+                    flex-direction: column;
                 }
             }
         }
