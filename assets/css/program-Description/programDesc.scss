@@ -67,6 +67,7 @@ nav{
     .container-fluid{
         .navbar-toggler{
             border: none;
+            padding: 0;
             &:focus{
                 outline: none;
             }
@@ -113,7 +114,7 @@ nav{
 section#about{
     .custom-container{
         .head{
-            margin: 40px 0px 48px 0;
+            margin: 40px 0px 0 0;
             padding: 16px 16px 16px 16px;
             border-radius: 5px;
             background-color: var(--lighter-color);
@@ -187,9 +188,7 @@ section#about{
             }
         }
         .wrapper {
-            .buttonWrapper{
-                display: none;
-            }
+            
             .contentWrapper{
                 #school-info{
                     .title{
@@ -872,9 +871,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
             } 
         } 
         .wrapper{
-            .buttonWrapper{
-                display: none;
-            }
+            
             .contentWrapper{
                 #school-info .alumni .wrapper{
                     .live, .doing, .studies, .work{
@@ -1013,9 +1010,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
             }
         }
         .wrapper {
-            .buttonWrapper{
-                display: block;
-            }
+            
             .contentWrapper{
                 #school-info{
                     .title{

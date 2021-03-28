@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "@splidejs/splide": "^2.4.21",
-    "bootstrap": "^5.0.0-beta2"
+    "bootstrap": "^5.0.0-beta2",
+    "nouislider": "^14.6.4"
   },
   "devDependencies": {},
   "scripts": {

@@ -4,6 +4,7 @@ const tabProgramButton = document.querySelectorAll(".tab-program-button");
 const programContents = document.querySelectorAll(".program-content");
 
 programsTabs.onclick = e => {
+  e.stopPropagation()
   const id = e.target.dataset.id;
   if (id) {
     tabProgramButton.forEach(btn => {
@@ -20,19 +21,19 @@ programsTabs.onclick = e => {
 } 
 
 // TABS ABOUT SECTION 
-const tabs = document.querySelector(".wrapper");
-const tabButton = document.querySelectorAll(".tab-button");
-const contents = document.querySelectorAll(".content");
+const schoolsTabs = document.querySelector(".schools-wrapper");
+const tabSchoolButton = document.querySelectorAll(".tab-schools-button");
+const schoolContents = document.querySelectorAll(".school-content");
 
-tabs.onclick = e => {
+schoolsTabs.onclick = e => {
   const id = e.target.dataset.id;
   if (id) {
-    tabButton.forEach(btn => {
+    tabSchoolButton.forEach(btn => {
       btn.classList.remove("active");
     });
     e.target.classList.add("active");
 
-    contents.forEach(content => {
+    schoolContents.forEach(content => {
       content.classList.remove("active");
     });
     const element = document.getElementById(id);

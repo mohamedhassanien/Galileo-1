@@ -80,6 +80,7 @@ nav {
 
 nav .container-fluid .navbar-toggler {
   border: none;
+  padding: 0;
 }
 
 nav .container-fluid .navbar-toggler:focus {
@@ -129,7 +130,7 @@ nav .container-fluid .navbar-collapse form .login {
 }
 
 section#about .custom-container .head {
-  margin: 40px 0px 48px 0;
+  margin: 40px 0px 0 0;
   padding: 16px 16px 16px 16px;
   border-radius: 5px;
   background-color: var(--lighter-color);
@@ -220,10 +221,6 @@ section#about .custom-container .head .layer .box:nth-child(2) .layer .school-im
 }
 
 section#about .custom-container .head .layer .img-bg {
-  display: none;
-}
-
-section#about .custom-container .wrapper .buttonWrapper {
   display: none;
 }
 
@@ -1007,9 +1004,6 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
   section#about .custom-container .head .layer .box:nth-child(2) .layer img {
     margin: 0;
   }
-  section#about .custom-container .wrapper .buttonWrapper {
-    display: none;
-  }
   section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .doing, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .studies, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .work {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1118,9 +1112,6 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
     z-index: 0;
     top: 50px;
     opacity: .5;
-    display: block;
-  }
-  section#about .custom-container .wrapper .buttonWrapper {
     display: block;
   }
   section#about .custom-container .wrapper .contentWrapper #school-info .title {
