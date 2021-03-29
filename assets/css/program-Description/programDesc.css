@@ -172,8 +172,6 @@ section#about .custom-container .head .layer .box .details div span {
 }
 
 section#about .custom-container .head .layer .box .details div img {
-  width: 15px;
-  height: 24px;
   -o-object-fit: contain;
      object-fit: contain;
 }

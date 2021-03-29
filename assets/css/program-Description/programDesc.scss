@@ -143,8 +143,6 @@ section#about{
                                 letter-spacing: 0.18px;
                             }
                             img{
-                                width: 15px;
-                                height: 24px;
                                 object-fit: contain;
                             }
                             &.fee{
@@ -1004,7 +1002,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                     right: 45px;
                     z-index: 0;
                     top: 50px;
-                    opacity: .5;
+                    opacity: .2;
                     display: block;
                 }
             }
