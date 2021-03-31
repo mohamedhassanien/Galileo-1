@@ -1,7 +1,4 @@
-// show menu in small devices 
-document.querySelector('button.navbar-toggler').addEventListener('click', function(){
-    document.getElementById('navbarSupportedContent').classList.toggle("show-menu")
-})
+
 // CITY PHOTOS SLIDER
 // Create and mount the thumbnails slider.
 let imgs = Array.from(document.querySelectorAll('li.img img'))

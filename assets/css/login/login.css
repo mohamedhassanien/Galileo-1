@@ -2,8 +2,11 @@
 /* Global Styling*/
 :root {
   --main-light-color: #1c85c8;
+  --main-dark-color: #283c8c;
+  --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 
 *, *:after, *:before {
@@ -137,8 +140,8 @@ section#login .custom-container form .mb-3 input {
   border: none;
   padding: 13px 39px 13px 15px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
-          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 0 12px 0 var(--box-shadow-color);
+          box-shadow: 0 0 12px 0 var(--box-shadow-color);
   background-color: var(--white-color);
 }
 
@@ -207,8 +210,8 @@ section#login .custom-container form .login-btn {
   line-height: 0;
   color: var(--white-color);
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
-          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 0 12px 0 var(--box-shadow-color);
+          box-shadow: 0 0 12px 0 var(--box-shadow-color);
   background-color: var(--main-light-color);
 }
 

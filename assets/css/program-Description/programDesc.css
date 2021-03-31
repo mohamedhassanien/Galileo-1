@@ -71,64 +71,10 @@ h1, h2, h3, h4, h5, p {
           box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
   background-color: var(--main-light-color);
   color: var(--white-color);
+  border: none;
 }
 
 /* GLOBAL STYLING*/
-nav {
-  padding-bottom: 0;
-}
-
-nav .container-fluid .navbar-toggler {
-  border: none;
-  padding: 0;
-}
-
-nav .container-fluid .navbar-toggler:focus {
-  outline: none;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 100%;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.program {
-  margin: 11px 45px 39px 51px;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.school {
-  margin: 11px 0px 39px 0;
-  color: var(--main-light-color);
-  opacity: 1;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.school a {
-  color: var(--main-light-color);
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li {
-  font-size: 16px;
-  color: var(--black-color);
-  letter-spacing: 0.16px;
-  opacity: 0.6;
-  line-height: 1.19;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li .nav-link {
-  padding-left: 0;
-  padding-right: 0;
-  color: var(--black-color);
-}
-
-nav .container-fluid .navbar-collapse form .login {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.22;
-  letter-spacing: 0.36px;
-}
-
 section#about .custom-container .head {
   margin: 40px 0px 0 0;
   padding: 16px 16px 16px 16px;
@@ -1109,7 +1055,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
     right: 45px;
     z-index: 0;
     top: 50px;
-    opacity: .5;
+    opacity: .2;
     display: block;
   }
   section#about .custom-container .wrapper .contentWrapper #school-info .title {

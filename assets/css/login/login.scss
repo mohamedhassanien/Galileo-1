@@ -4,8 +4,11 @@
 /* Global Styling*/
 :root{
     --main-light-color: #1c85c8;
+    --main-dark-color: #283c8c;
+    --lighter-color: #f3f6ff;
     --black-color: #000000;
     --white-color: #ffffff;
+    --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 *, *:after, *:before{
     box-sizing: inherit;
@@ -37,6 +40,19 @@ h1, h2, h3, h4, h5, p{
     padding: 0;
 }
 
+.custom-btn{
+    width: 103px;
+    height: 34px;
+    line-height: 1;
+    background: var(--main-light-color);
+    box-shadow: 0px 1px 10px var(--light-color-1);
+    border-radius: 5px;
+    color: var(--white-color);
+    border: none;
+}
+.custom-btn:hover{
+    color: var(--white-color);
+}
 /* Login Section */
 section#login{
     overflow: hidden;
@@ -101,7 +117,7 @@ section#login{
                     border: none;
                     padding: 13px 39px 13px 15px;
                     border-radius: 5px;
-                    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+                    box-shadow: 0 0 12px 0 var(--box-shadow-color);
                     background-color: var(--white-color);
                 }
                 input::placeholder{
@@ -141,7 +157,7 @@ section#login{
                 line-height: 0;
                 color: var(--white-color);
                 border-radius: 5px;
-                box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+                box-shadow: 0 0 12px 0 var(--box-shadow-color);
                 background-color: var(--main-light-color);
             }
            
@@ -152,6 +168,7 @@ section#login{
             width: 775px;
             height: 766px;
             justify-self: end;
+            margin-right: -100px;
             img{
                 width: 100%;
                 height: 100%;

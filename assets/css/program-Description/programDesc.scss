@@ -60,57 +60,10 @@ h1, h2, h3, h4, h5, p{
     box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
     background-color: var(--main-light-color);
     color: var(--white-color);
+    border: none;
 }
 /* GLOBAL STYLING*/
-nav{
-    padding-bottom: 0;
-    .container-fluid{
-        .navbar-toggler{
-            border: none;
-            padding: 0;
-            &:focus{
-                outline: none;
-            }
-        }
-        .navbar-collapse{
-            ul.navbar-nav{
-                justify-content: flex-end;
-                width: 100%;
-                li.nav-item.program{
-                    margin: 11px 45px 39px 51px;
-                }
-                li.nav-item.school{
-                    margin: 11px 0px 39px 0;
-                    color: var(--main-light-color);
-                    opacity: 1;
-                    a{
-                        color: var(--main-light-color);
-                    }
-                }
-                li{
-                    font-size: 16px;
-                    color: var(--black-color);
-                    letter-spacing: 0.16px;
-                    opacity: 0.6;
-                    line-height: 1.19;
-                    .nav-link{
-                        padding-left: 0;
-                        padding-right: 0;
-                        color: var(--black-color);
-                    }
-                }
-            }
-            form{
-                .login{
-                    font-size: 18px;
-                    font-weight: 500;
-                    line-height: 1.22;
-                    letter-spacing: 0.36px;
-                }
-            }
-        }
-    }
-}
+
 section#about{
     .custom-container{
         .head{

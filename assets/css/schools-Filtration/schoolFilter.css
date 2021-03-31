@@ -2,8 +2,11 @@
 /* Global Styling*/
 :root {
   --main-light-color: #1c85c8;
+  --main-dark-color: #283c8c;
+  --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 
 *, *:after, *:before {
@@ -74,64 +77,10 @@ h1, h2, h3, h4, h5, p {
           box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
   background-color: var(--main-light-color);
   color: var(--white-color);
+  border: none;
 }
 
 /* GLOBAL STYLING */
-nav {
-  padding-bottom: 0;
-}
-
-nav .container-fluid .navbar-toggler {
-  border: none;
-  padding: 0;
-}
-
-nav .container-fluid .navbar-toggler:focus {
-  outline: none;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 100%;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.program {
-  margin: 11px 45px 39px 51px;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.school {
-  margin: 11px 0px 39px 0;
-  color: var(--main-light-color);
-  opacity: 1;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.school a {
-  color: var(--main-light-color);
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li {
-  font-size: 16px;
-  color: var(--black-color);
-  letter-spacing: 0.16px;
-  opacity: 0.6;
-  line-height: 1.19;
-}
-
-nav .container-fluid .navbar-collapse ul.navbar-nav li .nav-link {
-  padding-left: 0;
-  padding-right: 0;
-  color: var(--black-color);
-}
-
-nav .container-fluid .navbar-collapse form .login {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.22;
-  letter-spacing: 0.36px;
-}
-
 section#home {
   margin-top: 95px;
 }
@@ -187,8 +136,8 @@ section#schools .custom-container .search .search-form .input-group input, secti
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.16);
-          box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 0 30px 0 var(--box-shadow-color);
+          box-shadow: 0 0 30px 0 var(--box-shadow-color);
 }
 
 section#schools .custom-container .search .search-form .input-group input {
@@ -256,8 +205,8 @@ section#schools .custom-container .body .filter {
   margin: 48px 0.1px 18px 0px;
   padding: 25px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 0 15px 0 var(--box-shadow-color);
+          box-shadow: 0 0 15px 0 var(--box-shadow-color);
   background-color: var(--white-color);
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -360,8 +309,8 @@ section#schools .custom-container .body .filter .filter-form .box.range .form-ch
   margin: 8px 0 0;
   padding: 11px 0 10px 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 0 10px 0 var(--box-shadow-color);
+          box-shadow: 0 0 10px 0 var(--box-shadow-color);
   border: none;
   opacity: 0.4;
   font-size: 16px;
@@ -390,8 +339,8 @@ section#schools .custom-container .body .schools-holder .wrapper .school-card {
   margin: 24px 0 24px 0px;
   padding: 16px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 0 15px 0 var(--box-shadow-color);
+          box-shadow: 0 0 15px 0 var(--box-shadow-color);
 }
 
 section#schools .custom-container .body .schools-holder .wrapper .school-card .bg-img-holder {
