@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, p{
     width: 103px;
     height: 34px;
     line-height: 1;
-    background: var(--main-light-color) 0% 0% no-repeat padding-box;
+    background: var(--main-light-color);
     box-shadow: 0px 1px 10px var(--light-color-1);
     border-radius: 5px;
     color: var(--white-color);
@@ -55,10 +55,16 @@ h1, h2, h3, h4, h5, p{
 .custom-btn:hover{
     color: var(--white-color);
 }
+.custom-container{
+    margin: 0 20px;
+}
 
 // PROGRAMS SECTION
 section#programs{
-    .container{
+    img.top-bg{
+        display: none;
+    }
+    .custom-container{
         .search{
             width: 100%;
             margin: auto;
@@ -82,12 +88,16 @@ section#programs{
                 select{
                     border-top: 1px solid var(--main-dark-color);
                 }
+                input:focus, select:focus{
+                    box-shadow: none;
+                }
                 button.search{
                     flex:0 0 100%;
                     height: 51px;
                     border-radius: 0px 0px 15px 15px;
                     text-align: left;
                     background: var(--main-light-color);
+                    color: var(--white-color);
                 }
             }
         }
@@ -130,6 +140,11 @@ section#programs{
                             line-height: normal;
                             letter-spacing: 0.15px;
                         }
+                    }
+                    button.filter{
+                        margin: 0;
+                        background-color: var(--main-light-color);
+                        color: white;
                     }
                 }
             }
@@ -203,6 +218,11 @@ section#programs{
                         grid-row: 3/4;
                         display: flex;
                         justify-content: left;
+                        background-color: var(--main-light-color);
+                        box-shadow: unset;
+                        margin: 0;
+                        border-radius: 5px;
+                        width: fit-content;
                         a{
                             align-self: center;
                             font-size: 16px;
@@ -212,6 +232,9 @@ section#programs{
                             color: var(--white-color);
                         }
                     }
+                    div.more-info{
+                        margin-top: 20px;
+                    }
                 }
             }
         }
@@ -220,8 +243,11 @@ section#programs{
 
 // MEDIA QUERY
 @media screen and (min-width: 692px) {
+    .custom-container{
+        margin: 0 50px;
+    }
     section#programs{
-        .container {
+        .custom-container {
             .data-container {
                 div.filter .filter-form {
                     .radio{
@@ -287,10 +313,20 @@ section#programs{
     }
 }
 @media screen and (min-width: 992px) {
+    .custom-container{
+        margin: 0 100px;
+    }
     section#programs{
-        background: transparent url('../../images/Group-1158@2x.png') no-repeat;
-        background-position: -20% 0%;
-        .container{
+        position: relative;
+        img.top-bg{
+            position: absolute;
+            z-index: -1;
+            left: -12%;
+            top: -5%;
+            opacity: .4;
+            display: inline;
+        }
+        .custom-container{
             .search{
                 width: 70%;
                 form{

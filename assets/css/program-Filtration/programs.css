@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, p {
   width: 103px;
   height: 34px;
   line-height: 1;
-  background: var(--main-light-color) 0% 0% no-repeat padding-box;
+  background: var(--main-light-color);
   -webkit-box-shadow: 0px 1px 10px var(--light-color-1);
           box-shadow: 0px 1px 10px var(--light-color-1);
   border-radius: 5px;
@@ -65,17 +65,25 @@ h1, h2, h3, h4, h5, p {
   color: var(--white-color);
 }
 
-section#programs .container .search {
+.custom-container {
+  margin: 0 20px;
+}
+
+section#programs img.top-bg {
+  display: none;
+}
+
+section#programs .custom-container .search {
   width: 100%;
   margin: auto;
 }
 
-section#programs .container .search form {
+section#programs .custom-container .search form {
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
-section#programs .container .search form .input-group {
+section#programs .custom-container .search form .input-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +93,7 @@ section#programs .container .search form .input-group {
   border-radius: 0 0px 15px 15px;
 }
 
-section#programs .container .search form input, section#programs .container .search form select {
+section#programs .custom-container .search form input, section#programs .custom-container .search form select {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
@@ -96,11 +104,16 @@ section#programs .container .search form input, section#programs .container .sea
   opacity: .4;
 }
 
-section#programs .container .search form select {
+section#programs .custom-container .search form select {
   border-top: 1px solid var(--main-dark-color);
 }
 
-section#programs .container .search form button.search {
+section#programs .custom-container .search form input:focus, section#programs .custom-container .search form select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+section#programs .custom-container .search form button.search {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
@@ -108,9 +121,10 @@ section#programs .container .search form button.search {
   border-radius: 0px 0px 15px 15px;
   text-align: left;
   background: var(--main-light-color);
+  color: var(--white-color);
 }
 
-section#programs .container .data-container {
+section#programs .custom-container .data-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,7 +135,7 @@ section#programs .container .data-container {
       flex-wrap: wrap;
 }
 
-section#programs .container .data-container div.filter, section#programs .container .data-container div.programs {
+section#programs .custom-container .data-container div.filter, section#programs .custom-container .data-container div.programs {
   -webkit-box-shadow: 0px 0px 25px var(--grey-color-1);
           box-shadow: 0px 0px 25px var(--grey-color-1);
   border-radius: 10px;
@@ -131,17 +145,17 @@ section#programs .container .data-container div.filter, section#programs .contai
   height: fit-content;
 }
 
-section#programs .container .data-container div.filter {
+section#programs .custom-container .data-container div.filter {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
 }
 
-section#programs .container .data-container div.filter .filter-form div.box {
+section#programs .custom-container .data-container div.filter .filter-form div.box {
   margin-bottom: 1.5rem;
 }
 
-section#programs .container .data-container div.filter .filter-form div.box .title {
+section#programs .custom-container .data-container div.filter .filter-form div.box .title {
   opacity: 0.6;
   font-size: 20px;
   font-weight: 500;
@@ -152,11 +166,11 @@ section#programs .container .data-container div.filter .filter-form div.box .tit
   margin-bottom: 16px;
 }
 
-section#programs .container .data-container div.filter .filter-form div.radio .form-check-input:checked[type=radio] {
+section#programs .custom-container .data-container div.filter .filter-form div.radio .form-check-input:checked[type=radio] {
   background-color: var(--main-light-color);
 }
 
-section#programs .container .data-container div.filter .filter-form div.radio label {
+section#programs .custom-container .data-container div.filter .filter-form div.radio label {
   opacity: 0.6;
   font-size: 15px;
   font-weight: normal;
@@ -166,7 +180,13 @@ section#programs .container .data-container div.filter .filter-form div.radio la
   letter-spacing: 0.15px;
 }
 
-section#programs .container .data-container div.programs {
+section#programs .custom-container .data-container div.filter .filter-form button.filter {
+  margin: 0;
+  background-color: var(--main-light-color);
+  color: white;
+}
+
+section#programs .custom-container .data-container div.programs {
   padding: 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
@@ -174,7 +194,7 @@ section#programs .container .data-container div.programs {
   margin-top: 2rem;
 }
 
-section#programs .container .data-container div.programs .program-holder {
+section#programs .custom-container .data-container div.programs .program-holder {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
@@ -185,11 +205,11 @@ section#programs .container .data-container div.programs .program-holder {
   border-bottom: 1px solid var(--grey-color-2);
 }
 
-section#programs .container .data-container div.programs .program-holder .img-school-holder {
+section#programs .custom-container .data-container div.programs .program-holder .img-school-holder {
   display: none;
 }
 
-section#programs .container .data-container div.programs .program-holder .details {
+section#programs .custom-container .data-container div.programs .program-holder .details {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
@@ -200,7 +220,7 @@ section#programs .container .data-container div.programs .program-holder .detail
   display: grid;
 }
 
-section#programs .container .data-container div.programs .program-holder .details .major h5 {
+section#programs .custom-container .data-container div.programs .program-holder .details .major h5 {
   font-size: 16px;
   line-height: 1.38;
   letter-spacing: 0.16px;
@@ -211,7 +231,7 @@ section#programs .container .data-container div.programs .program-holder .detail
   line-height: normal;
 }
 
-section#programs .container .data-container div.programs .program-holder .details .school {
+section#programs .custom-container .data-container div.programs .program-holder .details .school {
   margin: 5px 5px 10px 0px;
   opacity: 0.6;
   font-size: 16px;
@@ -222,7 +242,7 @@ section#programs .container .data-container div.programs .program-holder .detail
   letter-spacing: 0.16px;
 }
 
-section#programs .container .data-container div.programs .program-holder .details .fee-country {
+section#programs .custom-container .data-container div.programs .program-holder .details .fee-country {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 1fr 1fr;
@@ -232,7 +252,7 @@ section#programs .container .data-container div.programs .program-holder .detail
           align-items: flex-end;
 }
 
-section#programs .container .data-container div.programs .program-holder .details .fee-country .fee, section#programs .container .data-container div.programs .program-holder .details .fee-country .country {
+section#programs .custom-container .data-container div.programs .program-holder .details .fee-country .fee, section#programs .custom-container .data-container div.programs .program-holder .details .fee-country .country {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
@@ -246,7 +266,7 @@ section#programs .container .data-container div.programs .program-holder .detail
   color: #283c8c;
 }
 
-section#programs .container .data-container div.programs .program-holder .details .fee-country .fee span, section#programs .container .data-container div.programs .program-holder .details .fee-country .country span {
+section#programs .custom-container .data-container div.programs .program-holder .details .fee-country .fee span, section#programs .custom-container .data-container div.programs .program-holder .details .fee-country .country span {
   opacity: 0.4;
   font-size: 15px;
   font-weight: normal;
@@ -256,7 +276,7 @@ section#programs .container .data-container div.programs .program-holder .detail
   letter-spacing: 0.15px;
 }
 
-section#programs .container .data-container div.programs .program-holder .more-info {
+section#programs .custom-container .data-container div.programs .program-holder .more-info {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
@@ -269,9 +289,17 @@ section#programs .container .data-container div.programs .program-holder .more-i
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  background-color: var(--main-light-color);
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  margin: 0;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-section#programs .container .data-container div.programs .program-holder .more-info a {
+section#programs .custom-container .data-container div.programs .program-holder .more-info a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -282,38 +310,45 @@ section#programs .container .data-container div.programs .program-holder .more-i
   color: var(--white-color);
 }
 
+section#programs .custom-container .data-container div.programs .program-holder div.more-info {
+  margin-top: 20px;
+}
+
 @media screen and (min-width: 692px) {
-  section#programs .container .data-container div.filter .filter-form .radio {
+  .custom-container {
+    margin: 0 50px;
+  }
+  section#programs .custom-container .data-container div.filter .filter-form .radio {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  section#programs .container .data-container div.filter .filter-form .radio .title {
+  section#programs .custom-container .data-container div.filter .filter-form .radio .title {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
-  section#programs .container .data-container div.filter .filter-form .radio .form-check {
+  section#programs .custom-container .data-container div.filter .filter-form .radio .form-check {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
   }
-  section#programs .container .data-container div.filter .filter-form .sort.radio .form-check {
+  section#programs .custom-container .data-container div.filter .filter-form .sort.radio .form-check {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
   }
-  section#programs .container .data-container div.programs {
+  section#programs .custom-container .data-container div.programs {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
-  section#programs .container .data-container div.programs .program-holder {
+  section#programs .custom-container .data-container div.programs .program-holder {
     padding: 25px;
   }
-  section#programs .container .data-container div.programs .program-holder .img-school-holder {
+  section#programs .custom-container .data-container div.programs .program-holder .img-school-holder {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
@@ -331,10 +366,10 @@ section#programs .container .data-container div.programs .program-holder .more-i
     display: -ms-flexbox;
     display: flex;
   }
-  section#programs .container .data-container div.programs .program-holder .img-school-holder img {
+  section#programs .custom-container .data-container div.programs .program-holder .img-school-holder img {
     width: 100%;
   }
-  section#programs .container .data-container div.programs .program-holder .details {
+  section#programs .custom-container .data-container div.programs .program-holder .details {
     -ms-grid-column: 2;
     -ms-grid-column-span: 3;
     grid-column: 2/5;
@@ -342,12 +377,12 @@ section#programs .container .data-container div.programs .program-holder .more-i
     -ms-grid-row-span: 3;
     grid-row: 1/4;
   }
-  section#programs .container .data-container div.programs .program-holder .details .school {
+  section#programs .custom-container .data-container div.programs .program-holder .details .school {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
   }
-  section#programs .container .data-container div.programs .program-holder .details .fee-country {
+  section#programs .custom-container .data-container div.programs .program-holder .details .fee-country {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
@@ -355,10 +390,10 @@ section#programs .container .data-container div.programs .program-holder .more-i
     -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
-  section#programs .container .data-container div.programs .program-holder .details .fee-country .fee, section#programs .container .data-container div.programs .program-holder .details .fee-country .country {
+  section#programs .custom-container .data-container div.programs .program-holder .details .fee-country .fee, section#programs .custom-container .data-container div.programs .program-holder .details .fee-country .country {
     grid-column: unset;
   }
-  section#programs .container .data-container div.programs .program-holder .more-info {
+  section#programs .custom-container .data-container div.programs .program-holder .more-info {
     -ms-grid-column: 4;
     -ms-grid-column-span: 1;
     grid-column: 4/5;
@@ -372,27 +407,37 @@ section#programs .container .data-container div.programs .program-holder .more-i
 }
 
 @media screen and (min-width: 992px) {
-  section#programs {
-    background: transparent url("../../images/Group-1158@2x.png") no-repeat;
-    background-position: -20% 0%;
+  .custom-container {
+    margin: 0 100px;
   }
-  section#programs .container .search {
+  section#programs {
+    position: relative;
+  }
+  section#programs img.top-bg {
+    position: absolute;
+    z-index: -1;
+    left: -12%;
+    top: -5%;
+    opacity: .4;
+    display: inline;
+  }
+  section#programs .custom-container .search {
     width: 70%;
   }
-  section#programs .container .search form .input-group {
+  section#programs .custom-container .search form .input-group {
     border-radius: 0;
   }
-  section#programs .container .search form .input-group input, section#programs .container .search form .input-group select {
+  section#programs .custom-container .search form .input-group input, section#programs .custom-container .search form .input-group select {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 40%;
             flex: 0 0 40%;
     height: 64px;
   }
-  section#programs .container .search form .input-group select {
+  section#programs .custom-container .search form .input-group select {
     border: none;
     border-left: 1px solid #283C8C;
   }
-  section#programs .container .search form .input-group button.search {
+  section#programs .custom-container .search form .input-group button.search {
     -webkit-box-flex: 1;
         -ms-flex: auto;
             flex: auto;
@@ -402,32 +447,32 @@ section#programs .container .data-container div.programs .program-holder .more-i
     border-radius: 0px 5px 5px 0px;
     font-size: 18px;
   }
-  section#programs .container .data-container {
+  section#programs .custom-container .data-container {
     margin-top: 48px;
     background-color: var(--white-color);
   }
-  section#programs .container .data-container div.filter {
+  section#programs .custom-container .data-container div.filter {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
   }
-  section#programs .container .data-container div.filter .filter-form .radio {
+  section#programs .custom-container .data-container div.filter .filter-form .radio {
     display: block;
   }
-  section#programs .container .data-container div.programs {
+  section#programs .custom-container .data-container div.programs {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 65%;
             flex: 0 0 65%;
     margin-top: 0;
   }
-  section#programs .container .data-container div.programs .program-holder .details .major h5 {
+  section#programs .custom-container .data-container div.programs .program-holder .details .major h5 {
     margin: 0 0 5px 0;
     font-size: 18px;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.18px;
   }
-  section#programs .container .data-container div.programs .program-holder .details .school {
+  section#programs .custom-container .data-container div.programs .program-holder .details .school {
     margin: 0;
     opacity: 0.6;
     font-size: 18px;

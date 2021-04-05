@@ -227,10 +227,10 @@ section#student-info{
         .custom-container{
             .side-menu{
                 margin-top: -101px;
-                padding-top: 0;
-                position: relative;
+                padding-top: 0;    
+                position: fixed;
+                width: 21.5%;
                 z-index: 10;
-                flex:0 0 21.5%;
                 display: block;
                 margin-left: -100px;
                 background-image: linear-gradient(197deg, #1c85c8 5%, #283c8c);
@@ -271,6 +271,9 @@ section#student-info{
                             text-align: center;
                             line-height: .9;
                         }
+                        a{
+                            color: var(--white-color)
+                        }
                     }
                     li.active{
                         background-color: #3aa7ec;
@@ -291,6 +294,7 @@ section#student-info{
                 }
             }
             .students{
+                margin-left: 21.5%;
                 flex:0 0 80%;
                 .body{
                     .title{
@@ -309,6 +313,7 @@ section#student-info{
                             }
                             .parent__email{
                                 display:block;
+                                line-height: 2;
                             }
                             .manage{
                                 button{

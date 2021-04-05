@@ -21,8 +21,8 @@
     <title>Program's Name </title>
 </head>
 <body>
+    <?php include 'header.php';?>
     
-
     <!-- more details about program  -->
     <section class="about" id="about">
         <div class="custom-container">
@@ -511,7 +511,7 @@
                                         </div>
 
                                         <div class="program-content" id="related-programs">
-                                            <div class="program">  
+                                            <div class="program first">  
                                                 <div class="row">
                                                     <div class="title first">Master IBPM major Purchase and Supply Chain</div>
                                                     <div class="deadline">Start: Jan 2021Apr 2021Sep 2021Jan 2022Apr 2022 Deadline: May 2022Sep 2022</div>
@@ -690,7 +690,7 @@
                         </section>
                     </div>
 
-                    <div class="content" id="city-info">
+                    <div class="content school-content" id="city-info">
                         <div class="title">About City</div>
                         <div class="desc">
                             <p>
@@ -771,6 +771,7 @@
         </div>
     </section>
 
+    <?php include 'footer.php';?>
 
 
     <!-- SLIDER SCRIPT  -->

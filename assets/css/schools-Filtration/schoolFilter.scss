@@ -248,14 +248,16 @@ section#schools{
                 .wrapper{
                     .school-card{
                         margin: 24px 0 24px 0px;
-                        padding: 16px;
+                        padding: 10px;
                         border-radius: 10px;
                         box-shadow: 0 0 15px 0 var(--box-shadow-color);
                         .bg-img-holder{
                             position: relative;
+                            height: 208px;
                             img{
                                 border-radius: 10px;
                                 width: 100%;
+                                height: 100%;
                             }
                             .school-img{
                                 width: 118px;
@@ -387,6 +389,16 @@ section#schools{
             .text{
                 flex: 0 0 36%;
                 align-self: center;
+                .title{
+                    margin-bottom: 20px;
+                    text-align: left;
+                }
+                .desc{
+                    margin: 0;
+                    p{
+                        text-align:left;
+                    }
+                }
             }
             .img-holder{
                 margin-top: 0;
@@ -403,6 +415,11 @@ section#schools{
                 .search-form{
                     width: 54%;
                     margin: auto;
+                    .input-group button{
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: 0.36px;
+                    }
                 }
             }
             .body{

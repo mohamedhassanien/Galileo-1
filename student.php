@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- WEBSITE ICON  -->
     <link rel="shortcut icon" href="assets/images/galileo-global-education-logo-vector.png" type="image/x-icon">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/header/header.css">
     <!-- STYLE SHEET FILE  -->
     <link rel="stylesheet" href="assets/css/student-sub-agent/student.css">
+    <link rel="stylesheet" href="assets/css/footer/footer.css">
     <title>Student</title>
 </head>
 <body>
+    <?php include 'header.php';?>
+
     <section class="student-info" id="student-info">
         <div class="custom-container">
             <div class="side-menu">
@@ -22,10 +27,10 @@
                 </div>
                 <div class="user"><span>Mohamed</span> info</div>
                 <ul>
-                    <li class="side-menu-item">Statistics</li>
-                    <li class="side-menu-item active">Students</li>
-                    <li class="side-menu-item">CV Maker <span>soon</span></li>
-                    <li class="side-menu-item">Training <span>soon</span></li>
+                    <li class="side-menu-item"><a href="statistics.php">Statistics</a></li>
+                    <li class="side-menu-item active"><a href="statistics.php">Students</a></li>
+                    <li class="side-menu-item"><a href="#">CV Maker <span>soon</span></a></li>
+                    <li class="side-menu-item"><a href="#">Training <span>soon</span></a></li>
                 </ul>
             </div>
             <div class="students"> 
@@ -203,6 +208,7 @@
         </div>
     </section>
     
+    <?php include 'footer.php';?>
     <script src="assets/js/student.js"></script>
 </body>
 </html>

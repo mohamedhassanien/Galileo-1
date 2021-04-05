@@ -1,0 +1,684 @@
+// ROBOT FONT FAMILY
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* GLOBAL STYLING*/
+:root{
+    --main-light-color: #1c85c8;
+    --main-dark-color: #283c8c;
+    --lighter-color: #f3f6ff;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --box-shadow-color: rgba(0, 0, 0, 0.16);
+}
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:after, *:before{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+	padding: 0;
+    margin: 0;
+}	
+a{
+	text-decoration: none;
+	margin: 0 ;
+    padding: 0 ;
+}
+h1, h2, h3, h4, h5, p{
+    margin: 0;
+}
+.custom-container{
+    margin: 0 20px;
+    padding: 0;
+}
+.custom-btn{
+    margin: 1px 1px 28px 45px;
+    padding: 9px 41px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+    background-color: var(--main-light-color);
+    color: var(--white-color);
+    border: none;
+}
+/* GLOBAL STYLING*/
+section#statistic-info{
+    .custom-container{
+        display: flex;
+        justify-content: space-between;
+        .side-menu{
+            display: none;
+        }
+        .statistic{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .head{
+                margin-bottom: 30px;;
+                flex: 0 0 100%;
+                .title{
+                    margin: 61px 0 0 0;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 1.22;
+                    color: var(--main-dark-color);
+                }
+            }
+            .body{
+                margin: 0;
+                flex:0 0 100%;
+                display: grid;
+                .number__statistic{
+                    padding: 35px 0;;
+                    border-radius: 10px;
+                    box-shadow: 0 0 20px 0 var(--box-shadow-color);
+                    .company-img-holder{
+                        width: 116px;
+                        height: 116px;
+                        margin: auto;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        border: 2px var(--main-light-color);
+                        border-style: dashed dashed dashed dashed;
+                        border-left-style: dashed;
+                        border-left-color: white;
+                        transform: rotate(-23deg);
+                        img{
+                            width: 102px;
+                            height: 102px;
+                            border-radius: 50%;
+                            align-self: center;
+                            transform: rotate(23deg);
+                            padding: 5px;
+                        }
+
+                    }
+                    .company-name{
+                        margin: 25px 0 15px 0;
+                        opacity: 0.8;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 1.22;
+                        text-align: center;
+                    }
+                    .statistic-data{
+                        padding: 0 33px;
+                        div{
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 16px;
+                            line-height: 1.19;
+                            font-stretch: normal;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            .text{
+                                margin: 0 0 10px 0;
+                                opacity: 0.6;
+                                font-weight: 500;
+                            }
+                            .number{
+                                margin: 0 0 10px 0;
+                                opacity: 0.6;
+                                font-weight: normal;
+                            }
+                        }
+                        .accepted, .rejected, .in-progress{
+                            .text{
+                                opacity: 1;
+                            }
+                        }
+                        .accepted{
+                            .text{
+                                color: #42c1af;
+                            }
+                        }
+                        .rejected{
+                            .text{
+                                color: #d51b1b;
+                            }
+                        }
+                        .in-progress{
+                            .text{
+                                color: #f8df00;
+                            }
+                        }
+                    }
+                }
+                .graph__statistic{
+                    margin-top: 30px;
+                    padding: 20px 20px 25.6px;
+                    border-radius: 10px;
+                    box-shadow: 0 3px 15px 0 rgba(40, 60, 140, 0.16);
+                    .title{
+                        font-size: 18px;
+                        font-weight: bold;
+                        line-height: 1.22;
+                        letter-spacing: normal;
+                        color: var(--main-dark-color);
+                        span{
+                            opacity: 0.4;
+                            font-size: 14px;
+                            line-height: 1.21;
+                            letter-spacing: normal;
+                            font-weight: normal;
+                            color: var(--black-color);
+                            display: block;
+                        }
+                    }
+                    .charts{
+                        position: relative;
+                        margin-top: 15px;
+                        .y-axis{
+                            .point{
+                                display: flex;
+                                margin-bottom: 25px;
+                                .number{
+                                    opacity: 0.4;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.17;
+                                    letter-spacing: normal;
+                                    flex: 0 0 10%;
+                                }
+                                .line{
+                                    border-top: 2px #d4d4d4 dashed;
+                                    align-self: center;
+                                    margin: 0 0 0 5%;
+                                    flex: 0 0 85%;
+                                }
+                            }
+                        }
+                        .x-axis{
+                            position: absolute;
+                            bottom: -5.8px;
+                            left: 15%;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 85%;
+                            height: 100%;
+                            .point{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                                .point-name{
+                                    opacity: 0.4;
+                                    font-size: 12px;
+                                    line-height: 1.17;
+                                    letter-spacing: normal;
+                                    text-align: center;
+                                }
+                                .point-value{
+                                    width: 26px;
+                                    background-color: var(--lighter-color);
+                                    border-radius: 6px 6px 0 0;
+                                }
+                            }
+                            .point.highest{
+                                .point-value{
+                                    background-color: var(--main-light-color)
+                                }
+                                .point-name{
+                                    opacity: 1;
+                                    color: var(--main-light-color);
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                    .earn{
+                        display: grid;
+                        grid-template-columns: 1.5fr 1fr;
+                        margin-top: 25px;
+                        .total-earn{
+                            position: relative;
+                            width: fit-content;
+                            grid-column: 1/2;
+                            grid-row: 1/3;
+                            svg{
+                                width: 130px;
+                                height: 130px;
+                                circle{
+                                    width: 100%;
+                                    height: 100%;
+                                    fill: none;
+                                    stroke: var(--lighter-color);
+                                    stroke-width: 15px;
+                                    stroke-linecap: round;
+                                }
+                            }
+                            .number{
+                                position: absolute;
+                                top: 50px;
+                                width: 100%;
+                                text-align: center;
+                                span{
+                                    opacity: 0.4;
+                                    font-size: 14px;
+                                    line-height: 1.21;
+                                    letter-spacing: normal;
+                                    font-weight: normal;
+                                    color: var(--black-color);
+                                    display: block;
+                                }
+                                p{
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.22;
+                                    letter-spacing: normal;
+                                    text-align: center;
+                                    color: var(--main-dark-color);
+                                }
+                            }
+                        }
+                        .monthly-earn{
+                            grid-column: 2/3;
+                            align-self: center;
+                            .title{
+                                opacity: 0.4;
+                                font-size: 16px;
+                                font-weight: normal;
+                                line-height: 1.19;
+                                letter-spacing: normal;
+                                color: var(--black-color);
+                            }
+                            .percentage{
+                                margin-top: 5px;
+                                display: flex;
+                                span{
+                                    opacity: 0.4;
+                                    font-size: 22px;
+                                    font-weight: bold;
+                                    line-height: 1.23;
+                                    letter-spacing: normal;
+                                    align-self: flex-end;
+                                    margin-right: 3px;
+                                }
+                                img{
+                                    width: 29px;
+                                    height: 29px;
+                                    opacity: .4;
+                                }
+                            }
+                        }
+                        .country{
+                            font-size: 13px;
+                            line-height: 1.15;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 15px;
+                            grid-column: 2/3;
+                            span{
+                                opacity:.4;
+                            }
+                            .uk{
+                                margin-right: 32px;
+                            }
+                            .uk::before, .france::before{
+                                content:'';
+                                width: 9px;
+                                height: 9px;
+                                display:inline-block;
+                                background-color: var(--main-dark-color);
+                                margin-right:5px;
+                                transform: rotate(45deg);
+                            }
+                            .france::before{
+                                background-color: var(--main-light-color);
+                            }
+                        }
+                    }
+                }
+                .students{
+                    margin-top: 30px;
+                    padding: 19px 0 0 0;
+                    border-radius: 10px;
+                    box-shadow: 0 0 20px 0 var(--box-shadow-color);
+                    .title{
+                        display: flex;
+                        justify-content: space-between;
+                        opacity: 0.8;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 1.22;
+                        letter-spacing: 0.18px;
+                        border-bottom: solid 1px #24544e;
+                        padding: 0 23.5px 19px 23.5px;
+                        div:nth-child(2)
+                        ,div:nth-child(3){
+                            display: none;
+                        }
+                    }
+                    .wrapper{
+                        .student{
+                            border-bottom: 1px solid #747474;
+                            padding: 15px;;
+                            display: flex;
+                            justify-content: space-between;
+                            .img__name{
+                                display: flex;
+                                .student-img-holder{
+                                    width: 30px;
+                                    height: 30px;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                .student-name{
+                                    margin: 0 0 0 10px;
+                                    opacity: 0.6;
+                                    font-size: 16px;
+                                    line-height: 1.8;
+                                    letter-spacing: 0.16px;
+                                }
+                            }
+                            .student-email{
+                                display: none;
+                            }
+                            .student-profile{
+                                a{
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 2;
+                                    letter-spacing: 0.28px;
+                                    color: var(--main-light-color);
+                                }   
+                            }
+                            &:last-child{
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 692px) {
+    .custom-container{
+        margin: 0 50px;
+    }
+    section#statistic-info{
+        .custom-container{
+            .statistic{
+                .head{
+                    margin: 61px 0 32px 0;
+                    .title{
+                        margin: 0;    
+                        line-height: 1.2;
+                        font-size: 24px;
+                        font-weight: 500;
+                        letter-spacing: normal;
+                        align-self: center;
+                    }
+                    // .title, .search-form{
+                    //     flex: 0 0 49%;
+                    // }
+                }
+                .body{
+                    .number__statistic{
+                        display: grid;
+                        .company-img-holder{
+                            grid-column: 1/2;
+                            grid-row: 1/3;
+                            width: 143px;
+                            height: 143px;
+                            margin: 0 auto;
+                            img{
+                                width: 117px;
+                                height: 117px;
+                            }
+                        }
+                        .company-name{
+                            grid-column: 2/3;
+                            grid-row: 1/2;
+                            text-align: left;
+                            margin-top: 0;
+                        }
+                        .statistic-data{
+                            padding-left: 0;
+                            display: grid;
+                            grid-column-gap: 50px;
+                            .total-students,
+                            .total-application,
+                            .accepted,
+                            .rejected{
+                                grid-column: 1/2;
+                            }
+                            .in-progress{
+                                grid-column: 2/3;
+                                grid-row: 1/2;
+                            }
+                            .total-earn{
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                            }
+                            .expect-earn{
+                                grid-column: 2/3;
+                                grid-row: 3/4;
+                            }
+                        }
+                    }
+                    .graph__statistic{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        .title{
+                            flex: 0 0 69.5%;
+                        }
+                        .charts{
+                            flex:0 0 64.5%;
+                            .y-axis{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                height: 100%;
+                                .point{
+                                    margin-bottom: unset;
+                                }
+                            }
+                        }
+                        .earn{
+                            grid-template-columns: auto;
+                            flex: 0 0 30%;
+                            margin-top: -17px;
+                            .total-earn{
+                                grid-row: 2/3;
+                                grid-column: 1/2;
+                                justify-self: center;
+                            }
+                            .monthly-earn{
+                                text-align: center;
+                                grid-column: 1/2;
+                                grid-row: 1/2;
+                                align-self: flex-start;
+                                .percentage{
+                                    justify-content: center;
+                                }
+                            }
+                            .country{
+                                grid-column: 1/2;
+                                grid-row: 3/4;
+                            }
+                        }
+                    }
+                    .students{
+                        .title{
+                            div{
+                                display: block !important;
+                            }
+                        }
+                        .wrapper .student .student-email{
+                            display: block;
+                            opacity: 0.6;
+                            font-size: 14px;
+                            letter-spacing: 0.14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .custom-container{
+        margin: 0 100px;
+    }
+    section#statistic-info{
+        .custom-container{
+            .side-menu{
+                margin-top: -101px;
+                padding-top: 0;    
+                position: fixed;
+                width: 21.5%;
+                z-index: 10;
+                display: block;
+                margin-left: -100px;
+                background-image: linear-gradient(197deg, var(--main-light-color) 5%, var(--main-dark-color));
+                height: 768px;
+                padding:0 0 0 30px;
+                .logo-holder{
+                    margin-top: 16px;
+                }
+                .user{
+                    margin: 0 4px 16px 0;
+                    margin-top: 118px;
+                    opacity: 0.8;
+                    font-size: 14px;
+                    font-weight: 500;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: var(--white-color);
+                }
+                ul{
+                    li{
+                        margin: 16px 0 15px 0;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: var(--white-color);
+                        span{
+                            width: 59px;
+                            height: 15px;
+                            margin: 0 14px;
+                            font-size: 14px;
+                            font-weight: normal;
+                            letter-spacing: 0.14px;
+                            color: var(--white-color);
+                            background-color: var(--main-dark-color);
+                            border-radius: 3px;
+                            display: inline-block;
+                            text-align: center;
+                            line-height: .9;
+                        }
+                        a{
+                            color: var(--white-color);
+                        }
+                    }
+                    li.active{
+                        background-color: #3aa7ec;
+                        margin-left: -30px;
+                        position: relative;
+                        padding: 9px 0 9px 30px;
+                    }
+                    li.active::before{
+                        content: '';
+                        width: 13px;
+                        border-radius: 0 5px 0 0;
+                        background-color: #283a82;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+            .statistic{
+                margin-left: 21.5%;
+                flex:0 0 80%;
+                .body{
+                    grid-template-columns: 34.3% 61.3%;
+                    grid-column-gap: 4.2%;
+                    grid-row-gap: 4.2%;
+                    .number__statistic, .graph__statistic, .students{
+                        box-shadow: 0 3px 30px 0 rgba(28, 133, 200, 0.12);
+                    }
+                    .number__statistic{
+                        display: block;
+                        grid-column: 1/2;
+                        grid-row: 1/3;
+                        padding-bottom: 0;
+                        height: fit-content;
+                        .company-name{
+                            text-align: center;
+                            margin-top: 25px;
+                            margin-bottom: 52px;
+                        }
+                        .statistic-data{
+                            padding: 0 25px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            div{
+                                margin-bottom: 15px;
+                                font-size:17px;
+                                &.accepted{
+                                    .text{
+                                        color: var(--main-light-color);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .graph__statistic{
+                        grid-column: 2/3;
+                        margin: 0;
+                        grid-row: 1/2;
+                        .title{
+                            color:var(--main-light-color);
+                        }
+                        .charts{
+                            .x-axis{
+                                .point{
+                                    .point-value{
+                                        background-color: #ddebf3;
+                                    }
+                                }
+                            }
+                        }
+                        .earn{
+                            border-radius: 5px;
+                            background-color: rgba(66, 193, 175, .03);
+                            padding: 15px 14px 15px 14px;
+                        }
+                    }
+                    .students{
+                        grid-column: 2/3;
+                        margin: 0;
+                        grid-row: 2/3;
+                        height: fit-content;
+                        align-self: end;
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -96,7 +96,7 @@ footer{
     }
     footer{
         .custom-container{
-            grid-template-columns: 4fr 1fr;
+            grid-template-columns: 3fr 1fr;
             .terms__privacy{
                 grid-column: 1/2;
                 grid-row: 1/2;
@@ -115,6 +115,8 @@ footer{
                 .social-icons{
                     flex: 0 0 100%;
                     margin: 0;
+                    display: flex;
+                    justify-content: space-between;
                 }
             } 
             .copy__right{
@@ -132,6 +134,27 @@ footer{
         margin: 0 100px;
     }
     footer{
-
+        .custom-container{
+            grid-template-columns: auto;
+            .copy__right{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            .social__media{
+                grid-column: 2/3;
+                grid-row: 1/2;
+                flex-wrap: nowrap;
+                div:first-child{
+                    flex: 0 0 30%;
+                }
+                .social-icons{
+                    justify-content: flex-start;
+                }
+            } 
+            .terms__privacy{
+                grid-column: 3/4;
+                grid-row: 1/2;
+            }
+        }
     }
 }

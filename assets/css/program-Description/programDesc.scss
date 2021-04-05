@@ -68,7 +68,7 @@ section#about{
     .custom-container{
         .head{
             margin: 40px 0px 0 0;
-            padding: 16px 16px 16px 16px;
+            padding: 41px;
             border-radius: 5px;
             background-color: var(--lighter-color);
             .layer{
@@ -125,7 +125,7 @@ section#about{
                         width: 100%;
                         height: 100%;
                         .school-img{
-                            width: 90px;
+                            width: 95px;
                             margin: auto;
                             img{
                                 width: 100%;
@@ -201,7 +201,6 @@ section#about{
                     .media{
                         display: flex;
                         flex-wrap: wrap;
-                        margin-top: 62px;
                         .accreditation, .social-media{
                             margin-top: 48px;
                             margin-right: 214px;
@@ -609,6 +608,7 @@ section#about section#school__program{
         .map{
             margin-top: 49px;
             iframe{
+                border-radius: 5px;
                 width: 335px;
                 height: 331px;
             }
@@ -822,21 +822,27 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
             } 
         } 
         .wrapper{
-            
             .contentWrapper{
-                #school-info .alumni .wrapper{
-                    .live, .doing, .studies, .work{
-                        flex: 0 0 100%;
-                        .custom-progress .box{
-                            flex: 0 0 25%;
+                #school-info{
+                    .media{
+                        .accreditation{
+                            width: 100%;
                         }
                     }
-                    .doing, .studies {
-                        .custom-progress .box .progress{
-                            width: 658px;
+                    .alumni .wrapper{
+                        .live, .doing, .studies, .work{
+                            flex: 0 0 100%;
+                            .custom-progress .box{
+                                flex: 0 0 25%;
+                            }
+                        }
+                        .doing, .studies {
+                            .custom-progress .box .progress{
+                                width: 658px;
+                            }
                         }
                     }
-                }
+                } 
             }
         }
     }
@@ -936,6 +942,9 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                     .details .apply-btn{
                         flex: 0 0 auto;
                     }
+                    .apply-btn{
+                        margin-top: -24px !important;
+                    }
                 }
                 
                 .box:nth-child(2){
@@ -965,7 +974,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
             .contentWrapper{
                 #school-info{
                     .title{
-                        margin: 30px 98px 20px 1px;
+                        margin: 30px 0 20px 1px;
                         font-size: 24px;
                         line-height: 1.21;
                         letter-spacing: 0.24px;
@@ -994,8 +1003,8 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                         margin-top: 50px;
                         .accreditation{
                             margin-right: 0 !important;
-                            flex: 2 0 auto;
                             margin-top: 0;
+                            flex: 0 0 58%;
                         }
                         .social-media{
                             flex: 0 0 auto;
@@ -1019,7 +1028,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                                 .custom-progress{
                                     .box{
                                         .progress{
-                                            width: 423px;
+                                            width: 100%;
                                             height: 20px;
                                         }
                                     }

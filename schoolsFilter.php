@@ -16,6 +16,7 @@
     <title>Schools</title>
 </head>
 <body>
+    <?php include 'header.php';?>
 
     <section id="home">
         <div class="custom-container">
@@ -426,6 +427,8 @@
         </div>
     </section>
     
+    <?php include 'footer.php';?>
+
     <!-- RANG SLIDER JS  -->
     <script src="node_modules/nouislider/distribute/nouislider.min.js"></script>
     <script src="assets/js/schoolFilter.js"></script>

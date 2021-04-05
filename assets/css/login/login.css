@@ -47,12 +47,28 @@ h1, h2, h3, h4, h5, p {
   padding: 0;
 }
 
+.custom-btn {
+  width: 103px;
+  height: 34px;
+  line-height: 1;
+  background: var(--main-light-color);
+  -webkit-box-shadow: 0px 1px 10px var(--light-color-1);
+          box-shadow: 0px 1px 10px var(--light-color-1);
+  border-radius: 5px;
+  color: var(--white-color);
+  border: none;
+}
+
+.custom-btn:hover {
+  color: var(--white-color);
+}
+
 /* Login Section */
-section#login {
+section#login, section#register {
   overflow: hidden;
 }
 
-section#login .custom-container {
+section#login .custom-container, section#register .custom-container {
   -ms-grid-rows: 183px auto;
       grid-template-rows: 183px auto;
   row-gap: 0;
@@ -65,7 +81,7 @@ section#login .custom-container {
   grid-row: 2;
 }
 
-section#login .custom-container .logo {
+section#login .custom-container .logo, section#register .custom-container .logo {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -74,7 +90,7 @@ section#login .custom-container .logo {
   grid-row: 1/2;
 }
 
-section#login .custom-container .logo img {
+section#login .custom-container .logo img, section#register .custom-container .logo img {
   width: 119.8px;
   height: 42px;
   margin: 16px 371.2px 125.4px 0.2px;
@@ -82,7 +98,7 @@ section#login .custom-container .logo img {
      object-fit: contain;
 }
 
-section#login .custom-container form {
+section#login .custom-container form, section#register .custom-container form {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -91,12 +107,12 @@ section#login .custom-container form {
   grid-row: 2/3;
 }
 
-section#login .custom-container form > p, section#login .custom-container form .title {
+section#login .custom-container form > p, section#login .custom-container form .title, section#register .custom-container form > p, section#register .custom-container form .title {
   text-align: left;
   color: var(--black-color);
 }
 
-section#login .custom-container form > p {
+section#login .custom-container form > p, section#register .custom-container form > p {
   margin: 0 201px 10px 0.2px;
   opacity: 0.6;
   font-size: 18px;
@@ -104,7 +120,7 @@ section#login .custom-container form > p {
   letter-spacing: 0.18px;
 }
 
-section#login .custom-container form .title {
+section#login .custom-container form .title, section#register .custom-container form .title {
   margin: 0 330px 0 0.2px;
   opacity: 0.8;
   font-size: 24px;
@@ -113,27 +129,24 @@ section#login .custom-container form .title {
   letter-spacing: 0.24px;
 }
 
-section#login .custom-container form .mb-3 {
+section#login .custom-container form .mb-3, section#register .custom-container form .mb-3 {
   margin-bottom: 0 !important;
 }
 
-section#login .custom-container form .mb-3 label {
+section#login .custom-container form .mb-3 label, section#register .custom-container form .mb-3 label {
   opacity: 0.9;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.16px;
   color: var(--black-color);
-}
-
-section#login .custom-container form .mb-3 label.email-label {
   margin: 25px 351px 10px 0.2px;
 }
 
-section#login .custom-container form .mb-3 label.password-label {
+section#login .custom-container form .mb-3 label.password-label, section#register .custom-container form .mb-3 label.password-label {
   margin: 25px 319px 10px 0.2px;
 }
 
-section#login .custom-container form .mb-3 input {
+section#login .custom-container form .mb-3 input, section#register .custom-container form .mb-3 input {
   width: 334.8px;
   height: 45px;
   margin: 0 0 0px 0.2px;
@@ -145,7 +158,7 @@ section#login .custom-container form .mb-3 input {
   background-color: var(--white-color);
 }
 
-section#login .custom-container form .mb-3 input::-webkit-input-placeholder {
+section#login .custom-container form .mb-3 input::-webkit-input-placeholder, section#register .custom-container form .mb-3 input::-webkit-input-placeholder {
   opacity: 0.4;
   font-size: 16px;
   line-height: 1.19;
@@ -154,7 +167,7 @@ section#login .custom-container form .mb-3 input::-webkit-input-placeholder {
   color: #000000;
 }
 
-section#login .custom-container form .mb-3 input:-ms-input-placeholder {
+section#login .custom-container form .mb-3 input:-ms-input-placeholder, section#register .custom-container form .mb-3 input:-ms-input-placeholder {
   opacity: 0.4;
   font-size: 16px;
   line-height: 1.19;
@@ -163,7 +176,7 @@ section#login .custom-container form .mb-3 input:-ms-input-placeholder {
   color: #000000;
 }
 
-section#login .custom-container form .mb-3 input::-ms-input-placeholder {
+section#login .custom-container form .mb-3 input::-ms-input-placeholder, section#register .custom-container form .mb-3 input::-ms-input-placeholder {
   opacity: 0.4;
   font-size: 16px;
   line-height: 1.19;
@@ -172,7 +185,7 @@ section#login .custom-container form .mb-3 input::-ms-input-placeholder {
   color: #000000;
 }
 
-section#login .custom-container form .mb-3 input::placeholder {
+section#login .custom-container form .mb-3 input::placeholder, section#register .custom-container form .mb-3 input::placeholder {
   opacity: 0.4;
   font-size: 16px;
   line-height: 1.19;
@@ -181,7 +194,7 @@ section#login .custom-container form .mb-3 input::placeholder {
   color: #000000;
 }
 
-section#login .custom-container form .mb-3 .form-text1 a {
+section#login .custom-container form .mb-3 .form-text1 a, section#register .custom-container form .mb-3 .form-text1 a {
   margin: 10px 278px 0 0.2px;
   opacity: 0.4;
   font-size: 14px;
@@ -191,7 +204,7 @@ section#login .custom-container form .mb-3 .form-text1 a {
   color: var(--black-color);
 }
 
-section#login .custom-container form .mb-3 .form-text2 {
+section#login .custom-container form .mb-3 .form-text2, section#register .custom-container form .mb-3 .form-text2 {
   margin: 25px 151.2px 0 0;
   font-size: 16px;
   line-height: 1.19;
@@ -199,11 +212,11 @@ section#login .custom-container form .mb-3 .form-text2 {
   color: rgba(0, 0, 0, 0.4);
 }
 
-section#login .custom-container form .mb-3 .form-text2 a {
+section#login .custom-container form .mb-3 .form-text2 a, section#register .custom-container form .mb-3 .form-text2 a {
   color: var(--main-light-color);
 }
 
-section#login .custom-container form .login-btn {
+section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn {
   width: 334.8px;
   height: 45px;
   margin: 25px 0 0 0.2px;
@@ -215,7 +228,7 @@ section#login .custom-container form .login-btn {
   background-color: var(--main-light-color);
 }
 
-section#login .custom-container .bg-login-img {
+section#login .custom-container .bg-login-img, section#login .custom-container .bg-register-img, section#register .custom-container .bg-login-img, section#register .custom-container .bg-register-img {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -226,29 +239,83 @@ section#login .custom-container .bg-login-img {
   height: 766px;
   -ms-grid-column-align: end;
       justify-self: end;
+  margin-right: -100px;
 }
 
-section#login .custom-container .bg-login-img img {
+section#login .custom-container .bg-login-img img, section#login .custom-container .bg-register-img img, section#register .custom-container .bg-login-img img, section#register .custom-container .bg-register-img img {
   width: 100%;
   height: 100%;
+}
+
+section#register .custom-container form .mb-3 input {
+  margin-top: 0 !important;
+}
+
+section#register .custom-container form .mb-3 div.mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 12px 0 var(--box-shadow-color);
+          box-shadow: 0 0 12px 0 var(--box-shadow-color);
+  background-color: var(--white-color);
+  width: 334.8px;
+}
+
+section#register .custom-container form .mb-3 div.mobile select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  height: 45px;
+  padding-left: 10px;
+  opacity: .5;
+  background-image: url("../../images/Icon-ionic-ios-arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 12.5px;
+  width: 70px;
+  cursor: pointer;
+}
+
+section#register .custom-container form .mb-3 div.mobile select:focus {
+  outline: none;
+}
+
+section#register .custom-container form .mb-3 div.mobile input {
+  padding: 0 0 0 10px !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  margin: 0 !important;
+  height: 45px !important;
 }
 
 @media only screen and (min-width: 692px) {
   .custom-container {
     margin: 0 50px;
   }
-  section#login .custom-container form .mb-3 input {
+  section#login .custom-container form .mb-3 input, section#register .custom-container form .mb-3 input {
     width: 668px;
     height: 45px;
     margin: 15px 0 0 0.2px;
   }
-  section#login .custom-container form .login-btn {
+  section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn {
     width: 668px;
     height: 45px;
     margin: 15px 0 0 0.2px;
   }
-  section#login .custom-container .bg-login-img {
+  section#login .custom-container form .register-btn, section#register .custom-container form .register-btn {
+    margin-top: 24px;
+  }
+  section#login .custom-container .bg-login-img, section#login .custom-container .bg-register-img, section#register .custom-container .bg-login-img, section#register .custom-container .bg-register-img {
     display: none;
+  }
+  section#register form div.mobile {
+    width: 668px !important;
   }
 }
 
@@ -256,14 +323,17 @@ section#login .custom-container .bg-login-img img {
   .custom-container {
     margin: 0 100px;
   }
-  section#login .custom-container form .mb-3 input {
+  section#login .custom-container form .mb-3 input, section#register .custom-container form .mb-3 input {
     width: 391px;
   }
-  section#login .custom-container form .login-btn {
+  section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn {
     width: 391px;
   }
-  section#login .custom-container .bg-login-img {
+  section#login .custom-container .bg-login-img, section#login .custom-container .bg-register-img, section#register .custom-container .bg-login-img, section#register .custom-container .bg-register-img {
     display: block;
+  }
+  section#register form div.mobile {
+    width: 391px !important;
   }
 }
 /*# sourceMappingURL=login.css.map */

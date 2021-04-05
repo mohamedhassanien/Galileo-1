@@ -1,4 +1,4 @@
-// TABS PROGRAMs SECTION
+// TABS PROGRAMS SECTION
 const programsTabs = document.querySelector(".programs-wrapper");
 const tabProgramButton = document.querySelectorAll(".tab-program-button");
 const programContents = document.querySelectorAll(".program-content");

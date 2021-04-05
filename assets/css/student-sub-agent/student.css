@@ -298,11 +298,9 @@ section#student-info .custom-container .students .body .wrapper .student:last-ch
   section#student-info .custom-container .side-menu {
     margin-top: -101px;
     padding-top: 0;
-    position: relative;
+    position: fixed;
+    width: 21.5%;
     z-index: 10;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 21.5%;
-            flex: 0 0 21.5%;
     display: block;
     margin-left: -100px;
     background-image: linear-gradient(197deg, #1c85c8 5%, #283c8c);
@@ -344,6 +342,9 @@ section#student-info .custom-container .students .body .wrapper .student:last-ch
     text-align: center;
     line-height: .9;
   }
+  section#student-info .custom-container .side-menu ul li a {
+    color: var(--white-color);
+  }
   section#student-info .custom-container .side-menu ul li.active {
     background-color: #3aa7ec;
     margin-left: -30px;
@@ -361,6 +362,7 @@ section#student-info .custom-container .students .body .wrapper .student:last-ch
     left: 0;
   }
   section#student-info .custom-container .students {
+    margin-left: 21.5%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 80%;
             flex: 0 0 80%;
@@ -381,6 +383,7 @@ section#student-info .custom-container .students .body .wrapper .student:last-ch
   }
   section#student-info .custom-container .students .body .wrapper .student .parent__email {
     display: block;
+    line-height: 2;
   }
   section#student-info .custom-container .students .body .wrapper .student .manage button {
     margin-right: 0;

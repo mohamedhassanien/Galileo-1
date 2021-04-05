@@ -337,7 +337,7 @@ section#schools .custom-container .body .schools-holder {
 
 section#schools .custom-container .body .schools-holder .wrapper .school-card {
   margin: 24px 0 24px 0px;
-  padding: 16px;
+  padding: 10px;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 15px 0 var(--box-shadow-color);
           box-shadow: 0 0 15px 0 var(--box-shadow-color);
@@ -345,11 +345,13 @@ section#schools .custom-container .body .schools-holder .wrapper .school-card {
 
 section#schools .custom-container .body .schools-holder .wrapper .school-card .bg-img-holder {
   position: relative;
+  height: 208px;
 }
 
 section#schools .custom-container .body .schools-holder .wrapper .school-card .bg-img-holder img {
   border-radius: 10px;
   width: 100%;
+  height: 100%;
 }
 
 section#schools .custom-container .body .schools-holder .wrapper .school-card .bg-img-holder .school-img {
@@ -493,6 +495,16 @@ section#schools .custom-container .body .schools-holder .wrapper .school-card .d
         -ms-grid-row-align: center;
         align-self: center;
   }
+  section#home .custom-container .text .title {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  section#home .custom-container .text .desc {
+    margin: 0;
+  }
+  section#home .custom-container .text .desc p {
+    text-align: left;
+  }
   section#home .custom-container .img-holder {
     margin-top: 0;
     -webkit-box-flex: 0;
@@ -508,6 +520,11 @@ section#schools .custom-container .body .schools-holder .wrapper .school-card .d
   section#schools .custom-container .search .search-form {
     width: 54%;
     margin: auto;
+  }
+  section#schools .custom-container .search .search-form .input-group button {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.36px;
   }
   section#schools .custom-container .body {
     margin-top: 52px;

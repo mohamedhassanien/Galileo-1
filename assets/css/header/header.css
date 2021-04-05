@@ -85,6 +85,8 @@ nav .container-fluid .navbar-toggler {
 
 nav .container-fluid .navbar-toggler:focus {
   outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 nav .container-fluid .navbar-collapse ul.navbar-nav {
@@ -127,6 +129,8 @@ nav .container-fluid .navbar-collapse form .login {
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.36px;
+  background-color: var(--main-light-color);
+  color: white;
 }
 
 @media only screen and (min-width: 692px) {

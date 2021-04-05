@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, p{
     color: var(--white-color);
 }
 /* Login Section */
-section#login{
+section#login, section#register{
     overflow: hidden;
     .custom-container{
         grid-template-rows: 183px auto;
@@ -103,9 +103,8 @@ section#login{
                     line-height: 1.19;
                     letter-spacing: 0.16px;
                     color: var(--black-color);
-                }
-                label.email-label{
                     margin: 25px 351px 10px 0.2px;
+                    
                 }
                 label.password-label{
                     margin: 25px 319px 10px 0.2px;
@@ -150,7 +149,7 @@ section#login{
                     }
                 }
             }
-            .login-btn{
+            .login-btn, .register-btn{
                 width: 334.8px;
                 height: 45px;
                 margin: 25px 0 0 0.2px;
@@ -162,7 +161,7 @@ section#login{
             }
            
         }
-        .bg-login-img{
+        .bg-login-img, .bg-register-img{
             grid-column: 2/3;
             grid-row: 1/3;
             width: 775px;
@@ -177,13 +176,57 @@ section#login{
     }
 }
 
+section#register{
+    .custom-container{
+        form {
+            .mb-3{
+                input{
+                    margin-top: 0 !important;
+                }
+                div.mobile{
+                    display: flex;
+                    border-radius: 5px;
+                    box-shadow: 0 0 12px 0 var(--box-shadow-color);
+                    background-color: var(--white-color);
+                    width: 334.8px;
+                    select{
+                        appearance: none;
+                        border: none;
+                        height: 45px;
+                        padding-left: 10px;
+                        opacity: .5;
+                        background-image: url('../../images/Icon-ionic-ios-arrow-down.png');
+                        background-repeat: no-repeat;
+                        background-position: center right;
+                        background-size: 12.5px;
+                        width: 70px;
+                        cursor: pointer;
+                    }
+                    select:focus{
+                        outline: none;
+                    }
+                    input{
+                        padding: 0 0 0 10px !important;
+                        width: fit-content;
+                        border-radius: 0 !important;
+                        box-shadow: none !important;
+                        margin: 0 !important;
+                        height: 45px !important;
+                    }
+        
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 692px) {
     .custom-container{
         margin: 0 50px;
     }
-    section#login{
+    
+    section#login, section#register{
         .custom-container{
-     
             form {
                 .mb-3{
                     input{
@@ -192,34 +235,54 @@ section#login{
                         margin: 15px 0 0 0.2px;
                     }
                 } 
-                .login-btn{
+                .login-btn, .register-btn{
                     width: 668px;
                     height: 45px;
                     margin: 15px 0 0 0.2px;
                 }
-            }
-                
-            .bg-login-img{
+                .register-btn{
+                    margin-top: 24px;;
+                }
+            }                
+            .bg-login-img, .bg-register-img{
                 display: none;
             }
         } 
     } 
+
+    section#register{
+        form {
+            div.mobile{
+                width: 668px !important;
+            }
+        }
+    }
 }
 @media only screen and (min-width: 992px) {
     .custom-container{
         margin: 0 100px;
     }
-    section#login .custom-container{
-        form{
-            .mb-3 input{
-                width: 391px;
-            }
-            .login-btn{
-                width: 391px;   
+    section#login, section#register{
+        .custom-container{
+            form{
+                .mb-3 input{
+                    width: 391px;
+                }
+                .login-btn, .register-btn{
+                    width: 391px;   
+                }
+            } 
+            .bg-login-img, .bg-register-img{
+                display: block
             }
         } 
-        .bg-login-img{
-            display: block
-        }
     } 
+    
+    section#register{
+        form {
+            div.mobile{
+                width: 391px !important;
+            }
+        }
+    }
 }
