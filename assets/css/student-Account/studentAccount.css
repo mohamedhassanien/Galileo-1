@@ -1,0 +1,704 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* GLOBAL STYLING*/
+:root {
+  --main-light-color: #1c85c8;
+  --main-dark-color: #283c8c;
+  --lighter-color: #f3f6ff;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.custom-container {
+  margin: 0 20px;
+  padding: 0;
+}
+
+.custom-btn {
+  margin: 1px 1px 28px 45px;
+  padding: 9px 41px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+          box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+  background-color: var(--main-light-color);
+  color: var(--white-color);
+  border: none;
+}
+
+/* GLOBAL STYLING*/
+section#student-account {
+  margin-top: 64px;
+}
+
+section#student-account .custom-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#student-account .custom-container .side-menu {
+  display: none;
+}
+
+section#student-account .custom-container .student-wrapper {
+  width: 100%;
+}
+
+section#student-account .custom-container .student-wrapper .buttonWrapper button {
+  margin: 0 40px 1.5px 0;
+  opacity: 0.4;
+  font-size: 20px;
+}
+
+section#student-account .custom-container .student-wrapper .buttonWrapper button.active {
+  opacity: 1;
+  color: var(--main-light-color);
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper {
+  margin-top: 48px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper div.update button.update-btn {
+  padding: 9px 41px;
+  float: right;
+  margin: 0;
+  background-color: var(--main-light-color);
+  color: white;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .title {
+  margin: 0 0 24px 0.8px;
+  letter-spacing: normal;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.21;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group {
+  margin-bottom: 24px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group label {
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.19;
+  letter-spacing: 0.16px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group input, section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group select {
+  margin: 8px 0.5px 0 0.2px;
+  padding: 10.5px 0 10.5px 16px;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group select {
+  color: rgba(0, 0, 0, 0.29);
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group select option {
+  color: var(--black-color);
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group input::-webkit-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group input:-ms-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group input::-ms-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group input::placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group input[type=radio] {
+  margin: 4px 4px 0 0;
+  border: 1px solid var(--main-light-color);
+  padding: 0;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .form-group input:checked[type=radio] {
+  background-color: var(--main-light-color);
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information, section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .academic__information, section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .language__skills {
+  margin-top: 24px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group.gender {
+  margin: 8px 0.5px 24px 0.2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group.gender label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  margin-bottom: 8px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group.gender .form-check {
+  padding: 0;
+  padding-right: 24px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group.gender .form-check label {
+  opacity: .4;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth select {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address .form-group {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .title {
+  opacity: 0.6;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--black-color);
+  margin: 0 0 8px 0;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 24px;
+  padding: 13px 24px 13.2px 16px;
+  border-radius: 10px;
+  background-color: #f9fbff;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body div.file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90%;
+          flex: 0 0 90%;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body div.file img {
+  width: 27px;
+  height: 27px;
+  margin-right: 27px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body div.file input {
+  width: -webkit-fill-available;
+  border: none;
+  background-color: #f9fbff;
+  opacity: 0.6;
+  letter-spacing: 0.16px;
+  line-height: 2;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body div.file input:focus {
+  outline: none;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body div.file input::-webkit-file-upload-button {
+  display: none;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body .date {
+  display: none;
+  opacity: 0.6;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: 2;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body .more-action {
+  border-left: 6px dotted rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body .more-action .actions {
+  position: absolute;
+  display: none;
+  background-color: var(--white-color);
+  top: 100%;
+  right: 0%;
+  border-radius: 5px;
+  padding: 10px 16px;
+  z-index: 13;
+  -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body .more-action .actions.block {
+  display: block;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body .more-action .actions button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  letter-spacing: 0.16px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body .more-action .actions button.reupload {
+  color: var(--main-dark-color);
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body .more-action .actions button.delete {
+  color: #bd172e;
+  margin: 16px 0 0 0;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body.not-uploaded {
+  margin: 0 0 24px;
+  padding: 17.5px 24px 17.5px 16px;
+  border-radius: 10px;
+  background-color: #fffee9;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body.not-uploaded .file {
+  opacity: 0.6;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body.not-uploaded .upload label {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  color: var(--main-dark-color);
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body.not-uploaded .upload input {
+  display: none;
+}
+
+section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .task-list {
+  display: none;
+}
+
+@media only screen and (min-width: 692px) {
+  .custom-container {
+    margin: 0 50px;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth {
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth select {
+    width: 120px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-right: 24px;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address {
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address .form-group {
+    width: 120px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-right: 24px;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body div.file {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info form .body .date {
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 39%;
+            flex: 0 0 39%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .custom-container {
+    margin: 0 100px;
+  }
+  section#student-account {
+    margin-top: 0;
+  }
+  section#student-account .custom-container .side-menu {
+    margin-top: -101px;
+    padding-top: 0;
+    position: fixed;
+    width: 19.7%;
+    z-index: 10;
+    display: block;
+    margin-left: -100px;
+    background-image: linear-gradient(197deg, var(--main-light-color) 5%, var(--main-dark-color));
+    height: 768px;
+    padding: 0 0 0 30px;
+  }
+  section#student-account .custom-container .side-menu .logo-holder {
+    margin-top: 16px;
+  }
+  section#student-account .custom-container .side-menu .user {
+    margin: 0 4px 16px 0;
+    margin-top: 118px;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--white-color);
+  }
+  section#student-account .custom-container .side-menu ul li {
+    margin: 16px 0 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white-color);
+  }
+  section#student-account .custom-container .side-menu ul li span {
+    width: 59px;
+    height: 15px;
+    margin: 0 14px;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.14px;
+    color: var(--white-color);
+    background-color: var(--main-dark-color);
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    line-height: .9;
+  }
+  section#student-account .custom-container .side-menu ul li a {
+    color: var(--white-color);
+    display: inline-block;
+    width: 100%;
+  }
+  section#student-account .custom-container .side-menu ul li.active {
+    background-color: #3aa7ec;
+    margin-left: -30px;
+    position: relative;
+    padding: 9px 0 9px 30px;
+  }
+  section#student-account .custom-container .side-menu ul li.active::before {
+    content: '';
+    width: 13px;
+    border-radius: 0 5px 0 0;
+    background-color: #283a82;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  section#student-account .custom-container .student-wrapper {
+    margin-left: 19%;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper {
+    margin-top: 43px;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .title {
+    color: var(--main-light-color);
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .body .custom-col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+    margin-right: 9%;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth select {
+    width: auto;
+    margin: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address .form-group {
+    width: auto;
+    margin: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #profile-info form .update {
+    margin-right: 11%;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: -33px;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 64%;
+            flex: 0 0 64%;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list {
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+    background-color: var(--white-color);
+    margin-top: -60px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .head {
+    background-color: var(--main-light-color);
+    color: var(--white-color);
+    padding: 32px 16px 24px 16px;
+    border-radius: 10px 10px 0 0;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .head .title {
+    color: var(--white-color);
+    margin: 0 16px 16px 0;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .head p {
+    margin: 8px 0;
+    opacity: 0.9;
+    letter-spacing: 0.16px;
+    color: var(--white-color);
+    line-height: normal;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body {
+    height: 416px;
+    overflow-y: scroll;
+    margin: 0;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body div.box:first-child {
+    margin: 24px 0 0 0;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body div.box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-bottom: 1px solid #ececec;
+    padding: 0 16px 0 16px;
+    margin: 15.5px 0;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body div.box .title {
+    margin: 0;
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: var(--main-light-color);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body div.box .check {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body div.box .check p {
+    margin: 0 8px 0 0;
+    opacity: 0.4;
+    line-height: normal;
+    letter-spacing: 0.16px;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body div.box .desc {
+    width: auto;
+    margin: 0;
+    height: auto;
+    margin: 8px 0 15.5px 0;
+    opacity: 0.6;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.16px;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body div.box:last-child {
+    border: none;
+  }
+  section#student-account .custom-container .student-wrapper .contentWrapper #documents-info .documents-container .task-list .body div.box:last-child .desc {
+    margin-bottom: 0;
+  }
+}
+
+.delete-warning {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.delete-warning .custom-container {
+  padding: 30px 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+  width: 580px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.delete-warning .custom-container .title-warning {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  color: #bd172e;
+  margin: 20px 0;
+}
+
+.delete-warning .custom-container .desc-warning {
+  margin: 16px 0 20px;
+  opacity: 0.7;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.delete-warning .custom-container .btns-holder button.keep {
+  padding: 11.5px 25.7px 11.5px 25.3px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(66, 193, 175, 0.2);
+          box-shadow: 0 1px 10px 0 rgba(66, 193, 175, 0.2);
+  background-color: var(--main-light-color);
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  color: var(--white-color);
+  margin: 0 48px 0 44px;
+}
+
+.delete-warning .custom-container .btns-holder button.delete {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  text-align: left;
+  color: #bd172e;
+  margin: 11px 48px 11px 44px;
+  padding: 0;
+}
+
+.delete-warning.appear {
+  display: block;
+}
+/*# sourceMappingURL=studentAccount.css.map */

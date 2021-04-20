@@ -216,6 +216,44 @@ section#register{
         
                 }
             }
+            div.profile-photo{
+                div{
+                    border-radius: 5px;
+                    border: 10px solid #ebf7ff;
+                    padding: 10px;
+                    width: 334.8px;
+                    img{
+                        width: 33px;
+                        height: 27px;
+                        display: block;
+                        margin: auto;
+                    }
+                    input.profile-photo-input{
+                        box-shadow: unset;
+                        margin-right: 0 !important;
+                        padding: 0;
+                        height: 2px;
+                        width: 100%;
+                    }
+                    label {
+                        margin: 0;
+                        display: block;
+                        text-align: center;
+                        padding: 13px 13px 0 13px;
+                        outline: none;
+                        cursor: pointer;
+                        font-size: 16px;
+                        letter-spacing: 0.16px;
+                        color: rgba(0, 0, 0, 0.4);
+                        span{
+                            color: var(--main-light-color);
+                        }
+                    }
+                }
+                input.profile-photo-input::-webkit-file-upload-button{
+                    visibility: hidden;
+                }
+            }
         }
     }
 }
@@ -228,20 +266,19 @@ section#register{
     section#login, section#register{
         .custom-container{
             form {
-                .mb-3{
-                    input{
-                        width: 668px;
-                        height: 45px;
-                        margin: 15px 0 0 0.2px;
-                    }
-                } 
-                .login-btn, .register-btn{
+                .mb-3 input, .login-btn, .register-btn{
                     width: 668px;
                     height: 45px;
                     margin: 15px 0 0 0.2px;
+                
                 }
                 .register-btn{
                     margin-top: 24px;;
+                }
+                div.profile-photo{
+                    div{
+                        width: 668px;
+                    }
                 }
             }                
             .bg-login-img, .bg-register-img{
@@ -265,11 +302,11 @@ section#register{
     section#login, section#register{
         .custom-container{
             form{
+                div.profile-photo div,
+                .register-btn,
+                .login-btn,
                 .mb-3 input{
                     width: 391px;
-                }
-                .login-btn, .register-btn{
-                    width: 391px;   
                 }
             } 
             .bg-login-img, .bg-register-img{

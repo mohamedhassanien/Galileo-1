@@ -18,11 +18,14 @@
     <title>Programs</title>
 </head>
 <body>
+    
     <?php include 'header.php';?>
 
     <section id="programs" class="programs">
         <img src="assets/images/Group-1158@2x.png" class="top-bg" alt="">
+        
         <div class="custom-container">
+
             <div class="search">             
                 <form class="search-form" autocomplete="off">
                     <div class="input-group mb-3">
@@ -302,6 +305,7 @@
     </section>
     
     <?php include 'footer.php';?>
+
     <!-- multi select  -->
     <script src="node_modules/slim-select/dist/slimselect.min.js"></script>
     <!-- script file -->

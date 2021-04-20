@@ -6,6 +6,7 @@
   --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 
 *, *:after, *:before {
@@ -131,6 +132,138 @@ nav .container-fluid .navbar-collapse form .login {
   letter-spacing: 0.36px;
   background-color: var(--main-light-color);
   color: white;
+}
+
+nav .container-fluid .navbar-collapse .user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 11px 18px 39px 48px;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-img {
+  margin: 3.4px 8px 2.6px 10px;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-img img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-name {
+  margin: 3.4px 8px 2.6px 10px;
+  opacity: 0.6;
+  letter-spacing: 0.16px;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions {
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions .arrow-down img {
+  width: 15px;
+  height: 9px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions .arrow-down img.arrow-down.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions .user-menu {
+  position: absolute;
+  margin: 17px 0;
+  padding: 0 16px;
+  right: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(26, 36, 78, 0.12);
+          box-shadow: 0 2px 12px 0 rgba(26, 36, 78, 0.12);
+  display: none;
+  background-color: var(--white-color);
+  z-index: 16;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions .user-menu ul li {
+  margin: 16px 0;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions .user-menu ul li a {
+  color: var(--main-dark-color);
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions .user-menu ul li button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions .user-menu ul li button a {
+  color: #bd172e;
+}
+
+nav .container-fluid .navbar-collapse .user-profile .user-actions .user-menu.appear {
+  display: block;
+}
+
+nav .container-fluid .navbar-collapse .notification {
+  margin: 11px 0 39px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-icon {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-icon img {
+  width: 23px;
+  height: 23px;
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-icon.rotate {
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-body {
+  -webkit-box-shadow: 0 2px 12px 0 rgba(26, 36, 78, 0.12);
+          box-shadow: 0 2px 12px 0 rgba(26, 36, 78, 0.12);
+  position: absolute;
+  right: 0;
+  width: 265px;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 17px 0;
+  z-index: 16;
+  display: none;
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-body ul {
+  border-radius: 8px;
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-body ul li {
+  padding: 16px;
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-body ul li a {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-body ul li:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+nav .container-fluid .navbar-collapse .notification .notification-body.appear {
+  display: block;
 }
 
 @media only screen and (min-width: 692px) {

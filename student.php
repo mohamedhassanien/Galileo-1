@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- WEBSITE ICON  -->
     <link rel="shortcut icon" href="assets/images/galileo-global-education-logo-vector.png" type="image/x-icon">
+    <!-- BOOTSTRAP  -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/header/header.css">
     <!-- STYLE SHEET FILE  -->
     <link rel="stylesheet" href="assets/css/student-sub-agent/student.css">
-    <link rel="stylesheet" href="assets/css/footer/footer.css">
     <title>Student</title>
 </head>
 <body>
@@ -28,7 +27,7 @@
                 <div class="user"><span>Mohamed</span> info</div>
                 <ul>
                     <li class="side-menu-item"><a href="statistics.php">Statistics</a></li>
-                    <li class="side-menu-item active"><a href="statistics.php">Students</a></li>
+                    <li class="side-menu-item active"><a href="student.php">Students</a></li>
                     <li class="side-menu-item"><a href="#">CV Maker <span>soon</span></a></li>
                     <li class="side-menu-item"><a href="#">Training <span>soon</span></a></li>
                 </ul>
@@ -38,7 +37,10 @@
                     <div class="title">Students</div>
                     <div class="search-form">
                         <form action="">
-                            <input type="text" placeholder="Search by student name">
+                            <img src="assets/images/Icon-feather-search@2x.png"
+                            srcset="assets/images/Icon-feather-search@2x.png 2x, 
+                            assets/images/Icon-feather-search@3x.png 3x" alt="">
+                            <input type="text" placeholder="Search by student name" name="student-name">
                         </form>
                     </div>
                 </div>
@@ -62,8 +64,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                         <div class="student">
@@ -79,8 +81,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                         <div class="student">
@@ -96,8 +98,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                         <div class="student">
@@ -113,8 +115,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                         <div class="student">
@@ -130,8 +132,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                         <div class="student">
@@ -147,8 +149,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                         <div class="student">
@@ -164,8 +166,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                         <div class="student">
@@ -181,8 +183,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                         <div class="student">
@@ -198,8 +200,8 @@
                                 alimohammed33@gmail.com
                             </div>
                             <div class="manage">
-                                <button class="account-btn custom-btn"><a href="">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="">Programs</a></button>
+                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
+                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
                             </div>
                         </div>
                     </div>

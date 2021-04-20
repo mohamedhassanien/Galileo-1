@@ -45,7 +45,7 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" id="field-select" placeholder="Search for schools or university's">
                         
-                        <button class="btn custom-btn search" type="button" id="search">Search</button>
+                        <button class="custom-btn search" type="button" id="search">Search</button>
                     </div>
                 </form>
             </div>
@@ -428,7 +428,7 @@
     </section>
     
     <?php include 'footer.php';?>
-
+ 
     <!-- RANG SLIDER JS  -->
     <script src="node_modules/nouislider/distribute/nouislider.min.js"></script>
     <script src="assets/js/schoolFilter.js"></script>

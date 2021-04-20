@@ -154,7 +154,7 @@ section#programs{
                 margin-top: 2rem;
                 .program-holder{
                     display: grid;
-                    grid-template-columns: auto;
+                    grid-template-columns: 120px 1fr 1fr 120px;
                     grid-template-rows: auto;
                     padding: 25px;
                     border-bottom: 1px solid var(--grey-color-2);

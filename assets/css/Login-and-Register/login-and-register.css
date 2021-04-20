@@ -294,22 +294,63 @@ section#register .custom-container form .mb-3 div.mobile input {
   height: 45px !important;
 }
 
+section#register .custom-container form div.profile-photo div {
+  border-radius: 5px;
+  border: 10px solid #ebf7ff;
+  padding: 10px;
+  width: 334.8px;
+}
+
+section#register .custom-container form div.profile-photo div img {
+  width: 33px;
+  height: 27px;
+  display: block;
+  margin: auto;
+}
+
+section#register .custom-container form div.profile-photo div input.profile-photo-input {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  margin-right: 0 !important;
+  padding: 0;
+  height: 2px;
+  width: 100%;
+}
+
+section#register .custom-container form div.profile-photo div label {
+  margin: 0;
+  display: block;
+  text-align: center;
+  padding: 13px 13px 0 13px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+section#register .custom-container form div.profile-photo div label span {
+  color: var(--main-light-color);
+}
+
+section#register .custom-container form div.profile-photo input.profile-photo-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
 @media only screen and (min-width: 692px) {
   .custom-container {
     margin: 0 50px;
   }
-  section#login .custom-container form .mb-3 input, section#register .custom-container form .mb-3 input {
-    width: 668px;
-    height: 45px;
-    margin: 15px 0 0 0.2px;
-  }
-  section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn {
+  section#login .custom-container form .mb-3 input, section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#register .custom-container form .mb-3 input, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn {
     width: 668px;
     height: 45px;
     margin: 15px 0 0 0.2px;
   }
   section#login .custom-container form .register-btn, section#register .custom-container form .register-btn {
     margin-top: 24px;
+  }
+  section#login .custom-container form div.profile-photo div, section#register .custom-container form div.profile-photo div {
+    width: 668px;
   }
   section#login .custom-container .bg-login-img, section#login .custom-container .bg-register-img, section#register .custom-container .bg-login-img, section#register .custom-container .bg-register-img {
     display: none;
@@ -323,10 +364,13 @@ section#register .custom-container form .mb-3 div.mobile input {
   .custom-container {
     margin: 0 100px;
   }
-  section#login .custom-container form .mb-3 input, section#register .custom-container form .mb-3 input {
-    width: 391px;
-  }
-  section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn {
+  section#login .custom-container form div.profile-photo div,
+  section#login .custom-container form .register-btn,
+  section#login .custom-container form .login-btn,
+  section#login .custom-container form .mb-3 input, section#register .custom-container form div.profile-photo div,
+  section#register .custom-container form .register-btn,
+  section#register .custom-container form .login-btn,
+  section#register .custom-container form .mb-3 input {
     width: 391px;
   }
   section#login .custom-container .bg-login-img, section#login .custom-container .bg-register-img, section#register .custom-container .bg-login-img, section#register .custom-container .bg-register-img {
@@ -336,4 +380,4 @@ section#register .custom-container form .mb-3 div.mobile input {
     width: 391px !important;
   }
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=login-and-register.css.map */

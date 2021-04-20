@@ -30,9 +30,38 @@
                         <a class="nav-link" href="#">Schools</a>
                     </li>
                 </ul>
-                <form class="d-flex" autocomplete="off">
-                    <button class="btn login custom-btn" type="submit">Login</button>
-                </form>
+                <div class="user-profile">
+                    <div class="user-img">
+                        <img src="assets/images/dummy-company-owner.png" alt="Agent">
+                    </div>
+                    
+                    <div class="user-name">Mohamed</div>
+
+                    <div class="user-actions" id="user-actions">
+                        <div class="arrow-down">
+                            <img class="arrow-down" src="assets/images/Icon-ionic-ios-arrow-down.png" alt="icon arrow Down">
+                        </div>
+                        <div class="user-menu">
+                            <ul>
+                                <li><a href="statistics.php">Statistics</a></li>
+                                <li><a href="student.php">Student</a></li>
+                                <li><button class="logout"><a href="login.php">Logout</a></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification" id="notification">
+                    <div class="notification-icon">
+                        <img src="assets/images/bell.svg" alt="">
+                    </div>
+                    <div class="notification-body">
+                        <ul>
+                            <li><a href="login.php">The quick, brown fox jumps over a lazy dog. DJs flock by when</a></li>
+                            <li><a href="#">But I must explain to you how all this mistaken idea of</a></li>
+                            <li><a href="#">Zwei flinke Boxer jagen die quirlige Eva und ihren Mops</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

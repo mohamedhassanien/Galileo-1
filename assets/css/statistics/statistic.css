@@ -718,7 +718,7 @@ section#statistic-info .custom-container .statistic .body .students .wrapper .st
     margin-top: -101px;
     padding-top: 0;
     position: fixed;
-    width: 21.5%;
+    width: 19.7%;
     z-index: 10;
     display: block;
     margin-left: -100px;
@@ -763,6 +763,8 @@ section#statistic-info .custom-container .statistic .body .students .wrapper .st
   }
   section#statistic-info .custom-container .side-menu ul li a {
     color: var(--white-color);
+    display: inline-block;
+    width: 100%;
   }
   section#statistic-info .custom-container .side-menu ul li.active {
     background-color: #3aa7ec;
@@ -781,7 +783,7 @@ section#statistic-info .custom-container .statistic .body .students .wrapper .st
     left: 0;
   }
   section#statistic-info .custom-container .statistic {
-    margin-left: 21.5%;
+    margin-left: 19%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 80%;
             flex: 0 0 80%;

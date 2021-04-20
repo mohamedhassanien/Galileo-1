@@ -51,7 +51,6 @@
                                 assets/images/academic-cap@3x.png 3x">
     
                                 <span>22,800 Students</span>
-                                
                             </div>
     
                             <div class="fee">
@@ -60,7 +59,6 @@
                                 assets/images/money-tag@3x.png 3x">
                                 
                                 <span>10,500 $ Per Year</span>
-                                
                             </div>
     
                             <div class="apply-btn">

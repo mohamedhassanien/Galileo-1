@@ -10,7 +10,7 @@
     <!-- BOOTSTRAP  -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- STYLE SHEET FILE  -->
-    <link rel="stylesheet" href="assets/css/login/login.css">
+    <link rel="stylesheet" href="assets/css/Login-and-Register/login-and-register.css">
     <title>Login</title>
 </head>
 <body>

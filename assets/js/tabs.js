@@ -40,3 +40,5 @@ schoolsTabs.onclick = e => {
     element.classList.add("active");
   }
 }
+
+

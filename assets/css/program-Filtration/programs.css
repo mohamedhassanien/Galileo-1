@@ -197,8 +197,8 @@ section#programs .custom-container .data-container div.programs {
 section#programs .custom-container .data-container div.programs .program-holder {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  -ms-grid-columns: 120px 1fr 1fr 120px;
+      grid-template-columns: 120px 1fr 1fr 120px;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   padding: 25px;

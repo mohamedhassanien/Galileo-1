@@ -546,7 +546,7 @@ section#statistic-info{
                 margin-top: -101px;
                 padding-top: 0;    
                 position: fixed;
-                width: 21.5%;
+                width: 19.7%;
                 z-index: 10;
                 display: block;
                 margin-left: -100px;
@@ -590,6 +590,8 @@ section#statistic-info{
                         }
                         a{
                             color: var(--white-color);
+                            display: inline-block;
+                            width: 100%;
                         }
                     }
                     li.active{
@@ -611,7 +613,7 @@ section#statistic-info{
                 }
             }
             .statistic{
-                margin-left: 21.5%;
+                margin-left: 19%;
                 flex:0 0 80%;
                 .body{
                     grid-template-columns: 34.3% 61.3%;

@@ -199,6 +199,8 @@ section#schools .custom-container .search .search-form .input-group button {
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.28px;
+  background-color: var(--main-light-color);
+  color: white;
 }
 
 section#schools .custom-container .body .filter {
@@ -544,6 +546,8 @@ section#schools .custom-container .body .schools-holder .wrapper .school-card .d
     display: block;
   }
   section#schools .custom-container .body .schools-holder {
+    height: 1277px;
+    overflow-y: scroll;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 67.5%;
             flex: 0 0 67.5%;

@@ -140,6 +140,8 @@ section#schools{
                         font-style: normal;
                         line-height: normal;
                         letter-spacing: 0.28px;
+                        background-color: var(--main-light-color);
+                        color: white;
                     }
                 }
             }
@@ -432,8 +434,9 @@ section#schools{
                         display: block;
                     }
                 }
-                
                 .schools-holder{
+                    height: 1277px;
+                    overflow-y: scroll;
                     flex: 0 0 67.5%;
                     .wrapper .school-card{
                         flex: 0 0 31.1%;    
