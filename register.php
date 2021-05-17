@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php   session_start(); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,22 +23,22 @@
                 assets/images/galileo-global-education-logo-vector@3x.png 3x">
             </div>
 
-            <form action="programDesc.php" autocomplete="off">
+            <form action="?" method="post" enctype="multipart/form-data" autocomplete="off">
                 <p>Happy because you will join us</p>
                 <h4 class="title">Register</h4>
 
                 <div class="mb-3">
                     <label for="name-input" class="form-label name-label">Full Name</label>
-                    <input type="text" class="form-control name-input" id="name-input" placeholder="Enter your full name" required>
+                    <input type="text" class="form-control name-input" name="name-input" id="name-input" placeholder="Enter your full name" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label email-label">Email</label>
-                    <input type="email" class="form-control email-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address" required>
+                    <input type="email" class="form-control email-input" name="emailinput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address" required>
                 </div>
                 <div class="mb-3">
                     <label for="mobile-input" class="form-label mobile-label">Mobile Number</label>
                     <div class="mobile">
-                        <select name="countryCode" id="">
+                        <select name="countryCode">
                             <option data-countryCode="GB" value="44" Selected>+44</option>
                             <option data-countryCode="US" value="1">+1</option>
                             <option data-countryCode="DZ" value="213">+213</option>
@@ -251,34 +252,34 @@
                             <option data-countryCode="ZM" value="260">+260</option>
                             <option data-countryCode="ZW" value="263">+263</option>
                         </select>
-                        <input type="tel" class="form-control mobile-input" id="mobile-input" placeholder="Enter your mobile number" required>
+                        <input type="tel" name="tel" class="form-control mobile-input" id="mobile-input" placeholder="Enter your mobile number" required>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="company-name-input" class="form-label company-label">Company Name</label>
-                    <input type="text" class="form-control company-name-input" id="company-name-input" placeholder="Enter your company name" required>
+                    <input type="text" name="company-name" class="form-control company-name-input" id="company-name-input" placeholder="Enter your company name" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label password-label">Password</label>
-                    <input type="password" class="form-control password-input" id="password" placeholder="Enter your Password" required>
+                    <input type="password" name="password" class="form-control password-input" id="password" placeholder="Enter your Password" required>
                 </div>
                 <div class="mb-3">
                     <label for="confirm-password" class="form-label confirm-password-label">Confirm Password</label>
-                    <input type="password" class="form-control confirm-password-input" id="confirm-password" placeholder="Enter the same password" required>
+                    <input type="password" name="confirm-password" class="form-control confirm-password-input" id="confirm-password" placeholder="Enter the same password" required>
                 </div>
                 <div class="mb-3 profile-photo">
                     <label class="form-label">Profile Photo</label>
                     <div>
                         <img src="assets/images/Icon-upload.png"
                         srcset="assets/images/Icon-upload@2x.png 2x, assets/images/Icon-upload@2x.png 3x" alt="">
-                        
+
                         <label for="profile-photo" id="profile-photo-label">Drop or click <span>Here</span> to upload photo</label>
-                        <input type="file" class="form-control profile-photo-input" id="profile-photo" required>
-                        
+                        <input type="file" name="profile-photo" class="form-control profile-photo-input" id="profile-photo" required>
+
                     </div>
                 </div>
-                <button type="submit" class="btn register-btn">Register</button>
-                
+                <input type="submit" class="btn register-btn" name="formsubmit" value ="Register">
+
                 <div class="mb-3">
                     <div class="form-text2">Have account?
                         <a href="login.php" class="account"> Login</a>
@@ -293,7 +294,42 @@
             </div>
         </div>
     </section>
+<?php if (isset($_POST['formsubmit'])) {
+  $dbHost     = "localhost";
+  $dbUsername = "root";
+  $dbPassword = "";
+  $dbName     = "galileo";
 
+  $mysqli=new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+  $con = mysqli_connect($dbHost,$dbUsername,$dbPassword);
+  if ($mysqli->connect_error) {
+      die("Connection to database failed: " . $mysqli->connect_error);
+  }
+  mysqli_select_db($con,'galileo');
+  $name=$_POST['name-input'];
+  $email=$_POST['emailinput'];
+  $tel=$_POST["countryCode"].$_POST['tel'];
+  $company=$_POST['company-name'];
+  $password=sha1($_POST['password']);
+  $s="select * from Agents where Email='$email'";
+    $result=mysqli_query($con,$s);
+    if ( false===$result ) {
+      printf("error: %s\n", mysqli_error($con));
+    }
+    $num=mysqli_num_rows($result);
+    if($num==1){
+    }else {
+  $file_filename=$_FILES['profile-photo']['name'];
+  $file_tem_loc=$_FILES['profile-photo']['tmp_name'];
+  $result = mkdir ("upload/Agents/$company", "0777");
+  $file_store="upload/Agents/$company/".$file_filename;
+  move_uploaded_file($file_tem_loc,$file_store);
+  $reg="insert into Agents(FullName,Email,Password,CompanyName,MobileNumber,ProfilePhotoLink)values('$name','$email','$password','$company','$tel','$file_store')";
+  $regq=mysqli_query($con,$reg);
+  $_SESSION['email']=$email;
+  echo "<script>window.location.href='programFilter.php';</script>";
+}
+} ?>
     <script src="assets/js/login-and-register.js"></script>
 </body>
 </html>

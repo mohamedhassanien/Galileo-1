@@ -6,12 +6,17 @@
   --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --red-color: #bd172e;
   --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 
 *, *:after, *:before {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
 }
 
 html {
@@ -250,7 +255,7 @@ section#agent-request .custom-container .agents .body .wrapper .agent .manage bu
 }
 
 section#agent-request .custom-container .agents .body .wrapper .agent .manage button.decline-btn {
-  background-color: #bd172e;
+  background-color: var(--red-color);
 }
 
 section#agent-request .custom-container .agents .body .wrapper .agent .manage button a {
@@ -259,6 +264,75 @@ section#agent-request .custom-container .agents .body .wrapper .agent .manage bu
 
 section#agent-request .custom-container .agents .body .wrapper .agent:last-child {
   border: none;
+}
+
+section#agent-request .custom-container .no-agent-requests {
+  margin-top: 200px;
+  text-align: center;
+}
+
+section#agent-request .custom-container .no-agent-requests h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.21;
+  color: var(--main-dark-color);
+  margin: 40.2px 0 0;
+}
+
+#decline {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+#decline .custom-container {
+  padding: 30px 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 25%;
+  position: relative;
+  margin: auto;
+}
+
+#decline .custom-container .title-warning {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--red-color);
+  margin: 20px 0;
+}
+
+#decline .custom-container .btns-holder button.yes {
+  padding: 7px 25px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(66, 193, 175, 0.2);
+          box-shadow: 0 1px 10px 0 rgba(66, 193, 175, 0.2);
+  background-color: var(--main-light-color);
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  color: var(--white-color);
+  margin: 0 48px 0 44px;
+}
+
+#decline .custom-container .btns-holder button.no {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  text-align: left;
+  color: var(--red-color);
+  margin: 11px 48px 11px 44px;
+  padding: 0;
 }
 
 @media only screen and (min-width: 692px) {
@@ -353,7 +427,7 @@ section#agent-request .custom-container .agents .body .wrapper .agent:last-child
     padding: 0 0 0 30px;
   }
   section#agent-request .custom-container .side-menu .logo-holder {
-    margin-top: 16px;
+    margin-top: 45px;
   }
   section#agent-request .custom-container .side-menu ul {
     margin-top: 118px;
@@ -426,6 +500,9 @@ section#agent-request .custom-container .agents .body .wrapper .agent:last-child
   section#agent-request .custom-container .agents .body .wrapper .agent {
     padding: 11px 0 11px 24px;
   }
+  section#agent-request .custom-container .agents .body .wrapper .agent .agent__name {
+    margin-bottom: 0;
+  }
   section#agent-request .custom-container .agents .body .wrapper .agent .agent__name, section#agent-request .custom-container .agents .body .wrapper .agent .manage, section#agent-request .custom-container .agents .body .wrapper .agent .company__name {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33%;
@@ -442,11 +519,17 @@ section#agent-request .custom-container .agents .body .wrapper .agent:last-child
     color: var(--black-color);
     margin: 0;
   }
+  section#agent-request .custom-container .agents .body .wrapper .agent .manage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 16px 0 0;
+  }
   section#agent-request .custom-container .agents .body .wrapper .agent .manage button {
     margin-right: 0;
-  }
-  section#agent-request .custom-container .agents .body .wrapper .agent .manage button.accept-btn {
-    margin-right: 26px;
   }
 }
 /*# sourceMappingURL=agent-request.css.map */

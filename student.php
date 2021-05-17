@@ -10,11 +10,17 @@
     <!-- BOOTSTRAP  -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- STYLE SHEET FILE  -->
-    <link rel="stylesheet" href="assets/css/student-sub-agent/student.css">
+    <link rel="stylesheet" href="assets/css/student/student.css">
     <title>Student</title>
 </head>
 <body>
-    <?php include 'header.php';?>
+    <?php
+     include 'header.php';
+    include 'php/dbConfig.php';
+    $queryStudents="SELECT * FROM `students` WHERE `SubAgent`='$email'";
+    $resultStudents=$mysqli->query($queryStudents);
+
+    ?>
 
     <section class="student-info" id="student-info">
         <div class="custom-container">
@@ -32,13 +38,13 @@
                     <li class="side-menu-item"><a href="#">Training <span>soon</span></a></li>
                 </ul>
             </div>
-            <div class="students"> 
+            <div class="students">
                 <div class="head">
                     <div class="title">Students</div>
                     <div class="search-form">
                         <form action="">
                             <img src="assets/images/Icon-feather-search@2x.png"
-                            srcset="assets/images/Icon-feather-search@2x.png 2x, 
+                            srcset="assets/images/Icon-feather-search@2x.png 2x,
                             assets/images/Icon-feather-search@3x.png 3x" alt="">
                             <input type="text" placeholder="Search by student name" name="student-name">
                         </form>
@@ -51,165 +57,37 @@
                         <div>Manage</div>
                     </div>
                     <div class="wrapper">
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
+                      <?php
+                      while ($rows=$resultStudents->fetch_assoc()) {
+                        $img=$rows['idenPhoto'];
+                        $name=$rows['GivenName'].' '.$rows['FamilyName'];
+                        $emailST=$rows['ParentsEmail'];
+                        $idST=$rows['id'];
+                        echo "
+                        <div class='student'>
+                            <div class='img__name'>
+                                <div class='student-img-holder'>
+                                    <img src='$img' alt=''>
                                 </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
+                                <div class='student-name'>
+                                    $name
                                 </div>
                             </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
+                            <div class='parent__email'>
+                                $emailST
                             </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
+                            <div class='manage'>
+                                <button class='account-btn custom-btn'><a href='studentAccount.php?id=$idST'>Account</a></button>
+                                <button class='program-btn custom-btn'><a href='appliedPrograms.php?id=$idST'>Programs</a></button>
                             </div>
                         </div>
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
-                                </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
-                                </div>
-                            </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
-                            </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
-                            </div>
-                        </div>
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
-                                </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
-                                </div>
-                            </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
-                            </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
-                            </div>
-                        </div>
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
-                                </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
-                                </div>
-                            </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
-                            </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
-                            </div>
-                        </div>
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
-                                </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
-                                </div>
-                            </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
-                            </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
-                            </div>
-                        </div>
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
-                                </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
-                                </div>
-                            </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
-                            </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
-                            </div>
-                        </div>
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
-                                </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
-                                </div>
-                            </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
-                            </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
-                            </div>
-                        </div>
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
-                                </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
-                                </div>
-                            </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
-                            </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
-                            </div>
-                        </div>
-                        <div class="student">
-                            <div class="img__name">
-                                <div class="student-img-holder">
-                                    <img src="assets/images/dummycitypic1.PNG" alt="">
-                                </div>
-                                <div class="student-name">
-                                    Ahmed Ali Mohammed
-                                </div>
-                            </div>
-                            <div class="parent__email">
-                                alimohammed33@gmail.com
-                            </div>
-                            <div class="manage">
-                                <button class="account-btn custom-btn"><a href="studentAccount.php">Account</a></button>
-                                <button class="program-btn custom-btn"><a href="appliedPrograms.php">Programs</a></button>
-                            </div>
-                        </div>
+";}?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <?php include 'footer.php';?>
     <script src="assets/js/student.js"></script>
 </body>

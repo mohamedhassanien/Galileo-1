@@ -1,0 +1,703 @@
+/* Sub-Header of the page
+  Return NavBar
+  School Picture + Link
+  School Name
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #F8F9FD;
+}
+
+div.header{
+  text-align: center;
+  margin-top: 2%;
+}
+
+
+/* NavBar Menu */
+
+nav.nav_menu{
+  box-shadow: none;
+  background: none;
+}
+
+nav.nav_menu span{
+  font-size: 1.25vw;
+}
+
+nav.nav_menu span:hover{
+  text-decoration: none;
+  background-color: none;
+  text-shadow: 5px  1px white;
+  font-size: 1.25vw;
+
+  font-style: italic;
+  font-weight: bold;
+}
+
+nav.nav_menu a.breadcrumb{
+  color: #0F4A52;
+}
+
+nav.nav_menu a.breadcrumb::before{
+  color:#0F4A52;
+}
+
+nav.nav_menu a.last_breadcrumb{
+font-weight: bold;
+font-size: 1.25vw;
+
+}
+
+div.header .card{
+  display: inline-block;
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
+  transition: all .2s ease-in-out;
+}
+
+div.header .card:hover {
+   transform: scale(1.05);
+}
+
+div.header .card img{
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+div.header h2{
+  color:#0F4A52;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+/* NavBar fixed */
+/*
+div.nav_cont{
+  transition: 2s;
+  position: fixed;
+  top: 510px;
+  left: 365px;
+  box-shadow: #0F4A52;
+}
+*/
+
+
+div.nav_cont div.nav_content{
+  display: inline-block;
+}
+
+
+div.nav_cont div.nav_content nav{
+  border-radius: 20px;
+  text-align: center;
+  min-height: 128px;
+  background: none;
+  box-shadow: #F8F9FD;
+  overflow: hidden;
+
+}
+
+div.nav_cont div.nav_content nav ul li a{
+  margin-left: 75px;
+  margin-right: 75px;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+}
+
+div.nav_cont div.nav_content nav ul li a:hover{
+  background-color: white;
+  transform: scale(1.05);
+}
+
+div.nav_cont div.nav_content nav ul li a div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+div.nav_cont div.nav_content nav ul li a span{
+  color: #0F4A52;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+div.nav_cont div.nav_content nav ul li a:hover span{
+  color: black;
+}
+
+div.nav_cont div.nav_content nav ul li a img{
+  padding-top: 10px;
+  display: block;
+  height: 64px;
+}
+
+
+
+/* Transition Header & School Resume*/
+
+
+/* School Container */
+div.school_resume{
+  padding-top: 200px;
+  padding-bottom: 10px;
+  background: url("../images/Waves/School_wave1.svg");
+  background-color:  #118AB2;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+div.sd_container{
+  margin-bottom: 50px;
+}
+
+div.sd_container div.row div h3{
+  color: #0F4A52;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.sd_container div.row div div.card{
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
+}
+
+div.sd_container div.row div div.card p{
+  padding: 15px;
+  text-align: justify;
+}
+
+div.sd_container div.row div div.card blockquote{
+  padding: 5px;
+  font-weight:bold;
+  font-family: Poppins;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Resume Container */
+
+  /* First Part */
+
+div.fir_rscontainer{
+}
+
+div.fir_rscontainer hr{
+    width: 90%;
+    height: 2px;
+    background-color: #0F4A52;
+    border-radius: 25px;
+}
+
+div.fir_rscontainer h3{
+  color: #0F4A52;
+  font-size: 35px;
+  font-weight: bold;
+  text-align:center;
+}
+
+div.fir_rscontainer div div hr{
+  color: #0F4A52;
+}
+
+div.fir_rscontainer div div div div{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+div.fir_rscontainer div div div div.img_content{
+  float: left;
+  margin-left: 85px;
+}
+
+div.fir_rscontainer div div div div.txt_content h4{
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+  display: flex;
+  padding-left: 25px;
+}
+
+div.fir_rscontainer div div div div.txt_content p{
+  display: flex;
+  font-size: 14px;
+  padding-left: 25px;
+}
+
+  /* Second Part */
+
+div.sec_rscontainer div div hr{
+  width: 90%;
+  height: 2px;
+  background-color: #0F4A52;
+  border-radius: 25px;
+}
+
+div.sec_rscontainer div div div{
+  margin-top: 20px;
+}
+
+div.sec_rscontainer div div div div.acc_container{
+  border: 2px solid black;
+}
+
+div.sec_rscontainer div div div h4{
+  color: #0F4A52;
+}
+
+div.sec_rscontainer div div div div.accredit_container{
+  margin-top: 30px;
+}
+
+div.sec_rscontainer div div div div.accredit_container ul li{
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-left: 50px;
+}
+div.sec_rscontainer div div div div.accredit_container ul li img{
+  height: 32px;
+  width: 32px;
+}
+
+div.sec_rscontainer div div div div.accredit_container ul li span{
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+div.sec_rscontainer div div.ranking_content{
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+div.sec_rscontainer div div.ranking_content div div div.card{
+ display: block;
+ text-align: center;
+ padding: 20px;
+ border-radius: 25px;
+}
+
+div.sec_rscontainer div div.ranking_content div div div div.card-image{
+  display: flex;
+  text-align: center;
+
+}
+
+div.sec_rscontainer div div.ranking_content div div div.card div.card-image img{
+  height: 150px;
+
+}
+
+div.sec_rscontainer div div.ranking_content div div div.card div.card-content p{
+  height: 70px;
+  font-size: 15px;
+}
+
+div.sec_rscontainer div div.ranking_content div div div.card div.card-content span{
+  font-weight: bold;
+}
+
+div.sec_rscontainer div div.ranking_content div div div.card div.card-content a{
+  color: black;
+  font-weight:lighter;
+  font-style: italic;
+}
+
+div.sec_rscontainer div div.ranking_content div div div.card div.card-content a:hover{
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 30px;
+  transform: scale(1.05);
+}
+
+
+/* Campus Container  */
+div.cp_container{
+  padding-top: 200px;
+  padding-bottom: 10px;
+  background: url("../images/Waves/School_wave2.svg");
+  background-color:  #06D6A0;
+  background-repeat: no-repeat;
+}
+
+div.cp_container div div h4{
+    color: #0F4A52;
+    font-size: 60px;
+    font-weight: bold;
+    text-align:center;
+}
+
+
+/* Choice of Campush (Tabs) */
+
+div.cp_container div div div div ul.tabs li.tab{
+  text-align: left;
+  width: auto;
+  display: table;
+
+}
+
+
+div.cp_container div div div div ul.tabs li.tab a.active{
+  background-color: #F8F9FD;
+  border-radius: 15px;
+}
+
+div.cp_container div div div div ul.tabs li.tab a{
+  display: inline-flex;
+  justify-content: flex-start;
+  border-radius: 15px;
+
+}
+
+div.cp_container div div div div ul.tabs li.tab a:hover{
+  background-color: #F8F9FD;
+  border-radius: 15px;
+}
+
+.tabs{
+  margin-left: -50px;
+}
+div.tabs_container h4.tabs_container{
+  font-size: 15px;
+}
+
+div.tabs_container .tabs {
+  background-color: transparent;
+   height: auto;
+   width: auto;
+   -ms-flex-direction: column;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   display: block;
+
+ }
+
+ div.tabs_container .indicator {
+   display: none;
+ }
+
+
+div.cp_container div div div div ul.tabs li.tab img{
+  margin-top: 12px;
+  height: 24px;
+  width: 32px;
+  border-radius: 5px;
+
+}
+
+div.cp_container  div div div svg{
+  position: relative;
+  margin-top: 8px;
+  margin-left: 20px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #3F3B3B;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+div.cp_container div div div div ul.tabs li.tab a span{
+  margin-left: 10px;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: VERDANA;
+
+}
+
+/* End of Choice of Campus (Tabs) */
+
+/* Campus Style */
+
+div.cp_container div div h5{
+    color: #0F4A52;
+    font-size: 40px;
+    font-weight: bold;
+    text-align:center;
+}
+
+div.cp_container p{
+
+}
+
+div.cp_container hr{
+  height: 4px;
+  border-radius: 25px;
+  margin-top: 25px;
+  background-color: #0F4A52;
+}
+
+div.cp_container div.fst_cpcontent p{
+  font-size: 18px;
+  padding: 15px;
+
+  text-align: justify;
+}
+
+div.cp_container div.fst_cpcontent img{
+    display: block;
+   width: 500px;
+   height: 300px;
+   padding: 10px;
+   border-radius: 25px;
+}
+
+div.cp_container div.scd_cpcontent{
+  margin-top: 30px;
+}
+
+div.cp_container div.scd_cpcontent p{
+  font-size: 16px;
+}
+
+div.cp_container div.scd_cpcontent img{
+  text-align: center;
+   max-width: 100%;
+   max-height: 100%;
+   padding: 10px;
+   border-radius: 25px;
+}
+
+div.cp_container div.scd_cpcontent iframe{
+  width: 600px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+div.cp_container h4.subtitle{
+  color: #0F4A52;
+  font-family: Poppins;
+  font-size: 50px;
+  text-align:center;
+  margin-top: 20px;
+}
+
+div.cp_container div.trd_cpcontent{
+}
+
+div.cp_container div.trd_cpcontent img{
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+div.cp_container div.trd_cpcontent p{
+  font-size: 18px;
+}
+
+div.cp_container div.frh_cpcontent img{
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+div.cp_container div.frh_cpcontent h5{
+  color: #0F4A52;
+  font-weight: bold;
+}
+
+/* Program Container*/
+
+div.pg_container{
+  padding-top: 200px;
+  padding-bottom: 10px;
+  background: url("../images/Waves/School_wave3.svg");
+  background-color:  #ff715b;
+  background-repeat: no-repeat;
+}
+
+div.pg_container div div div h4{
+  color: #0F4A52;
+  font-size: 60px;
+  margin-top: 20%;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+div.pg_container div.padcard{
+  border-radius: 25px;
+  margin-bottom: 0px;
+  padding: 20px 30px 10px 30px;
+
+}
+
+div.pg_container div.padcard button.button_stl{
+  border-radius: 20px;
+  margin-top: 32px;
+  margin-bottom: 25px;
+  font-size: 12px;
+}
+
+div.pg_container div.Formation_card div.card{
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  border-radius: 25px;
+  padding: 20px 30px 10px 30px;
+}
+
+div.pg_container div.Formation_card div.card:hover {
+   transform: scale(1.05);
+}
+
+div.pg_container div.Formation_card div.card div.contentdiv{
+  margin-top: -15px;
+}
+
+div.pg_container div.Formation_card div.card span.form_title{
+  font-size: 15px;
+  text-align: left;
+  font-style: italic;
+  display: block;
+}
+
+div.pg_container div.Formation_card div.card span.form_subtitle{
+  display: block;
+  font-size: 17px;
+  font-size: bold;
+  color: #0F4A52;
+}
+
+div.pg_container div.Formation_card div.card span.form_sstitle{
+  display: block;
+  font-size: 14px;
+  padding: 2px;
+}
+
+div.pg_container div.Formation_card div.card p.form_sstitle{
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+div.pg_container div.Formation_card div.card img.form_sstitle{
+  height: 32px;
+  width: 32px;
+  margin-top: 5px;
+}
+
+div.pg_container div.Formation_card div.card #line_center{
+  width: 100px;
+  border:1.5px solid black;
+  border-radius:30px;
+}
+
+div.pg_container div.Formation_card div.card p.applnw{
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+div.pg_container div.Formation_card div.card span.card-title{
+  text-align: center;
+  font-style: italic;
+  color: #0F4A52;
+  font-family: Poppins;
+}
+
+div.pg_container div.Formation_card div.card  div.card-reveal div.reveal{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+div.pg_container div.Formation_card div.card  div.card-reveal img.reveal{
+
+  width: 260px;
+  height: 250px;
+}
+
+div.pg_container div.Formation_card div.card  div.card-reveal span.reveal_subtitle{
+  margin-top: 20px;
+}
+div.pg_container div.Formation_card div.card  div.card-reveal span.reveal{
+  margin-bottom: 20px;
+  color: #0F4A52;
+  text-align: center;
+  font-weight:bold;
+}
+
+/* Program Validation */
+
+#popup_valid{
+  border-radius: 25px;
+  background-color: #F8F9FD;
+}
+
+#popup_valid h5{
+  text-align: center;
+  color: #0F4A52;
+  font-size: 35px;
+  font-weight: bold;
+  text-align:center;
+  margin-bottom: 50px;
+}
+
+#popup_valid p{
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: Poppins;
+  margin-bottom: 50px;
+  color: #0F4A52;
+}
+
+#popup_valid div.divbord{
+  border: 3px solid black;
+}
+
+#popup_valid span.modal_span_tlt2{
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  color: #0F4A52;
+}
+
+
+/* Map Google */
+
+#googleMap{
+  border-radius: 25px;
+  height: 400px;
+  width: 100%;
+  display:inline-block;
+}
+
+
+/* Transition Program & Footer */
+
+
+/* Footer */
+.page-footer{
+  padding-top: 200px;
+  background: url("../images/Waves/School_wave4.svg");
+  background-color:  #F8F9FD;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer-copyright{
+  background-color: #F8F9FD;
+}
+@media only screen and (max-width: 600px) {
+    .footer_container{
+      margin-top: 50px;
+
+    }
+}
+
+/* Styles for screen with max width of 600px */
+@media (max-width: 720px) {

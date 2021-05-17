@@ -8,10 +8,8 @@
     <!-- WEBSITE ICON  -->
     <link rel="shortcut icon" href="assets/images/galileo-global-education-logo-vector.png" type="image/x-icon">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/header/header.css">
     <!-- STYLE SHEET FILE  -->
     <link rel="stylesheet" href="assets/css/statistics/statistic.css">
-    <link rel="stylesheet" href="assets/css/footer/footer.css">
     <title>Statistics</title>
 </head>
 <body>
@@ -35,15 +33,15 @@
                 </ul>
             </div>
 
-            <div class="statistic"> 
+            <div class="statistic">
                 <div class="head">
-                    <div class="title">Statistics and Reports</div> 
+                    <div class="title">Statistics and Reports</div>
                 </div>
                 <div class="body">
 
                     <div class="number__statistic">
                         <div class="company-img-holder">
-                            <img src="assets/images/dummy-company-owner.png" alt="">
+                            <img src="<?php echo $userss['ProfilePhotoLink']; ?>" alt="">
                         </div>
                         <div class="company-name">
                             Steps Company
@@ -54,7 +52,7 @@
                                     Total Students
                                 </div>
                                 <div class="number">
-                                    1205
+                                    <?php echo $userss['TotalStudnets'];?>
                                 </div>
                             </div>
                             <div class="total-application">
@@ -62,7 +60,7 @@
                                     Total Application
                                 </div>
                                 <div class="number">
-                                    1223
+                                    <?php echo $userss['TotalApplication'];?>
                                 </div>
                             </div>
                             <div class="accepted">
@@ -70,15 +68,15 @@
                                     Accepted
                                 </div>
                                 <div class="number">
-                                    331
-                                </div>    
+                                      <?php echo $userss['Accepted'];?>
+                                </div>
                             </div>
                             <div class="rejected">
                                 <div class="text">
                                     Rejected
                                 </div>
                                 <div class="number">
-                                    451
+                                      <?php echo $userss['Rejected'];?>
                                 </div>
                             </div>
                             <div class="in-progress">
@@ -86,7 +84,7 @@
                                     In progress
                                 </div>
                                 <div class="number">
-                                    441
+                                      <?php echo $userss['InProgress'];?>
                                 </div>
                             </div>
                             <div class="total-earn">
@@ -94,7 +92,7 @@
                                     Total Earn
                                 </div>
                                 <div class="number">
-                                    +10K
+                                      <?php echo $userss['TotalEarn'];?>
                                 </div>
                             </div>
                             <div class="expect-earn">
@@ -102,7 +100,7 @@
                                     Expect Earn
                                 </div>
                                 <div class="number">
-                                    +21k
+                                    <?php echo $userss['ExpectEarn'];?>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +138,7 @@
                             <div class="x-axis">
                                 <div class="point highest">
                                     <div class="point-value" style="height: 100%;">
-                                        
+
                                     </div>
                                     <div class="point-name">
                                         Sun
@@ -148,7 +146,7 @@
                                 </div>
                                 <div class="point">
                                     <div class="point-value" style="height: 0%;">
-                                        
+
                                     </div>
                                     <div class="point-name">
                                         Mon
@@ -156,7 +154,7 @@
                                 </div>
                                 <div class="point">
                                     <div class="point-value" style="height: 15%;">
-                                        
+
                                     </div>
                                     <div class="point-name">
                                         Tue
@@ -164,7 +162,7 @@
                                 </div>
                                 <div class="point">
                                     <div class="point-value" style="height: 50%;">
-                                        
+
                                     </div>
                                     <div class="point-name">
                                         Wen
@@ -172,7 +170,7 @@
                                 </div>
                                 <div class="point">
                                     <div class="point-value" style="height: 60%;">
-                                        
+
                                     </div>
                                     <div class="point-name">
                                         Thu
@@ -180,7 +178,7 @@
                                 </div>
                                 <div class="point">
                                     <div class="point-value" style="height: 20%;">
-                                        
+
                                     </div>
                                     <div class="point-name">
                                         Fri
@@ -225,6 +223,7 @@
                                 </div>
                         </div>
                     </div>
+
                     <div class="students">
                         <div class="title">
                             <div>Student</div>
@@ -232,54 +231,30 @@
                             <div>Account</div>
                         </div>
                         <div class="wrapper">
-                            <div class="student">
-                                <div class="img__name">
-                                    <div class="student-img-holder">
-                                        <img src="assets/images/dummycitypic1.PNG" alt="">
+                          <?php $queryStudents="SELECT * FROM `students` WHERE `SubAgent`='$email'";
+                          $resultStudents=$mysqli->query($queryStudents);
+                          while ($rows=$resultStudents->fetch_assoc()) {
+                            $img=$rows['idenPhoto'];
+                            $name=$rows['GivenName'].' '.$rows['FamilyName'];
+                            $emailST=$rows['ParentsEmail'];
+                            $idST=$rows['id'];
+                        echo "
+                            <div class='student'>
+                                <div class='img__name'>
+                                    <div class='student-img-holder'>
+                                        <img src='$img' alt=''>
                                     </div>
-                                    <div class="student-name">
-                                        Ahmed Ali Mohammed
-                                    </div>
-                                </div>
-                                <div class="student-email">
-                                    alimohammed33@gmail.com
-                                </div>
-                                <div class="student-profile">
-                                    <a href="">View Profile</a>
-                                </div>
-                            </div>
-                            <div class="student">
-                                <div class="img__name">
-                                    <div class="student-img-holder">
-                                        <img src="assets/images/dummycitypic1.PNG" alt="">
-                                    </div>
-                                    <div class="student-name">
-                                        Ahmed Ali Mohammed
+                                    <div class='student-name'>
+                                        $name
                                     </div>
                                 </div>
-                                <div class="student-email">
-                                    alimohammed33@gmail.com
+                                <div class='student-email'>
+                                    $emailST
                                 </div>
-                                <div class="student-profile">
-                                    <a href="">View Profile</a>
+                                <div class='student-profile'>
+                                    <a href=''>View Profile</a>
                                 </div>
-                            </div>
-                            <div class="student">
-                                <div class="img__name">
-                                    <div class="student-img-holder">
-                                        <img src="assets/images/dummycitypic1.PNG" alt="">
-                                    </div>
-                                    <div class="student-name">
-                                        Ahmed Ali Mohammed
-                                    </div>
-                                </div>
-                                <div class="student-email">
-                                    alimohammed33@gmail.com
-                                </div>
-                                <div class="student-profile">
-                                    <a href="">View Profile</a>
-                                </div>
-                            </div>
+                            </div>"; }?>
                         </div>
                     </div>
 
@@ -287,7 +262,7 @@
             </div>
         </div>
     </section>
-    
+
     <?php include 'footer.php';?>
 
     <script src="assets/js/student.js"></script>

@@ -1,0 +1,113 @@
+body{
+  background-image: url("../images/backgrounds/test2.jpg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+}
+
+.page-footer{
+  margin-top: 200px;
+}
+
+
+
+nav.clean{
+  padding: 30px 200px  100px;
+  box-shadow: none;
+  background: none;
+}
+
+
+nav.clean h6{
+  color: black;
+  display: inline-flex;
+  padding-right: 20px;
+}
+nav.clean span{
+  text-decoration: none;
+  text-decoration: underline;
+  background-color: none;
+  text-shadow: 5px  1px white;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+}
+.breadcrumb::before{
+  color:#004d40;
+}
+
+div.card{
+  text-align: center;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 10px
+}
+
+span.title{
+  text-decoration: underline;
+  font-size: 30px;
+  font-weight: lighter;
+  display:block;
+}
+
+
+img.Valid_Log{
+  border-radius: 30px;
+  height: 20%;
+}
+#Subscription_Para{
+  font-size: 15px;
+  font-weight: normal;
+  padding: 30px;
+}
+
+#Program_name{
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+
+#Appreciation_Para{
+  padding: 15px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+#Appreciation_Para span{
+  font-size: 18px;
+  font-family: cursive;
+  display: block;
+}
+
+#Mail_Para{
+  padding: 15px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+#Mail_Para span{
+  font-size: 18px;
+  font-family: cursive;
+  display: block;
+}
+
+#Other_Para{
+  padding: 15px;
+  font-size: 16px;
+font-weight: lighter;
+}
+#Other_Para span{
+  font-size: 18px;
+  font-family: cursive;
+  display: block;
+}
+
+a.simil_button{
+  font-weight: lighter;
+  color: black;
+  font-family: cursive;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 25px;
+  margin-left: 30px;
+  margin-right: 30px;
+}

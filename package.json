@@ -6,6 +6,7 @@
   "dependencies": {
     "@splidejs/splide": "^2.4.21",
     "bootstrap": "^5.0.0-beta2",
+    "flatpickr": "^4.6.9",
     "nouislider": "^14.6.4",
     "slim-select": "^1.27.0"
   },

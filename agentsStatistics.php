@@ -20,7 +20,7 @@
     <?php include 'header.php';?>
 
     <!-- Dashboard  -->
-    <section id="agent-request" class="agent-request">
+    <section id="agent-statistics" class="agent-statistics">
         <div class="custom-container">
             
             <div class="side-menu">
@@ -30,7 +30,7 @@
                     assets/images/student-sub-agent-galileo-global-education-logo-vector@3x.png 3x" alt="">
                 </div>
                 <ul>
-                    <li class="side-menu-item"><a href="">Dashboard</a></li>
+                    <li class="side-menu-item"><a href="DidiarDashboard.php">Dashboard</a></li>
                     <li class="side-menu-item active"><a href="agentsStatistics.php">Agent Statistics</a></li>
                     <li class="side-menu-item "><a href="agentsRequests.php">Agent Requests</a></li>
                 </ul>
@@ -133,7 +133,7 @@
                     <div class="body">
                         <div class="title">
     
-                            <div>Agent Name</div>
+                            <div>Agent info</div>
 
                             <div>Email</div>
 
@@ -161,7 +161,7 @@
                                 </div>
                                 <div class="manage">
                                     <button class="agent-profile-btn custom-btn">
-                                        <a href="">Profile</a>
+                                        <a href="agentProfile.php">Profile</a>
                                     </button>
                                 </div>
                                 <div class="actions">
@@ -186,7 +186,7 @@
                                 </div>
                                 <div class="manage">
                                     <button class="agent-profile-btn custom-btn">
-                                        <a href="">Profile</a>
+                                        <a href="agentProfile.php">Profile</a>
                                     </button>
                                 </div>
                                 <div class="actions">
@@ -212,7 +212,7 @@
                                 </div>
                                 <div class="manage">
                                     <button class="agent-profile-btn custom-btn">
-                                        <a href="">Profile</a>
+                                        <a href="agentProfile.php">Profile</a>
                                     </button>
                                 </div>
                                 <div class="actions">

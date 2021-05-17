@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* GLOBAL STYLING*/
+:root {
+  --main-light-color: #1c85c8;
+  --main-dark-color: #283c8c;
+  --lighter-color: #f3f6ff;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --red-color: #bd172e;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.custom-container {
+  margin: 0 20px;
+  padding: 0;
+}
+
+.custom-btn {
+  margin: 1px 1px 28px 45px;
+  padding: 9px 41px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+          box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+  background-color: var(--main-light-color);
+  color: var(--white-color);
+  border: none;
+}
+
+/* GLOBAL STYLING*/
+section#agent-requests {
+  margin-top: 64px;
+}
+
+section#agent-requests .custom-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#agent-requests .custom-container .side-menu {
+  display: none;
+}
+
+section#agent-requests .custom-container .data-container {
+  margin-top: 2rem;
+}
+
+section#agent-requests .custom-container .data-container .links {
+  display: inline;
+  margin-bottom: 30px;
+}
+
+section#agent-requests .custom-container .data-container .links a {
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 0px 12px;
+  opacity: 0.3;
+  color: var(--black-color);
+}
+
+section#agent-requests .custom-container .data-container .links a:first-child {
+  margin: 0 12px 0 0;
+}
+
+section#agent-requests .custom-container .data-container .links img {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  width: 15.1px;
+}
+
+section#agent-requests .custom-container .data-container .links a:last-child {
+  opacity: 1;
+  margin: 0px 0 0 12px;
+  color: var(--main-dark-color);
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .title, section#agent-requests .custom-container .data-container .body .student__information .title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  margin: 48px 5px 32px 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--main-dark-color);
+}
+
+section#agent-requests .custom-container .data-container .body .student__information .personal-information,
+section#agent-requests .custom-container .data-container .body .student__information .academic-information,
+section#agent-requests .custom-container .data-container .body .student__information .language-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#agent-requests .custom-container .data-container .body .student__information .personal-information .custom-col,
+section#agent-requests .custom-container .data-container .body .student__information .academic-information .custom-col,
+section#agent-requests .custom-container .data-container .body .student__information .language-skills .custom-col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+section#agent-requests .custom-container .data-container .body .student__information .personal-information .custom-col .item,
+section#agent-requests .custom-container .data-container .body .student__information .academic-information .custom-col .item,
+section#agent-requests .custom-container .data-container .body .student__information .language-skills .custom-col .item {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  color: var(--black-color);
+  margin: 32px 8px 24px 0;
+}
+
+section#agent-requests .custom-container .data-container .body .student__information .personal-information .custom-col .item span,
+section#agent-requests .custom-container .data-container .body .student__information .academic-information .custom-col .item span,
+section#agent-requests .custom-container .data-container .body .student__information .language-skills .custom-col .item span {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.16px;
+  color: #636363;
+}
+
+section#agent-requests .custom-container .data-container .body .student__information .personal-information .custom-col .item:first-child,
+section#agent-requests .custom-container .data-container .body .student__information .academic-information .custom-col .item:first-child,
+section#agent-requests .custom-container .data-container .body .student__information .language-skills .custom-col .item:first-child {
+  margin-top: 0;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .title {
+  opacity: 0.6;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--black-color);
+  margin: 0 0 8px 0;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body {
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 24px;
+  padding: 13px 24px 13.2px 16px;
+  border-radius: 10px;
+  background-color: #f9fbff;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .file img {
+  width: 27px;
+  height: 27px;
+  margin-right: 27px;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .file a {
+  opacity: 0.6;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  color: var(--black-color);
+  line-height: 1.8;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .date {
+  display: none;
+  opacity: 0.6;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: 2;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .more-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .more-actions .preview {
+  line-height: 2;
+  display: none;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .more-actions .preview a {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  text-align: left;
+  color: var(--main-light-color);
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .more-actions .download {
+  margin-left: 32px;
+}
+
+section#agent-requests .custom-container .data-container .body .student__documents .doc .body .more-actions .download img {
+  width: 16px;
+  height: 16px;
+  margin: auto;
+}
+
+section#agent-requests .custom-container .data-container .body .footer {
+  margin-bottom: 30px;
+}
+
+section#agent-requests .custom-container .data-container .body .footer .text {
+  margin: 48px 0 32px 0;
+  font-size: 18px;
+  letter-spacing: 0.18px;
+}
+
+section#agent-requests .custom-container .data-container .body .footer .text span {
+  font-size: 18px;
+  color: var(--main-dark-color);
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder div {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder button {
+  margin-top: 16px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 5px 27px 5px 27px;
+  letter-spacing: 0.32px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--white-color);
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder button.send, section#agent-requests .custom-container .data-container .body .footer .btns-holder button.accept {
+  margin: 0 24px 0 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(65, 65, 65, 0.2);
+          box-shadow: 0 1px 10px 0 rgba(65, 65, 65, 0.2);
+  background-color: var(--main-light-color);
+  border: solid 2px var(--main-light-color);
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder button.download {
+  border-radius: 5px;
+  background-color: var(--white-color);
+  border: dashed 2px var(--main-light-color);
+  color: var(--main-light-color);
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder button.decline {
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(213, 73, 92, 0.16);
+          box-shadow: 0 1px 10px 0 rgba(213, 73, 92, 0.16);
+  border: solid 2px var(--red-color);
+  background-color: var(--red-color);
+  margin: 16px 0;
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder button.accepted {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(65, 65, 65, 0.2);
+          box-shadow: 0 1px 10px 0 rgba(65, 65, 65, 0.2);
+  background-color: #00c9ad;
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder button.rejected {
+  border-radius: 5px;
+  border: dashed 2px var(--red-color);
+  background-color: var(--white-color);
+  color: var(--red-color);
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking button.accept {
+  width: 100%;
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking button {
+  width: 60%;
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking div {
+  width: 30%;
+  float: right;
+}
+
+section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking div button {
+  width: 100%;
+}
+
+@media only screen and (min-width: 692px) {
+  .custom-container {
+    margin: 0 50px;
+  }
+  section#agent-requests .custom-container .data-container {
+    width: 100%;
+  }
+  section#agent-requests .custom-container .data-container .body .student__information .personal-information .custom-col,
+  section#agent-requests .custom-container .data-container .body .student__information .academic-information .custom-col,
+  section#agent-requests .custom-container .data-container .body .student__information .language-skills .custom-col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 55%;
+            flex: 0 0 55%;
+  }
+  section#agent-requests .custom-container .data-container .body .student__information .personal-information .custom-col:nth-child(3),
+  section#agent-requests .custom-container .data-container .body .student__information .academic-information .custom-col:nth-child(3),
+  section#agent-requests .custom-container .data-container .body .student__information .language-skills .custom-col:nth-child(3) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+  section#agent-requests .custom-container .data-container .body .student__documents .doc .body .more-actions .preview {
+    display: block;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder button {
+    width: 45%;
+    margin: 0 !important;
+    margin-top: 16px !important;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking button, section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking button.accept {
+    width: 30%;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking div button.decline {
+    margin: 0;
+    width: 50%;
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .custom-container {
+    margin: 0 100px;
+  }
+  section#agent-requests {
+    margin-top: 0;
+  }
+  section#agent-requests .custom-container .side-menu {
+    margin-top: -101px;
+    padding-top: 0;
+    position: fixed;
+    width: 19.7%;
+    z-index: 10;
+    display: block;
+    margin-left: -100px;
+    background-image: linear-gradient(197deg, var(--main-light-color) 5%, var(--main-dark-color));
+    height: 768px;
+    padding: 0 0 0 30px;
+  }
+  section#agent-requests .custom-container .side-menu .logo-holder {
+    margin-top: 45px;
+  }
+  section#agent-requests .custom-container .side-menu .user {
+    margin: 0 4px 16px 0;
+    margin-top: 118px;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--white-color);
+  }
+  section#agent-requests .custom-container .side-menu ul {
+    margin-top: 118px;
+  }
+  section#agent-requests .custom-container .side-menu ul li {
+    margin: 16px 0 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white-color);
+  }
+  section#agent-requests .custom-container .side-menu ul li span {
+    width: 59px;
+    height: 15px;
+    margin: 0 14px;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.14px;
+    color: var(--white-color);
+    background-color: var(--main-dark-color);
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    line-height: .9;
+  }
+  section#agent-requests .custom-container .side-menu ul li a {
+    color: var(--white-color);
+    display: inline-block;
+    width: 100%;
+  }
+  section#agent-requests .custom-container .side-menu ul li.active {
+    background-color: #3aa7ec;
+    margin-left: -30px;
+    position: relative;
+    padding: 9px 0 9px 30px;
+  }
+  section#agent-requests .custom-container .side-menu ul li.active::before {
+    content: '';
+    width: 13px;
+    border-radius: 0 5px 0 0;
+    background-color: #283a82;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  section#agent-requests .custom-container .data-container {
+    margin-left: 19.7%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80.3%;
+            flex: 0 0 80.3%;
+  }
+  section#agent-requests .custom-container .data-container .links {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
+  }
+  section#agent-requests .custom-container .data-container .body .student__information .personal-information .custom-col,
+  section#agent-requests .custom-container .data-container .body .student__information .academic-information .custom-col,
+  section#agent-requests .custom-container .data-container .body .student__information .language-skills .custom-col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 55%;
+            flex: 0 0 55%;
+  }
+  section#agent-requests .custom-container .data-container .body .student__information .personal-information .custom-col:nth-child(3),
+  section#agent-requests .custom-container .data-container .body .student__information .academic-information .custom-col:nth-child(3),
+  section#agent-requests .custom-container .data-container .body .student__information .language-skills .custom-col:nth-child(3) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+  section#agent-requests .custom-container .data-container .body .student__documents .doc .body .file {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+  section#agent-requests .custom-container .data-container .body .student__documents .doc .body .date {
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+  section#agent-requests .custom-container .data-container .body .student__documents .doc .body .more-actions {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder button {
+    width: 20%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking button, section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking button.accept {
+    width: 25%;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+  section#agent-requests .custom-container .data-container .body .footer .btns-holder.checking div button.decline {
+    margin: 0;
+    width: 40%;
+    float: right;
+  }
+}
+/*# sourceMappingURL=Employee-Application-Details.css.map */

@@ -8,6 +8,7 @@
     --lighter-color: #f3f6ff;
     --black-color: #000000;
     --white-color: #ffffff;
+    --red-color: #bd172e;
     --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 *, *:after, *:before{
@@ -78,17 +79,6 @@ nav{
             ul.navbar-nav{
                 justify-content: flex-end;
                 width: 100%;
-                li.nav-item.program{
-                    margin: 11px 45px 39px 51px;
-                }
-                li.nav-item.school{
-                    margin: 11px 0px 39px 0;
-                    color: var(--main-light-color);
-                    opacity: 1;
-                    a{
-                        color: var(--main-light-color);
-                    }
-                }
                 li{
                     font-size: 16px;
                     color: var(--black-color);
@@ -96,9 +86,20 @@ nav{
                     opacity: 0.6;
                     line-height: 1.19;
                     .nav-link{
+                        padding-bottom: 0;
                         padding-left: 0;
                         padding-right: 0;
                         color: var(--black-color);
+                    }
+                }
+                li.nav-item.program, li.nav-item.school{
+                    margin: 0 45px 0 0;
+                }
+                li.nav-item.active{
+                    color: (--main-light-color);
+                    opacity: 1;
+                    a{
+                        color: (--main-light-color);
                     }
                 }
             }
@@ -114,9 +115,10 @@ nav{
             }
             .user-profile{
                 display: flex;
-                margin: 11px 18px 39px 48px;
+                margin-top: 15px;
                 .user-img{
-                    margin: 3.4px 8px 2.6px 10px;
+                    display: none;
+                    margin: auto 0;
                     img{
                         width: 25px;
                         height: 25px;
@@ -124,46 +126,49 @@ nav{
                     }
                 }
                 .user-name{
+                    display: none;
                     margin: 3.4px 8px 2.6px 10px;
                     opacity: 0.6;
                     letter-spacing: 0.16px;
                 }
                 .user-actions{
-                    margin: auto;
+                    margin: auto 0;
                     position: relative;
                     cursor: pointer;
                     .arrow-down{
+                        display: none;
                         img{
                             width: 15px;
                             height: 9px;
-                            transition: all 1s ease;
+                            transition: all .6s ease;
                         }
                         img.arrow-down.rotate{
                             transform: rotate(180deg);
                         } 
                     }
                     .user-menu{
-                        position: absolute;
-                        margin: 17px 0;
-                        padding:0 16px;
-                        right: 100%;
+                        display: block;
+                        box-shadow: none;
+                        position: relative;
+                        right: 0;
+                        padding: 0;
+                        margin: 0;
                         border-radius: 5px;
-                        box-shadow: 0 2px 12px 0 rgba(26, 36, 78, 0.12);
-                        display: none;
                         background-color: var(--white-color);
                         z-index: 16;
                         ul{
                             li{
-                                margin: 16px 0;
+                                margin:0 0 16px 0;
                                 a{
-                                    color: var(--main-dark-color);
+                                    // color: var(--main-dark-color);
+                                    color: rgba(0,0,0,.5)
                                 }
                                 button{
                                     background: transparent;
                                     border: none;
                                     padding: 0;
                                     a{
-                                        color: #bd172e;
+                                        color: var(--red-color);
                                     }
                                 }
                             }
@@ -175,11 +180,15 @@ nav{
                 }
             }
             .notification{
-                margin: 11px 0 39px 0;
-                position: relative;
+                position: absolute;
+                left: 82%;
+                top: 8%;
+                width: fit-content;
+                margin: 0;
                 cursor: pointer;
                 .notification-icon{
-                    transition: all 1s ease;
+                    width: fit-content;
+                    transition: all .6s ease;
                     img{
                         width: 23px;
                         height: 23px;
@@ -188,6 +197,7 @@ nav{
                 .notification-icon.rotate{
                     transform: rotate(25deg);
                 }
+                
                 .notification-body{
                     box-shadow: 0 2px 12px 0 rgba(26, 36, 78, 0.12);
                     position: absolute;
@@ -215,8 +225,19 @@ nav{
                 }
                 .notification-body.appear{
                     display: block;
+                    left: unset;
                 }
 
+            }
+            #noti_number{
+                bottom: 10px;
+                position: relative;
+                color: var(--white-color);
+                padding: 3px 10px;
+                border-radius: 50%;
+                background-color: var(--red-color);
+                text-align: center;
+                left: -5px;
             }
         }
     }
@@ -230,5 +251,41 @@ nav{
 @media only screen and (min-width: 992px) {
     .custom-container{
         margin: 0 100px;
+    }
+    nav .container-fluid .navbar-collapse{
+        ul.navbar-nav li .nav-link{
+            padding: 16px 0;
+        }
+        .user-profile{
+            margin-top: 0;
+            .user-img, .user-name{
+                display: block;
+            }
+            .user-actions{
+                .arrow-down{
+                    display: block;
+                }
+                .user-menu{
+                    position: absolute;
+                    margin: 17px 0;
+                    padding:0 16px;
+                    right: 100%;
+                    box-shadow: 0 2px 12px 0 rgba(26, 36, 78, 0.12);
+                    display: none;
+                    ul li a{
+                        color: var(--main-dark-color);
+                    }
+                }
+            } 
+        }
+        .notification{
+            margin: auto 0 auto 20px;
+            position: relative;
+            left: 0;
+            top: 0;
+            .notification-body.appear{
+                left: unset;
+            }
+        }
     }
 }

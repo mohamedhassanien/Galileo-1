@@ -1,0 +1,483 @@
+// ROBOT FONT FAMILY
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* GLOBAL STYLING*/
+:root{
+    --main-light-color: #1c85c8;
+    --main-dark-color: #283c8c;
+    --lighter-color: #f3f6ff;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --red-color: #bd172e;
+    --box-shadow-color: rgba(0, 0, 0, 0.16);
+}
+*, *:after, *:before{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+	padding: 0;
+    margin: 0;
+}	
+a{
+	text-decoration: none;
+	margin: 0 ;
+    padding: 0 ;
+}
+h1, h2, h3, h4, h5, p{
+    margin: 0;
+}
+.custom-container{
+    margin: 0 20px;
+    padding: 0;
+}
+.custom-btn{
+    margin: 1px 1px 28px 45px;
+    padding: 9px 41px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+    background-color: var(--main-light-color);
+    color: var(--white-color);
+    border: none;
+}
+/* GLOBAL STYLING*/
+
+.apply-modal, .exist-student-apply, .new-student-apply{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 30px 0;
+    display: none;
+    .program__description{
+        padding: 30px;
+        border-radius: 15px;
+        text-align: left;
+        width: 966.2px;
+        margin: auto;
+        background-color: var(--white-color);
+        .wrapper{
+            .title{
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 0.24px;
+                color: var(--main-dark-color)
+            }
+            .body{
+                margin: 20px 27px 20px 0;
+                width: auto;
+                opacity: 0.6;
+                font-size: 18px;
+                line-height: 1.39;
+                letter-spacing: 0.18px;
+            }
+            ul.list{
+                li{
+                    font-size: 16px;
+                    letter-spacing: 0.16px;
+                    margin: 0 8px 15px 0;
+                    color: rgba(0 , 0 , 0 , .6)
+                }
+                li::before{
+                    content: '';
+                    width:15px;
+                    height:15px;
+                    display: inline-block;
+                    background-color: var(--main-light-color);
+                    opacity: 1;
+                    border-radius: 50%;
+                    margin: 0 10px 0px 0;
+                }
+            }
+            .btns-holder{
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    border-radius: 5px;
+                    background-color: var(--white-color);
+                    margin: 0 32px 0 0;
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 0.36px;
+                    padding: 9px 16px 9px 16px;
+                    border: none;
+                }
+                button.exist{
+                    border: solid 1.5px var(--main-dark-color);
+                    color: var(--main-dark-color);
+                }
+                button.new{
+                    color: var(--white-color);
+                    background-color: var(--main-light-color);    
+                }
+            }
+        }
+    }
+}
+
+.exist-student-apply{
+    z-index: 21;
+    .custom-container{
+        width: 966.2px;
+        margin: auto;
+        .student-info{
+            border-radius: 5px;
+            padding-bottom: 48px;
+            background-color: var(--white-color);
+            .students{
+                width: 90%;
+                margin: auto;
+                .head{
+                    margin: 48px 0 32px 0;
+                    .title{
+                        font-size: 24px;
+                        color: var(--main-light-color)
+                    }
+                }
+            }
+        }
+    } 
+}
+
+.new-student-apply{
+    z-index: 21;
+    #profile-info{
+        margin: auto;
+        width: 966.2px;
+        padding: 48px;
+        border-radius: 15px;
+        background-color: var(--white-color);
+        form{
+            .title{
+                margin: 0 0 24px 0.8px;
+                letter-spacing: normal;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.21;
+            }
+            .body{
+                .form-group{
+                    margin-bottom: 24px;
+                    label{
+                        opacity: 0.8;
+                        font-size: 16px;
+                        font-weight: normal;
+                        line-height: 1.19;
+                        letter-spacing: 0.16px;
+                    }
+                    input, select{
+                        margin: 8px 0.5px 0 0.2px;
+                        padding: 10.5px 0 10.5px 16px;
+                        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+                        border: none;
+                    }
+                    select{
+                        color: rgba(0, 0 , 0, .29);
+                    }
+                    select option {
+                        color:var(--black-color);
+                    }
+                    input::placeholder{
+                        opacity: 0.4;
+                        font-size: 16px;
+                        letter-spacing: 0.16px;
+                    }
+                    input[type=radio]{
+                        margin: 4px 4px 0 0;
+                        border: 1px solid var(--main-light-color);
+                        padding: 0;
+                        box-shadow: unset;
+                    }
+                    input:checked[type=radio]{
+                        background-color: var(--main-light-color);
+                    }
+                }
+            }
+            .footer{
+                button.next{
+                    padding: 9px 32px 9px 32px;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 10px 0 rgba(28, 133, 200, .20);
+                    background-color: var(--main-light-color);
+                    border: none;
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 0.36px;
+                    float: right;
+                    color: var(--white-color);
+                }
+            }
+            .personal__information{
+                display: none;
+                .body{
+                    .custom-col:nth-child(1){
+                        .form-group.gender{
+                            margin: 8px 0.5px 24px 0.2px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            label{
+                                flex: 0 0 100%;
+                                margin-bottom: 8px;
+                            }
+                            .form-check{
+                                padding: 0;
+                                padding-right: 24px;
+                                label{
+                                    opacity: .4;
+                                }
+                            }
+                        }
+                        .form-group#dateBirth{
+                            .date-birth{
+                                display: flex;
+                                justify-content: space-between;
+                                select{
+                                    flex: 0 0 30%;
+                                }
+                            }
+    
+                        }
+                    }
+                    .custom-col:nth-child(2){
+                        .form-group.address{
+                            display: flex;
+                            justify-content: space-between;
+                            .form-group{
+                                flex: 0 0 30%;
+                            }
+                        }
+                    }
+                }
+            }
+            .academic__language{
+                display: none;
+            }
+        }
+    }
+}
+
+.profile__photo, .identity__photo, .student__resume,
+.recommendation__letter, .statement__purpose, .degree__transcript,
+.student__certificates, .student__portfolio, .english__test, .fee__payment{
+    text-align: center;
+    display: none;
+    div.head {
+        .desc{
+            font-size: 18px;
+            font-weight: normal;
+            line-height: normal;
+            letter-spacing: 0.18px;
+            color: rgba(0, 0, 0, 0.4);
+            span{
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+    div.body{
+        div{
+            width: 100%;
+            margin-top: 100px;
+            padding: 48px;
+            border-radius: 5px;
+            border: 10px solid #ebf7ff;
+            img{
+                width: 58.4px;
+                height: auto;
+                opacity: 0.7;
+                display: block;
+                margin: auto;
+            }
+            input.file-upload-input{
+                box-shadow: unset;
+                margin-right: 0 !important;
+                padding: 0;
+                height: 2px;
+                border: none;
+                width: 100%;
+            }
+            label {
+                margin: 24px 0 0;
+                font-size: 24px;
+                font-weight: normal;
+                display: block;
+                text-align: center;
+                padding: 13px 13px 0 13px;
+                outline: none;
+                cursor: pointer;
+                letter-spacing: 0.16px;
+                color: rgba(0, 0, 0, 0.4);
+                span{
+                    color: var(--main-light-color);
+                }
+            }
+        }
+        input.file-upload-input::-webkit-file-upload-button{
+            visibility: hidden;
+        }
+    }
+    .footer{
+        margin: auto;
+        button.next{
+            float: none !important;
+            margin-top: 32px;
+        }
+    }
+}
+
+
+.done-modal{
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    .custom-container{
+        width: 966.2px;
+        padding: 30px 30px;
+        border-radius: 15px;
+        background-color: #fff;
+        text-align: center;
+        width: 580px;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        .title-warning{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1;
+            color: var(--black-color);
+            margin: 20px 0;
+        }
+        .desc-warning{
+            margin: 16px 0 20px;
+            opacity: 0.7;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .btns-holder{
+            button{
+                font-weight: 500;
+                letter-spacing: 0.32px;
+                padding: 11.5px 25.7px 11.5px 25.3px;
+                border: none;
+                border-radius: 5px;
+                a{
+                    color: var(--white-color)
+                }
+            }
+            button.more{
+                background-color: var(--main-light-color);
+                color: var(--white-color);
+                margin: 0 48px 0 44px;
+            }
+            button.dashboard{
+                padding: 9px 25.7px 9px 25.3px;
+                background-color: transparent;
+                border: 2px solid var(--main-dark-color);
+                margin: 11px 48px 11px 44px;
+                a{
+                    color: var(--main-dark-color);
+                }
+            }
+        }
+    }
+    &.appear{
+        display: block;
+    }
+}
+@media only screen and (min-width: 692px) {
+    .new-student-apply #profile-info{
+        form{
+            .personal__information{
+                .body{
+                    .custom-col:nth-child(1){
+                        .form-group#dateBirth{
+                            .date-birth{
+                                justify-content: normal;
+                                select{
+                                    width: 120px;
+                                    flex: 0 0 auto;
+                                    margin-right: 24px;
+                                }
+                            }
+
+                        }
+                    }
+                    .custom-col:nth-child(2){
+                        .form-group.address{
+                            justify-content: normal;
+                            .form-group{
+                                width: 120px;
+                                flex: 0 0 auto;
+                                margin-right: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 692px) {
+    .new-student-apply #profile-info{
+        form{
+            .title{
+                color: var(--main-light-color)
+            }
+            .body{
+                display: flex;
+                .custom-col{
+                    flex: 0 0 40%;
+                    margin-right: 9%;
+                }
+            }
+            .personal__information{
+                .body{
+                    .custom-col:nth-child(1){
+                        .form-group#dateBirth{
+                            .date-birth{
+                                justify-content: space-between;
+                                select{
+                                    width: auto;
+                                    margin:0;
+                                    flex: 0 0 30%;
+                                }
+                            }
+    
+                        }
+                    }
+                    .custom-col:nth-child(2){
+                        .form-group.address{
+                            justify-content: space-between;
+                            .form-group{
+                                width: auto;
+                                margin:0;
+                                flex: 0 0 30%;
+                            }
+                        }
+                    }
+                }
+            
+            }
+            .update{
+                margin-right: 11%;
+            }
+        }
+    }
+}

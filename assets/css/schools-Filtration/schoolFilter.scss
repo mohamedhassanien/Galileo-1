@@ -8,6 +8,7 @@
     --lighter-color: #f3f6ff;
     --black-color: #000000;
     --white-color: #ffffff;
+    --red-color: #bd172e;
     --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 *, *:after, *:before{
@@ -34,6 +35,9 @@ a{
 }
 h1, h2, h3, h4, h5, p{
     margin: 0;
+}
+a[href="schoolsFilter.php"]{
+    color: var(--main-light-color) !important;
 }
 .custom-container{
     margin: 0 20px;
@@ -286,22 +290,40 @@ section#schools{
                                 opacity: 0.8;
                                 font-size: 18px;
                                 font-weight: 500;
-                                font-stretch: normal;
-                                font-style: normal;
                                 line-height: normal;
                                 letter-spacing: 0.18px;
+                                color: var(--black-color)
                             }
                             .specialty-name{
                                 margin: 8px 0 0 0;
                                 opacity: 0.6;
                                 font-size: 16px;
-                                font-stretch: normal;
-                                font-style: normal;
                                 line-height: normal;
                                 letter-spacing: 0.16px;
-                              
+                                color: var(--black-color)
                             }
                         }
+                    }
+                }
+            }
+            .schools-not-found{
+                display: flex;
+                height: fit-content !important;
+                box-shadow: none;
+                margin-top: 150px !important;
+                .custom-col:first-child{
+                    align-self: center;
+                    .title{
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: normal;
+                        color: var(--main-dark-color);
+                    }
+                    .desc{
+                        opacity: .8;
+                        margin: 24px 0 0 0;
+                        font-size: 17px;
+                        letter-spacing: .17px;
                     }
                 }
             }
@@ -453,5 +475,4 @@ section#schools{
             }
         }
     }
-
 }

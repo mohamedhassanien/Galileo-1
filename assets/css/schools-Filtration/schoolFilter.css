@@ -6,6 +6,7 @@
   --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --red-color: #bd172e;
   --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 
@@ -40,6 +41,10 @@ a {
 
 h1, h2, h3, h4, h5, p {
   margin: 0;
+}
+
+a[href="schoolsFilter.php"] {
+  color: var(--main-light-color) !important;
 }
 
 .custom-container {
@@ -387,20 +392,50 @@ section#schools .custom-container .body .schools-holder .wrapper .school-card .d
   opacity: 0.8;
   font-size: 18px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: 0.18px;
+  color: var(--black-color);
 }
 
 section#schools .custom-container .body .schools-holder .wrapper .school-card .details .specialty-name {
   margin: 8px 0 0 0;
   opacity: 0.6;
   font-size: 16px;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: 0.16px;
+  color: var(--black-color);
+}
+
+section#schools .custom-container .body .schools-not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-top: 150px !important;
+}
+
+section#schools .custom-container .body .schools-not-found .custom-col:first-child {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section#schools .custom-container .body .schools-not-found .custom-col:first-child .title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--main-dark-color);
+}
+
+section#schools .custom-container .body .schools-not-found .custom-col:first-child .desc {
+  opacity: .8;
+  margin: 24px 0 0 0;
+  font-size: 17px;
+  letter-spacing: .17px;
 }
 
 @media only screen and (min-width: 692px) {

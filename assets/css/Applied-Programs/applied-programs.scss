@@ -8,6 +8,7 @@
     --lighter-color: #f3f6ff;
     --black-color: #000000;
     --white-color: #ffffff;
+    --red-color: #bd172e;
     --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 *, *:after, *:before{
@@ -90,7 +91,7 @@ section#applied-programs{
                 background-color: var(--white-color);
                 .program-holder{
                     display: grid;
-                    grid-template-columns: auto;
+                    grid-template-columns: 120px 1fr 1fr 130px;
                     grid-template-rows: auto;
                     padding: 11px 9px;
                     border-bottom: 1px solid #c5c5c5;
@@ -159,21 +160,20 @@ section#applied-programs{
                         grid-column: 1/5;
                         grid-row: 3/4;
                         justify-self: start;
-                        padding: 7.5px 18px;
                         border-radius: 5px;
                         box-shadow: 0 1px 10px 0 rgba(65, 65, 65, 0.2);
                         background-color: #bd172e;
                         margin: 0;
                         border-radius: 5px;
-                        width: fit-content;
+                        width: 100%;
                         button{
+                            padding: 7.5px 18px;
                             align-self: center;
                             font-size: 16px;
                             font-weight: 500;
                             line-height: normal;
                             letter-spacing: 0.32px;
                             color: var(--white-color);
-                            padding:0;
                         }
                     }
                     div.cancel{
@@ -267,7 +267,7 @@ section#applied-programs{
                 height: 768px;
                 padding:0 0 0 30px;
                 .logo-holder{
-                    margin-top: 16px;
+                    margin-top: 45px;
                 }
                 .user{
                     margin: 0 4px 16px 0;

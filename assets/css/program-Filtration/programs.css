@@ -13,6 +13,7 @@
   --grey-color-2: #C5C5C5;
   --grey-color-3: #BEBEBE;
   --grey-color-4: #828282;
+  --red-color: #bd172e;
   --text-darker-color: #222222;
 }
 
@@ -47,6 +48,10 @@ a {
 
 h1, h2, h3, h4, h5, p {
   margin: 0;
+}
+
+a[href="programFilter.php"] {
+  color: var(--main-light-color) !important;
 }
 
 .custom-btn {
@@ -145,6 +150,35 @@ section#programs .custom-container .data-container div.filter, section#programs 
   height: fit-content;
 }
 
+section#programs .custom-container .data-container div.not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-top: 150px !important;
+}
+
+section#programs .custom-container .data-container div.not-found .custom-col:first-child {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section#programs .custom-container .data-container div.not-found .custom-col:first-child .title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--main-dark-color);
+}
+
+section#programs .custom-container .data-container div.not-found .custom-col:first-child .desc {
+  opacity: .8;
+  margin: 24px 0 0 0;
+  font-size: 17px;
+  letter-spacing: .17px;
+}
+
 section#programs .custom-container .data-container div.filter {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
@@ -152,7 +186,7 @@ section#programs .custom-container .data-container div.filter {
 }
 
 section#programs .custom-container .data-container div.filter .filter-form div.box {
-  margin-bottom: 1.5rem;
+  margin-bottom: 30px;
 }
 
 section#programs .custom-container .data-container div.filter .filter-form div.box .title {
@@ -163,7 +197,7 @@ section#programs .custom-container .data-container div.filter .filter-form div.b
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.2px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 section#programs .custom-container .data-container div.filter .filter-form div.radio .form-check-input:checked[type=radio] {
@@ -299,7 +333,12 @@ section#programs .custom-container .data-container div.programs .program-holder 
   width: fit-content;
 }
 
-section#programs .custom-container .data-container div.programs .program-holder .more-info a {
+section#programs .custom-container .data-container div.programs .program-holder .more-info button {
+  padding: 0;
+}
+
+section#programs .custom-container .data-container div.programs .program-holder .more-info button a {
+  padding: .375rem .75rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -312,6 +351,10 @@ section#programs .custom-container .data-container div.programs .program-holder 
 
 section#programs .custom-container .data-container div.programs .program-holder div.more-info {
   margin-top: 20px;
+}
+
+section#programs .custom-container .data-container div.programs .program-holder:last-child {
+  border-bottom: none;
 }
 
 @media screen and (min-width: 692px) {
@@ -334,6 +377,7 @@ section#programs .custom-container .data-container div.programs .program-holder 
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
+    margin-bottom: 10px;
   }
   section#programs .custom-container .data-container div.filter .filter-form .sort.radio .form-check {
     -webkit-box-flex: 0;
@@ -464,6 +508,8 @@ section#programs .custom-container .data-container div.programs .program-holder 
         -ms-flex: 0 0 65%;
             flex: 0 0 65%;
     margin-top: 0;
+    height: 916px;
+    overflow-y: scroll;
   }
   section#programs .custom-container .data-container div.programs .program-holder .details .major h5 {
     margin: 0 0 5px 0;

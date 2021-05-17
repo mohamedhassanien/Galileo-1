@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* GLOBAL STYLING*/
+:root {
+  --main-light-color: #1c85c8;
+  --main-dark-color: #283c8c;
+  --lighter-color: #f3f6ff;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --red-color: #bd172e;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.custom-container {
+  margin: 0 20px;
+  padding: 0;
+}
+
+.custom-btn {
+  margin: 1px 1px 28px 45px;
+  padding: 9px 41px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+          box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+  background-color: var(--main-light-color);
+  color: var(--white-color);
+  border: none;
+}
+
+/* GLOBAL STYLING*/
+section#student-info .custom-container, .exist-student-apply .custom-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#student-info .custom-container .side-menu, .exist-student-apply .custom-container .side-menu {
+  display: none;
+}
+
+section#student-info .custom-container .students, .exist-student-apply .custom-container .students {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#student-info .custom-container .students .head, .exist-student-apply .custom-container .students .head {
+  margin-bottom: 32px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#student-info .custom-container .students .head .title, section#student-info .custom-container .students .head .search-form, .exist-student-apply .custom-container .students .head .title, .exist-student-apply .custom-container .students .head .search-form {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+section#student-info .custom-container .students .head .title, .exist-student-apply .custom-container .students .head .title {
+  margin: 61px 0 16px 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  color: var(--main-dark-color);
+}
+
+section#student-info .custom-container .students .head .search-form form, .exist-student-apply .custom-container .students .head .search-form form {
+  padding: 11px 0 11px 16px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+
+section#student-info .custom-container .students .head .search-form form img, .exist-student-apply .custom-container .students .head .search-form form img {
+  width: 19px;
+  margin: 0 8px 0 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.9;
+}
+
+section#student-info .custom-container .students .head .search-form form input, .exist-student-apply .custom-container .students .head .search-form form input {
+  margin: 0 0 0 0;
+  border-radius: 5px;
+  border: none;
+}
+
+section#student-info .custom-container .students .head .search-form form input:focus, .exist-student-apply .custom-container .students .head .search-form form input:focus {
+  outline: none;
+}
+
+section#student-info .custom-container .students .head .search-form form input::-webkit-input-placeholder, .exist-student-apply .custom-container .students .head .search-form form input::-webkit-input-placeholder {
+  margin: 0 0 0 8px;
+  opacity: 0.4;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.16px;
+}
+
+section#student-info .custom-container .students .head .search-form form input:-ms-input-placeholder, .exist-student-apply .custom-container .students .head .search-form form input:-ms-input-placeholder {
+  margin: 0 0 0 8px;
+  opacity: 0.4;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.16px;
+}
+
+section#student-info .custom-container .students .head .search-form form input::-ms-input-placeholder, .exist-student-apply .custom-container .students .head .search-form form input::-ms-input-placeholder {
+  margin: 0 0 0 8px;
+  opacity: 0.4;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.16px;
+}
+
+section#student-info .custom-container .students .head .search-form form input::placeholder, .exist-student-apply .custom-container .students .head .search-form form input::placeholder {
+  margin: 0 0 0 8px;
+  opacity: 0.4;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.16px;
+}
+
+section#student-info .custom-container .students .body, .exist-student-apply .custom-container .students .body {
+  margin: 0;
+  padding: 19px 0 0 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px 0 var(--box-shadow-color);
+          box-shadow: 0 0 20px 0 var(--box-shadow-color);
+  width: 100%;
+}
+
+section#student-info .custom-container .students .body .title, .exist-student-apply .custom-container .students .body .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.18px;
+  border-bottom: solid 1px #7d7d7d;
+  padding: 0 0 19px 23.5px;
+}
+
+section#student-info .custom-container .students .body .title div:nth-child(2)
+, section#student-info .custom-container .students .body .title div:nth-child(3), .exist-student-apply .custom-container .students .body .title div:nth-child(2)
+, .exist-student-apply .custom-container .students .body .title div:nth-child(3) {
+  display: none;
+}
+
+section#student-info .custom-container .students .body .wrapper .student, .exist-student-apply .custom-container .students .body .wrapper .student {
+  border-bottom: 1px solid #747474;
+  padding: 24px 0 24px 24px;
+}
+
+section#student-info .custom-container .students .body .wrapper .student .img__name, .exist-student-apply .custom-container .students .body .wrapper .student .img__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+section#student-info .custom-container .students .body .wrapper .student .img__name .student-img-holder, .exist-student-apply .custom-container .students .body .wrapper .student .img__name .student-img-holder {
+  width: 30px;
+  height: 30px;
+}
+
+section#student-info .custom-container .students .body .wrapper .student .img__name .student-img-holder img, .exist-student-apply .custom-container .students .body .wrapper .student .img__name .student-img-holder img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+section#student-info .custom-container .students .body .wrapper .student .img__name .student-name, .exist-student-apply .custom-container .students .body .wrapper .student .img__name .student-name {
+  margin: 0 0 0 10px;
+  opacity: 0.6;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.16px;
+}
+
+section#student-info .custom-container .students .body .wrapper .student .parent__email, .exist-student-apply .custom-container .students .body .wrapper .student .parent__email {
+  display: none;
+}
+
+section#student-info .custom-container .students .body .wrapper .student .manage button, .exist-student-apply .custom-container .students .body .wrapper .student .manage button {
+  margin: 0;
+  margin-right: 24px;
+  width: 114px;
+  height: 34px;
+  padding: 7.5px 26.2px 7.5px 25.8px;
+  border-radius: 5px;
+  line-height: 1.2;
+}
+
+section#student-info .custom-container .students .body .wrapper .student .manage button.program-btn, .exist-student-apply .custom-container .students .body .wrapper .student .manage button.program-btn {
+  background-color: var(--main-dark-color);
+}
+
+section#student-info .custom-container .students .body .wrapper .student .manage button a, .exist-student-apply .custom-container .students .body .wrapper .student .manage button a {
+  color: var(--white-color);
+}
+
+section#student-info .custom-container .students .body .wrapper .student:last-child, .exist-student-apply .custom-container .students .body .wrapper .student:last-child {
+  border: none;
+}
+
+@media only screen and (min-width: 692px) {
+  .custom-container {
+    margin: 0 50px;
+  }
+  section#student-info .custom-container .students .head, section#student-info .exist-student-apply .student-info .students .head, .exist-student-apply .custom-container .students .head, .exist-student-apply .exist-student-apply .student-info .students .head {
+    margin: 61px 0 32px 0;
+  }
+  section#student-info .custom-container .students .head .search-form, section#student-info .exist-student-apply .student-info .students .head .search-form, .exist-student-apply .custom-container .students .head .search-form, .exist-student-apply .exist-student-apply .student-info .students .head .search-form {
+    margin: 0;
+  }
+  section#student-info .custom-container .students .head .search-form form, section#student-info .exist-student-apply .student-info .students .head .search-form form, .exist-student-apply .custom-container .students .head .search-form form, .exist-student-apply .exist-student-apply .student-info .students .head .search-form form {
+    float: right;
+    padding: 6px 6px 6px 10px;
+    width: 297px;
+  }
+  section#student-info .custom-container .students .head .title, section#student-info .exist-student-apply .student-info .students .head .title, .exist-student-apply .custom-container .students .head .title, .exist-student-apply .exist-student-apply .student-info .students .head .title {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: normal;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  section#student-info .custom-container .students .head .title, section#student-info .custom-container .students .head .search-form, section#student-info .exist-student-apply .student-info .students .head .title, section#student-info .exist-student-apply .student-info .students .head .search-form, .exist-student-apply .custom-container .students .head .title, .exist-student-apply .custom-container .students .head .search-form, .exist-student-apply .exist-student-apply .student-info .students .head .title, .exist-student-apply .exist-student-apply .student-info .students .head .search-form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 49%;
+            flex: 0 0 49%;
+  }
+  section#student-info .custom-container .students .body .wrapper .student, section#student-info .exist-student-apply .student-info .students .body .wrapper .student, .exist-student-apply .custom-container .students .body .wrapper .student, .exist-student-apply .exist-student-apply .student-info .students .body .wrapper .student {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section#student-info .custom-container .students .body .wrapper .student .img__name, section#student-info .exist-student-apply .student-info .students .body .wrapper .student .img__name, .exist-student-apply .custom-container .students .body .wrapper .student .img__name, .exist-student-apply .exist-student-apply .student-info .students .body .wrapper .student .img__name {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .custom-container {
+    margin: 0 100px;
+  }
+  section#student-info .custom-container .side-menu, .exist-student-apply .custom-container .side-menu {
+    margin-top: -101px;
+    padding-top: 0;
+    position: fixed;
+    width: 19.7%;
+    z-index: 10;
+    display: block;
+    margin-left: -100px;
+    background-image: linear-gradient(197deg, #1c85c8 5%, #283c8c);
+    height: 768px;
+    padding: 0 0 0 30px;
+  }
+  section#student-info .custom-container .side-menu .logo-holder, .exist-student-apply .custom-container .side-menu .logo-holder {
+    margin-top: 45px;
+  }
+  section#student-info .custom-container .side-menu .user, .exist-student-apply .custom-container .side-menu .user {
+    margin: 0 4px 16px 0;
+    margin-top: 118px;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--white-color);
+  }
+  section#student-info .custom-container .side-menu ul li, .exist-student-apply .custom-container .side-menu ul li {
+    margin: 16px 0 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white-color);
+  }
+  section#student-info .custom-container .side-menu ul li span, .exist-student-apply .custom-container .side-menu ul li span {
+    width: 59px;
+    height: 15px;
+    margin: 0 14px;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.14px;
+    color: var(--white-color);
+    background-color: var(--main-dark-color);
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    line-height: .9;
+  }
+  section#student-info .custom-container .side-menu ul li a, .exist-student-apply .custom-container .side-menu ul li a {
+    color: var(--white-color);
+    display: inline-block;
+    width: 100%;
+  }
+  section#student-info .custom-container .side-menu ul li.active, .exist-student-apply .custom-container .side-menu ul li.active {
+    background-color: #3aa7ec;
+    margin-left: -30px;
+    position: relative;
+    padding: 9px 0 9px 30px;
+  }
+  section#student-info .custom-container .side-menu ul li.active::before, .exist-student-apply .custom-container .side-menu ul li.active::before {
+    content: '';
+    width: 13px;
+    border-radius: 0 5px 0 0;
+    background-color: #283a82;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  section#student-info .custom-container .students, .exist-student-apply .custom-container .students {
+    margin-left: 19%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+  }
+  section#student-info .custom-container .students .body .title div, .exist-student-apply .custom-container .students .body .title div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+  }
+  section#student-info .custom-container .students .body .title div:nth-child(2)
+, section#student-info .custom-container .students .body .title div:nth-child(3), .exist-student-apply .custom-container .students .body .title div:nth-child(2)
+, .exist-student-apply .custom-container .students .body .title div:nth-child(3) {
+    display: block;
+  }
+  section#student-info .custom-container .students .body .wrapper .student .img__name, section#student-info .custom-container .students .body .wrapper .student .manage, section#student-info .custom-container .students .body .wrapper .student .parent__email, .exist-student-apply .custom-container .students .body .wrapper .student .img__name, .exist-student-apply .custom-container .students .body .wrapper .student .manage, .exist-student-apply .custom-container .students .body .wrapper .student .parent__email {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    margin: auto 0;
+  }
+  section#student-info .custom-container .students .body .wrapper .student .parent__email, .exist-student-apply .custom-container .students .body .wrapper .student .parent__email {
+    display: block;
+    line-height: 2;
+    opacity: .6;
+  }
+  section#student-info .custom-container .students .body .wrapper .student .manage button, .exist-student-apply .custom-container .students .body .wrapper .student .manage button {
+    margin-right: 0;
+    padding: 0;
+  }
+  section#student-info .custom-container .students .body .wrapper .student .manage button a, .exist-student-apply .custom-container .students .body .wrapper .student .manage button a {
+    display: block;
+    width: 100%;
+    padding: 7.5px 26.2px 7.5px 25.8px;
+  }
+  section#student-info .custom-container .students .body .wrapper .student .manage button.account-btn, .exist-student-apply .custom-container .students .body .wrapper .student .manage button.account-btn {
+    margin-right: 26px;
+  }
+}
+/*# sourceMappingURL=student.css.map */

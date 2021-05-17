@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* GLOBAL STYLING*/
+:root {
+  --main-light-color: #1c85c8;
+  --main-dark-color: #283c8c;
+  --lighter-color: #f3f6ff;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --red-color: #bd172e;
+  --box-shadow-color: rgba(0, 0, 0, 0.16);
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.custom-container {
+  margin: 0 20px;
+  padding: 0;
+}
+
+.custom-btn {
+  margin: 1px 1px 28px 45px;
+  padding: 9px 41px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+          box-shadow: 0 3px 15px 0 rgba(28, 133, 200, 0.11);
+  background-color: var(--main-light-color);
+  color: var(--white-color);
+  border: none;
+}
+
+/* GLOBAL STYLING*/
+.apply-modal, .exist-student-apply, .new-student-apply {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 30px 0;
+  display: none;
+}
+
+.apply-modal .program__description, .exist-student-apply .program__description, .new-student-apply .program__description {
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  width: 966.2px;
+  margin: auto;
+  background-color: var(--white-color);
+}
+
+.apply-modal .program__description .wrapper .title, .exist-student-apply .program__description .wrapper .title, .new-student-apply .program__description .wrapper .title {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  color: var(--main-dark-color);
+}
+
+.apply-modal .program__description .wrapper .body, .exist-student-apply .program__description .wrapper .body, .new-student-apply .program__description .wrapper .body {
+  margin: 20px 27px 20px 0;
+  width: auto;
+  opacity: 0.6;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.18px;
+}
+
+.apply-modal .program__description .wrapper ul.list li, .exist-student-apply .program__description .wrapper ul.list li, .new-student-apply .program__description .wrapper ul.list li {
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  margin: 0 8px 15px 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.apply-modal .program__description .wrapper ul.list li::before, .exist-student-apply .program__description .wrapper ul.list li::before, .new-student-apply .program__description .wrapper ul.list li::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: var(--main-light-color);
+  opacity: 1;
+  border-radius: 50%;
+  margin: 0 10px 0px 0;
+}
+
+.apply-modal .program__description .wrapper .btns-holder, .exist-student-apply .program__description .wrapper .btns-holder, .new-student-apply .program__description .wrapper .btns-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.apply-modal .program__description .wrapper .btns-holder button, .exist-student-apply .program__description .wrapper .btns-holder button, .new-student-apply .program__description .wrapper .btns-holder button {
+  border-radius: 5px;
+  background-color: var(--white-color);
+  margin: 0 32px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  padding: 9px 16px 9px 16px;
+  border: none;
+}
+
+.apply-modal .program__description .wrapper .btns-holder button.exist, .exist-student-apply .program__description .wrapper .btns-holder button.exist, .new-student-apply .program__description .wrapper .btns-holder button.exist {
+  border: solid 1.5px var(--main-dark-color);
+  color: var(--main-dark-color);
+}
+
+.apply-modal .program__description .wrapper .btns-holder button.new, .exist-student-apply .program__description .wrapper .btns-holder button.new, .new-student-apply .program__description .wrapper .btns-holder button.new {
+  color: var(--white-color);
+  background-color: var(--main-light-color);
+}
+
+.exist-student-apply {
+  z-index: 21;
+}
+
+.exist-student-apply .custom-container {
+  width: 966.2px;
+  margin: auto;
+}
+
+.exist-student-apply .custom-container .student-info {
+  border-radius: 5px;
+  padding-bottom: 48px;
+  background-color: var(--white-color);
+}
+
+.exist-student-apply .custom-container .student-info .students {
+  width: 90%;
+  margin: auto;
+}
+
+.exist-student-apply .custom-container .student-info .students .head {
+  margin: 48px 0 32px 0;
+}
+
+.exist-student-apply .custom-container .student-info .students .head .title {
+  font-size: 24px;
+  color: var(--main-light-color);
+}
+
+.new-student-apply {
+  z-index: 21;
+}
+
+.new-student-apply #profile-info {
+  margin: auto;
+  width: 966.2px;
+  padding: 48px;
+  border-radius: 15px;
+  background-color: var(--white-color);
+}
+
+.new-student-apply #profile-info form .title {
+  margin: 0 0 24px 0.8px;
+  letter-spacing: normal;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.21;
+}
+
+.new-student-apply #profile-info form .body .form-group {
+  margin-bottom: 24px;
+}
+
+.new-student-apply #profile-info form .body .form-group label {
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.19;
+  letter-spacing: 0.16px;
+}
+
+.new-student-apply #profile-info form .body .form-group input, .new-student-apply #profile-info form .body .form-group select {
+  margin: 8px 0.5px 0 0.2px;
+  padding: 10.5px 0 10.5px 16px;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.new-student-apply #profile-info form .body .form-group select {
+  color: rgba(0, 0, 0, 0.29);
+}
+
+.new-student-apply #profile-info form .body .form-group select option {
+  color: var(--black-color);
+}
+
+.new-student-apply #profile-info form .body .form-group input::-webkit-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+.new-student-apply #profile-info form .body .form-group input:-ms-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+.new-student-apply #profile-info form .body .form-group input::-ms-input-placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+.new-student-apply #profile-info form .body .form-group input::placeholder {
+  opacity: 0.4;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+.new-student-apply #profile-info form .body .form-group input[type=radio] {
+  margin: 4px 4px 0 0;
+  border: 1px solid var(--main-light-color);
+  padding: 0;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.new-student-apply #profile-info form .body .form-group input:checked[type=radio] {
+  background-color: var(--main-light-color);
+}
+
+.new-student-apply #profile-info form .footer button.next {
+  padding: 9px 32px 9px 32px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(28, 133, 200, 0.2);
+          box-shadow: 0 1px 10px 0 rgba(28, 133, 200, 0.2);
+  background-color: var(--main-light-color);
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  float: right;
+  color: var(--white-color);
+}
+
+.new-student-apply #profile-info form .personal__information {
+  display: none;
+}
+
+.new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group.gender {
+  margin: 8px 0.5px 24px 0.2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group.gender label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  margin-bottom: 8px;
+}
+
+.new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group.gender .form-check {
+  padding: 0;
+  padding-right: 24px;
+}
+
+.new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group.gender .form-check label {
+  opacity: .4;
+}
+
+.new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth select {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+.new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address .form-group {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+.new-student-apply #profile-info form .academic__language {
+  display: none;
+}
+
+.profile__photo, .identity__photo, .student__resume,
+.recommendation__letter, .statement__purpose, .degree__transcript,
+.student__certificates, .student__portfolio, .english__test, .fee__payment {
+  text-align: center;
+  display: none;
+}
+
+.profile__photo div.head .desc, .identity__photo div.head .desc, .student__resume div.head .desc,
+.recommendation__letter div.head .desc, .statement__purpose div.head .desc, .degree__transcript div.head .desc,
+.student__certificates div.head .desc, .student__portfolio div.head .desc, .english__test div.head .desc, .fee__payment div.head .desc {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.profile__photo div.head .desc span, .identity__photo div.head .desc span, .student__resume div.head .desc span,
+.recommendation__letter div.head .desc span, .statement__purpose div.head .desc span, .degree__transcript div.head .desc span,
+.student__certificates div.head .desc span, .student__portfolio div.head .desc span, .english__test div.head .desc span, .fee__payment div.head .desc span {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.profile__photo div.body div, .identity__photo div.body div, .student__resume div.body div,
+.recommendation__letter div.body div, .statement__purpose div.body div, .degree__transcript div.body div,
+.student__certificates div.body div, .student__portfolio div.body div, .english__test div.body div, .fee__payment div.body div {
+  width: 100%;
+  margin-top: 100px;
+  padding: 48px;
+  border-radius: 5px;
+  border: 10px solid #ebf7ff;
+}
+
+.profile__photo div.body div img, .identity__photo div.body div img, .student__resume div.body div img,
+.recommendation__letter div.body div img, .statement__purpose div.body div img, .degree__transcript div.body div img,
+.student__certificates div.body div img, .student__portfolio div.body div img, .english__test div.body div img, .fee__payment div.body div img {
+  width: 58.4px;
+  height: auto;
+  opacity: 0.7;
+  display: block;
+  margin: auto;
+}
+
+.profile__photo div.body div input.file-upload-input, .identity__photo div.body div input.file-upload-input, .student__resume div.body div input.file-upload-input,
+.recommendation__letter div.body div input.file-upload-input, .statement__purpose div.body div input.file-upload-input, .degree__transcript div.body div input.file-upload-input,
+.student__certificates div.body div input.file-upload-input, .student__portfolio div.body div input.file-upload-input, .english__test div.body div input.file-upload-input, .fee__payment div.body div input.file-upload-input {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  margin-right: 0 !important;
+  padding: 0;
+  height: 2px;
+  border: none;
+  width: 100%;
+}
+
+.profile__photo div.body div label, .identity__photo div.body div label, .student__resume div.body div label,
+.recommendation__letter div.body div label, .statement__purpose div.body div label, .degree__transcript div.body div label,
+.student__certificates div.body div label, .student__portfolio div.body div label, .english__test div.body div label, .fee__payment div.body div label {
+  margin: 24px 0 0;
+  font-size: 24px;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  padding: 13px 13px 0 13px;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 0.16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.profile__photo div.body div label span, .identity__photo div.body div label span, .student__resume div.body div label span,
+.recommendation__letter div.body div label span, .statement__purpose div.body div label span, .degree__transcript div.body div label span,
+.student__certificates div.body div label span, .student__portfolio div.body div label span, .english__test div.body div label span, .fee__payment div.body div label span {
+  color: var(--main-light-color);
+}
+
+.profile__photo div.body input.file-upload-input::-webkit-file-upload-button, .identity__photo div.body input.file-upload-input::-webkit-file-upload-button, .student__resume div.body input.file-upload-input::-webkit-file-upload-button,
+.recommendation__letter div.body input.file-upload-input::-webkit-file-upload-button, .statement__purpose div.body input.file-upload-input::-webkit-file-upload-button, .degree__transcript div.body input.file-upload-input::-webkit-file-upload-button,
+.student__certificates div.body input.file-upload-input::-webkit-file-upload-button, .student__portfolio div.body input.file-upload-input::-webkit-file-upload-button, .english__test div.body input.file-upload-input::-webkit-file-upload-button, .fee__payment div.body input.file-upload-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.profile__photo .footer, .identity__photo .footer, .student__resume .footer,
+.recommendation__letter .footer, .statement__purpose .footer, .degree__transcript .footer,
+.student__certificates .footer, .student__portfolio .footer, .english__test .footer, .fee__payment .footer {
+  margin: auto;
+}
+
+.profile__photo .footer button.next, .identity__photo .footer button.next, .student__resume .footer button.next,
+.recommendation__letter .footer button.next, .statement__purpose .footer button.next, .degree__transcript .footer button.next,
+.student__certificates .footer button.next, .student__portfolio .footer button.next, .english__test .footer button.next, .fee__payment .footer button.next {
+  float: none !important;
+  margin-top: 32px;
+}
+
+.done-modal {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.done-modal .custom-container {
+  width: 966.2px;
+  padding: 30px 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+  width: 580px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.done-modal .custom-container .title-warning {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--black-color);
+  margin: 20px 0;
+}
+
+.done-modal .custom-container .desc-warning {
+  margin: 16px 0 20px;
+  opacity: 0.7;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.done-modal .custom-container .btns-holder button {
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  padding: 11.5px 25.7px 11.5px 25.3px;
+  border: none;
+  border-radius: 5px;
+}
+
+.done-modal .custom-container .btns-holder button a {
+  color: var(--white-color);
+}
+
+.done-modal .custom-container .btns-holder button.more {
+  background-color: var(--main-light-color);
+  color: var(--white-color);
+  margin: 0 48px 0 44px;
+}
+
+.done-modal .custom-container .btns-holder button.dashboard {
+  padding: 9px 25.7px 9px 25.3px;
+  background-color: transparent;
+  border: 2px solid var(--main-dark-color);
+  margin: 11px 48px 11px 44px;
+}
+
+.done-modal .custom-container .btns-holder button.dashboard a {
+  color: var(--main-dark-color);
+}
+
+.done-modal.appear {
+  display: block;
+}
+
+@media only screen and (min-width: 692px) {
+  .new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth {
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  .new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth select {
+    width: 120px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-right: 24px;
+  }
+  .new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address {
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  .new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address .form-group {
+    width: 120px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width: 692px) {
+  .new-student-apply #profile-info form .title {
+    color: var(--main-light-color);
+  }
+  .new-student-apply #profile-info form .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .new-student-apply #profile-info form .body .custom-col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+    margin-right: 9%;
+  }
+  .new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(1) .form-group#dateBirth .date-birth select {
+    width: auto;
+    margin: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+  .new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .new-student-apply #profile-info form .personal__information .body .custom-col:nth-child(2) .form-group.address .form-group {
+    width: auto;
+    margin: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+  .new-student-apply #profile-info form .update {
+    margin-right: 11%;
+  }
+}
+/*# sourceMappingURL=apply-modal.css.map */

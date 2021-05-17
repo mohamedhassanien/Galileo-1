@@ -17,6 +17,89 @@
 </head>
 <body>
     <?php include 'header.php';?>
+    <?php
+
+include 'php/dbConfig.php';
+$query="SELECT * FROM schools";
+if(isset($_POST['filter'])){
+  if ( $_POST['Country']=="Any" and $_POST['field']=="Any" and $_POST['fees']==0 and $_POST['salary']==0 and $_POST['alumni']==0 ) {
+  $query="SELECT * FROM schools";
+  filterprogs($query);
+}else{
+  $count=0;
+  $query="SELECT * FROM schools WHERE";
+  if (isset($_POST['Country']) and $_POST['Country']!="Any") {
+  $city=$_POST['Country'];
+  $query=$query." Country LIKE '%$city%'";
+  $count=$count+1;
+  }
+  if (isset($_POST['field']) and $_POST['field']!="Any") {
+    $type=$_POST['field'];
+    if ($count>0) {
+      $query=$query." AND Field LIKE '%$type%'";
+      $count=$count+1;
+    }
+    else {
+      $query=$query." Field LIKE '%$type%'";
+      $count=$count+1;
+    }
+
+  }
+  if (isset($_POST['salary']) and $_POST['salary']!=0) {
+    $salary=$_POST['salary'];
+    if ($count>0) {
+      $query=$query." AND highrangesalary <= $salary";
+      $count=$count+1;
+    }else {
+      $query=$query." highrangesalary <= $salary";
+      $count=$count+1;
+
+    }
+
+  }
+  if (isset($_POST['alumni']) and $_POST['alumni']!=0) {
+    $alumni=$_POST['alumni'];
+    if ($count>0) {
+      $query=$query." AND alumni <= $alumni";
+      $count=$count+1;
+    }
+    else {
+      $query=$query."  alumni <= $alumni";
+      $count=$count+1;
+    }
+
+  }
+  if (isset($_POST['fees']) and $_POST['fees']!=0) {
+    $fees=$_POST['fees'];
+    if ($count>0) {
+      $query=$query." AND feesavg <= $fees";
+      $count=$count+1;
+    }else {
+      $query=$query." feesavg <= $fees";
+      $count=$count+1;
+    }
+
+  }
+filterprogs($query);
+  $count=0;
+}
+}
+
+function filterprogs($query){
+include 'php/dbConfig.php';
+$filter_result=mysqli_query($mysqli,$query);
+return $filter_result;
+}
+include 'php/dbConfig.php';
+mysqli_select_db($mysqli,'useregistration');
+
+$resultcities=$mysqli->query("SELECT Name FROM cities ORDER BY Name ASC;");
+$resulttypes=$mysqli->query("SELECT type FROM types ORDER BY  type  ASC;");
+$resultprograms=$mysqli->query($query);
+$resultlevels=$mysqli->query("SELECT * FROM levels");
+$resultschools=$mysqli->query("SELECT * FROM schools ORDER BY name ASC");
+
+ ?>
 
     <section id="home">
         <div class="custom-container">
@@ -30,7 +113,7 @@
                 </div>
             </div>
             <div class="img-holder">
-                <img src="assets/images/worldMap.png" 
+                <img src="assets/images/worldMap.png"
                     srcset="assets/images/worldMap@2x.png 2x
                     , assets/images/worldMap@3x.png 3x"
                 alt="Worldmap">
@@ -40,24 +123,24 @@
 
     <section id="schools" class="schools">
         <div class="custom-container">
-            <div class="search">             
+            <div class="search">
                 <form class="search-form" autocomplete="off">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" id="field-select" placeholder="Search for schools or university's">
-                        
+
                         <button class="custom-btn search" type="button" id="search">Search</button>
                     </div>
                 </form>
             </div>
-            
+
             <div class="body">
                 <div class="filter">
                     <form action="" class="filter-form">
                         <div class="box country radio">
                             <div class="title">
-                                country
+                                Country
                             </div>
-                        
+
                             <div class="wrapper">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="country" value="All" id="All" checked >
@@ -79,7 +162,7 @@
                                 </div>
                             </div>
                         </div>
-                          
+
                         <div class="box specialty radio">
                             <div class="title">
                                 School Specialty
@@ -111,7 +194,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="box language radio">
                             <div class="title">
                                 Language
@@ -137,7 +220,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="box sort radio">
                             <div class="title">
                                 Sort
@@ -157,7 +240,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="box range">
                             <div class="title">
                                 Fees Range
@@ -174,7 +257,7 @@
                                 <input type='number' id="fees-input-keypress-1">
                             </div>
                         </div>
-    
+
                         <div class="box range">
                             <div class="title">
                                 Salary Range
@@ -191,7 +274,7 @@
                                 <input type='number' id="salary-input-keypress-1">
                             </div>
                         </div>
-    
+
                         <div class="box range">
                             <div class="title">
                                 Alumni Range <span>( Yearly )</span>
@@ -208,7 +291,7 @@
                                 <input type='number' id="alumni-input-keypress-1">
                             </div>
                         </div>
-    
+
                         <div class="form-check box filter-btn-holder">
                             <button class="custom-btn filter-btn">Filter</button>
                         </div>
@@ -217,218 +300,33 @@
 
                 <div class="schools-holder">
                     <div class="wrapper">
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
+                      <?php     while ($rows=$resultprograms->fetch_assoc()) {
+      $schoolname=$rows['name'];
+      $field=$rows['Field'];
+      echo "
+                        <div class='school-card'>
+                        <a class='bg-img-holder' href='$schoolname.php'>
+                            <div class='bg-img-holder'>
+                                <img src='assets/images/schools/$schoolname/1.jpg' >
+                                <div class='school-img'>
+                                    <img src='assets/images/school-logos/$schoolname.png' style='object-fit:contain;'>
                                 </div>
                             </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
+                            <div class='details'>
+                                <div class='school-name'>$schoolname</div>
+                                <div class='specialty-name'>$field school</div>
                             </div>
+                            </a>
                         </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
-                        <div class="school-card">
-                            <div class="bg-img-holder">
-                                <img src="assets/images/school-bg-img.jpg" alt="">
-                                <div class="school-img">
-                                    <img src="assets/images/logo-school-img.png" alt="">
-                                </div>
-                            </div>
-                            <div class="details">
-                                <div class="school-name">Atelier Chardon Savard</div>
-                                <div class="specialty-name">Fashion design school</div>
-                            </div>
-                        </div>
+";}?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <?php include 'footer.php';?>
- 
+
     <!-- RANG SLIDER JS  -->
     <script src="node_modules/nouislider/distribute/nouislider.min.js"></script>
     <script src="assets/js/schoolFilter.js"></script>

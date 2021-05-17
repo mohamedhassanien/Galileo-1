@@ -1,0 +1,184 @@
+body{
+  background-color: #F8F9FD;
+}
+
+nav.clean{
+  padding: 30px 200px  100px;
+  box-shadow: none;
+  background: none;
+}
+
+nav.clean h6{
+  color: black;
+  display: inline-flex;
+  padding-right: 20px;
+}
+
+nav.clean span{
+  color: #0F4A52;
+  text-decoration: none;
+  text-decoration: underline;
+  background-color: none;
+  text-shadow: 5px  1px white;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+}
+.breadcrumb::before{
+  color:#0F4A52;
+}
+.card_srv{
+  display: inline-block;
+  border: 2px solid black;
+}
+
+.AboutHeader{
+  text-align: center;
+  margin-top: 25px;
+}
+
+.header_title{
+  align-items: center;
+  display:flex;
+  font-family: Verdana;
+  color: #0F4A52;
+  font-weight: bold;
+  font-size: 60px;
+}
+.header_title::before,
+.header_title::after {
+    border-top: .0750em solid;
+    content: "";
+    flex: 1;
+    margin: 0.5em 1.5em 0.5em 1.5em;
+}
+
+.header_para0{
+  text-align: justify;
+  font-style: normal;
+  font-family: Verdana;
+}
+
+.header_para1{
+  text-align: left;
+  text-decoration: none;
+  color: #0F4A52;
+  font-size: 18px;
+  font-style: italic;
+
+}
+#span_text1{
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  font-family:
+}
+
+.header_sc-dv{
+}
+
+
+.header_sc-dv h1{
+  font-size: 60px;
+  text-align: right;
+  margin: 0px;
+  color: #0F4A52;
+  font-weight: bold;
+}
+
+#headertitle1{}
+#headertitle2{}
+#headertitle3{}
+
+#headertitle4, #headertitle8{
+  color: red;
+}
+
+.header_sc-title{
+  align-items: justify;
+  display:flex;
+  font-family: Verdana;
+  color: red;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.header_para2{
+  text-align: justify;
+  font-style: normal;
+  font-family: Verdana;
+  font-size: 17px;
+  line-height: 30px;
+
+}
+
+
+.header_td-dv h1{
+  text-align: left;
+  margin: 0px;
+  color: #0F4A52;
+  font-weight: bold;
+}
+
+
+
+.AboutCrew{
+  padding-top: 25px;
+  padding-bottom: 10px;
+  /* background: linear-gradient(#F8F9FD 5%, 10%, #fff8e1  90%); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+}
+
+.crew_title{
+  padding: 10px;
+  display:inline-block;
+  font-family: Verdana;
+  color: #0F4A52;
+  font-weight: bold;
+  font-size: 60px;
+  border-radius: 25px;
+  border: 10px solid black;
+  margin-bottom: 100px;
+
+}
+
+.employe_img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.crew_name{
+  color: #0F4A52;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.crew_form{
+  color: #21a6b7;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+.crew_icon-dv{
+  margin-top: 15px;
+}
+.media_img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.employee_profil{
+  margin-bottom: 50px;
+}

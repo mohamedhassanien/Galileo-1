@@ -1,0 +1,13 @@
+
+.page-footer{
+  background-color: #0F4A52;
+}
+.footer_container{
+  margin-top: 70px;
+}
+@media only screen and (max-width: 600px) {
+    .footer_container{
+      margin-top: 50px;
+    }
+
+}

@@ -16,12 +16,16 @@
     <title>Profile</title>
 </head>
 <body>
-    
-    <?php include 'header.php';?>
-    
+
+    <?php include 'header.php';
+    $stid=$_GET['id'];
+
+
+    ?>
+
     <section class="student-account" id="student-account">
         <div class="custom-container">
-            
+
             <div class="side-menu">
                 <div class="logo-holder">
                     <img src="assets/images/student-sub-agent-galileo-global-education-logo-vector.png"
@@ -43,9 +47,9 @@
                     <button class="tab-button tab-student-button" data-id="profile-info">Profile</button>
                 </div>
                 <div class="contentWrapper">
-                    <div class="content student-content active" id="documents-info">    
+                    <div class="content student-content active" id="documents-info">
                         <div class="documents-container">
-                            <form action="">
+                            <form action="" >
                                 <div class="passport">
                                     <div class="title">
                                         Passport
@@ -54,7 +58,7 @@
                                     <div class="body">
                                         <div class="file">
                                             <img src="assets/images/Group-1158@2x.png" alt="">
-                                            <input type="file" readonly value="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             06/01/2021
@@ -62,7 +66,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
+                                                    <label for="passport">Reupload</label>
+                                                    <input type="file" id="passport" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -70,7 +75,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="body not-uploaded">
                                         <div class="file">
                                             Not uploaded yet
@@ -90,8 +95,8 @@
                                     </div>
                                     <div class="body">
                                         <div class="file">
-                                            <img src="" alt="">
-                                            <input type="file" readonly value="">
+                                            <img src="assets/images/Group-1158@2x.png" alt="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             17/01/2021
@@ -99,7 +104,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
+                                                    <label for="identity-photo">Reupload</label>
+                                                    <input type="file" id="identity-photo" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -115,8 +121,8 @@
                                     </div>
                                     <div class="body">
                                         <div class="file">
-                                            <img src="" alt="">
-                                            <input type="file" readonly value="">
+                                            <img src="assets/images/Group-1158@2x.png" alt="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             20/01/2021
@@ -124,7 +130,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
+                                                    <label for="resume">Reupload</label>
+                                                    <input type="file" id="resume" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -141,7 +148,7 @@
                                     <div class="body">
                                         <div class="file">
                                             <img src="" alt="">
-                                            <input type="file" readonly value="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             20/01/2021
@@ -149,7 +156,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
+                                                    <label for="purpose">Reupload</label>
+                                                    <input type="file" id="purpose" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -165,8 +173,8 @@
                                     </div>
                                     <div class="body">
                                         <div class="file">
-                                            <img src="" alt="">
-                                            <input type="file" readonly value="">
+                                            <img src="assets/images/Group-1158@2x.png" alt="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             06/01/2021
@@ -174,7 +182,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
+                                                    <label for="letter">Reupload</label>
+                                                    <input type="file" id="letter" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -190,8 +199,8 @@
                                     </div>
                                     <div class="body">
                                         <div class="file">
-                                            <img src="" alt="">
-                                            <input type="file" readonly value="">
+                                            <img src="assets/images/Group-1158@2x.png" alt="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             17/01/2021
@@ -199,7 +208,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
+                                                    <label for="certificate">Reupload</label>
+                                                    <input type="file" id="certificate" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -215,8 +225,8 @@
                                     </div>
                                     <div class="body">
                                         <div class="file">
-                                            <img src="" alt="">
-                                            <input type="file" readonly value="">
+                                            <img src="assets/images/Group-1158@2x.png" alt="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             20/01/2021
@@ -224,7 +234,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
+                                                    <label for="degree">Reupload</label>
+                                                    <input type="file" id="degree" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -240,8 +251,8 @@
                                     </div>
                                     <div class="body">
                                         <div class="file">
-                                            <img src="" alt="">
-                                            <input type="file" readonly value="">
+                                            <img src="assets/images/Group-1158@2x.png" alt="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             20/01/2021
@@ -249,32 +260,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
-                                                </button>
-                                                <button class="delete">
-                                                    Delete
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="fee-payment">
-                                    <div class="title">
-                                        Proof of 90 € application fee payment
-                                    </div>
-                                    <div class="body">
-                                        <div class="file">
-                                            <img src="" alt="">
-                                            <input type="file" readonly value="">
-                                        </div>
-                                        <div class="date">
-                                            20/01/2021
-                                        </div>
-                                        <div class="more-action">
-                                            <div class="actions">
-                                                <button class="reupload">
-                                                    Reupload
+                                                    <label for="eng-test">Reupload</label>
+                                                    <input type="file" id="eng-test" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -291,7 +278,7 @@
                                     <div class="body">
                                         <div class="file">
                                             <img src="" alt="">
-                                            <input type="file" readonly value="">
+                                            <a href="upload/Students/1/assertion.pdf">Assertion.pdf</a>
                                         </div>
                                         <div class="date">
                                             20/01/2021
@@ -299,7 +286,8 @@
                                         <div class="more-action">
                                             <div class="actions">
                                                 <button class="reupload">
-                                                    Reupload
+                                                    <label for="portfolio">Reupload</label>
+                                                    <input type="file" id="portfolio" readonly>
                                                 </button>
                                                 <button class="delete">
                                                     Delete
@@ -327,13 +315,13 @@
                                 <div class="body">
                                     <div class="box motivation-letter">
                                         <div class="title">
-                                            Motivation Letter 
+                                            Motivation Letter
                                         </div>
                                         <div class="check done">
                                             <p>Done</p>
-                                            <img src="assets/images/done.png" 
-                                            srcset="assets/images/done@2x.png 2x,
-                                            assets/images/done@3x.png 3x" 
+                                            <img src="assets/images/done-task.png"
+                                            srcset="assets/images/done-task@2x.png 2x,
+                                            assets/images/done-task@3x.png 3x"
                                             alt="">
                                         </div>
                                         <div class="desc">
@@ -341,16 +329,16 @@
                                             skills and reasons for applying
                                         </div>
                                     </div>
-                                    
+
                                     <div class="box resume">
                                         <div class="title">
                                             CV
                                         </div>
                                         <div class="check done">
                                             <p>Done</p>
-                                            <img src="assets/images/done.png" 
-                                            srcset="assets/images/done@2x.png 2x,
-                                            assets/images/done@3x.png 3x" 
+                                            <img src="assets/images/done-task.png"
+                                            srcset="assets/images/done-task@2x.png 2x,
+                                            assets/images/done-task@3x.png 3x"
                                             alt="">
                                         </div>
                                         <div class="desc">
@@ -358,84 +346,16 @@
                                             skills and reasons for applying
                                         </div>
                                     </div>
-                                    
+
                                     <div class="box certificates">
                                         <div class="title">
-                                            Certificates 
+                                            Certificates
                                         </div>
                                         <div class="check done">
                                             <p>Done</p>
-                                            <img src="assets/images/done.png" 
-                                            srcset="assets/images/done@2x.png 2x,
-                                            assets/images/done@3x.png 3x" 
-                                            alt="">
-                                        </div>
-                                        <div class="desc">
-                                            document detailing your professional
-                                            skills and reasons for applying
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box passport">
-                                        <div class="title">
-                                            Passport
-                                        </div>
-                                        <div class="check undone">
-                                            <p>Undone</p>
-                                            <img src="assets/images/undone.png" 
-                                            srcset="assets/images/undone@2x.png 2x,
-                                            assets/images/undone@3x.png 3x" 
-                                            alt="">
-                                        </div>
-                                        <div class="desc">
-                                            document detailing your professional
-                                            skills and reasons for applying
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box passport">
-                                        <div class="title">
-                                            Passport
-                                        </div>
-                                        <div class="check undone">
-                                            <p>Undone</p>
-                                            <img src="assets/images/undone.png" 
-                                            srcset="assets/images/undone@2x.png 2x,
-                                            assets/images/undone@3x.png 3x" 
-                                            alt="">
-                                        </div>
-                                        <div class="desc">
-                                            document detailing your professional
-                                            skills and reasons for applying
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box passport">
-                                        <div class="title">
-                                            Passport
-                                        </div>
-                                        <div class="check undone">
-                                            <p>Undone</p>
-                                            <img src="assets/images/undone.png" 
-                                            srcset="assets/images/undone@2x.png 2x,
-                                            assets/images/undone@3x.png 3x" 
-                                            alt="">
-                                        </div>
-                                        <div class="desc">
-                                            document detailing your professional
-                                            skills and reasons for applying
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box passport">
-                                        <div class="title">
-                                            Passport
-                                        </div>
-                                        <div class="check undone">
-                                            <p>Undone</p>
-                                            <img src="assets/images/undone.png" 
-                                            srcset="assets/images/undone@2x.png 2x,
-                                            assets/images/undone@3x.png 3x" 
+                                            <img src="assets/images/done-task.png"
+                                            srcset="assets/images/done-task@2x.png 2x,
+                                            assets/images/done-task@3x.png 3x"
                                             alt="">
                                         </div>
                                         <div class="desc">
@@ -450,9 +370,77 @@
                                         </div>
                                         <div class="check undone">
                                             <p>Undone</p>
-                                            <img src="assets/images/undone.png" 
+                                            <img src="assets/images/undone.png"
                                             srcset="assets/images/undone@2x.png 2x,
-                                            assets/images/undone@3x.png 3x" 
+                                            assets/images/undone@3x.png 3x"
+                                            alt="">
+                                        </div>
+                                        <div class="desc">
+                                            document detailing your professional
+                                            skills and reasons for applying
+                                        </div>
+                                    </div>
+
+                                    <div class="box passport">
+                                        <div class="title">
+                                            Passport
+                                        </div>
+                                        <div class="check undone">
+                                            <p>Undone</p>
+                                            <img src="assets/images/undone.png"
+                                            srcset="assets/images/undone@2x.png 2x,
+                                            assets/images/undone@3x.png 3x"
+                                            alt="">
+                                        </div>
+                                        <div class="desc">
+                                            document detailing your professional
+                                            skills and reasons for applying
+                                        </div>
+                                    </div>
+
+                                    <div class="box passport">
+                                        <div class="title">
+                                            Passport
+                                        </div>
+                                        <div class="check undone">
+                                            <p>Undone</p>
+                                            <img src="assets/images/undone.png"
+                                            srcset="assets/images/undone@2x.png 2x,
+                                            assets/images/undone@3x.png 3x"
+                                            alt="">
+                                        </div>
+                                        <div class="desc">
+                                            document detailing your professional
+                                            skills and reasons for applying
+                                        </div>
+                                    </div>
+
+                                    <div class="box passport">
+                                        <div class="title">
+                                            Passport
+                                        </div>
+                                        <div class="check undone">
+                                            <p>Undone</p>
+                                            <img src="assets/images/undone.png"
+                                            srcset="assets/images/undone@2x.png 2x,
+                                            assets/images/undone@3x.png 3x"
+                                            alt="">
+                                        </div>
+                                        <div class="desc">
+                                            document detailing your professional
+                                            skills and reasons for applying
+                                        </div>
+                                    </div>
+
+                                    <div class="box passport">
+                                        <div class="title">
+                                            Passport
+                                        </div>
+                                        <div class="check undone">
+                                            <p>Undone</p>
+                                            <img src="assets/images/undone.png"
+                                            srcset="assets/images/undone@2x.png 2x,
+                                            assets/images/undone@3x.png 3x"
                                             alt="">
                                         </div>
                                         <div class="desc">
@@ -464,7 +452,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="content student-content" id="profile-info">
                         <form action="">
                             <div class="personal__information">
@@ -480,7 +468,7 @@
                                             <label for="givenNameInput">Given Name</label>
                                             <input type="text" class="form-control" id="givenNameInput" placeholder="Given">
                                         </div>
-                                        
+
                                         <div class="form-group" id="dateBirth">
                                             <label for="dateBirth">Date of Birth</label>
                                             <div class="date-birth">
@@ -587,7 +575,7 @@
                                         </div>
 
                                     </div>
-                                    
+
                                     <div class="custom-col">
                                         <div class="form-group">
                                             <label for="cityBirth">City of Birth</label>
@@ -597,17 +585,17 @@
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
                                             </select>
-                                        </div> 
+                                        </div>
 
                                         <div class="form-group">
                                             <label for="address">Current Address</label>
                                             <input type="text" class="form-control" id="address" placeholder="16 abas el akad st nasr city">
-                                        </div> 
-                                        
+                                        </div>
+
                                         <div class="form-group address">
                                             <div class="form-group">
                                                 <label for="zipCode">Zip Code</label>
-                                                <input type="number" class="form-control" id="zipCode" placeholder="15142">   
+                                                <input type="number" class="form-control" id="zipCode" placeholder="15142">
                                             </div>
 
                                             <div class="form-group">
@@ -619,7 +607,7 @@
                                                     <option value="3">Three</option>
                                                 </select>
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <label for="country">Country</label>
                                                 <select class="form-select" id="country">
@@ -629,17 +617,17 @@
                                                     <option value="3">Three</option>
                                                 </select>
                                             </div>
-                                        </div> 
+                                        </div>
 
                                         <div class="form-group">
                                             <label for="phoneNumber">Cell phone</label>
                                             <input type="number" class="form-control" id="phoneNumber" placeholder="020111656454">
-                                        </div> 
+                                        </div>
 
                                         <div class="form-group">
                                             <label for="parentEmail">Parent's e-mail</label>
                                             <input type="email" class="form-control" id="parentEmail" placeholder="parent@example.com">
-                                        </div> 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -657,7 +645,7 @@
                                             <label for="formerInstitution">Former institution</label>
                                             <input type="text" class="form-control" id="formerInstitution" placeholder="Former">
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label for="yearGraduated">Year Graduated</label>
                                             <select class="form-select" id="yearGraduated">
@@ -667,7 +655,7 @@
                                                 <option value="3">Three</option>
                                             </select>
                                         </div>
-                                        
+
                                     </div>
 
                                     <div class="custom-col">
@@ -743,7 +731,7 @@
                             </div>
                         </form>
                     </div>
-        
+
                 </div>
             </div>
 
@@ -754,18 +742,18 @@
         <div class="custom-container">
             <div class="img-holder">
                 <img src="assets/images/delete-warning.png"
-                srcset="assets/images/delete-warning@2x.png 2x, 
-                assets/images/delete-warning@2x.png 3x" alt="">
+                srcset="assets/images/delete-warning@2x.png 2x,
+                assets/images/delete-warning@3x.png 3x" alt="">
             </div>
-            
+
             <div class="title-warning">
                 Are you sure
             </div>
-            
+
             <div class="desc-warning">
                 if you delete this document you must upload another one to compelete student application
             </div>
-    
+
             <div class="btns-holder">
                 <button class="keep">
                     Keep it
@@ -777,6 +765,34 @@
         </div>
     </div>
 
+    <div class="done-modal" id="done-modal">
+        <div class="custom-container">
+            <div class="img-holder">
+                <img src="assets/images/done-warning.png"
+                srcset="assets/images/done-warning@2x.png 2x, 
+                assets/images/done-warning@3x.png 3x" alt="">
+            </div>
+            
+            <div class="title-warning">
+                Done
+            </div>
+            
+            <div class="desc-warning">
+                The Document Uploaded Successfully please upload new one.           
+            </div>
+    
+            <div class="btns-holder">
+                <button class="more">
+                    <label for="new">Upload New</label>
+                    <input type="file" id="new">
+                </button>
+                <button class="back">
+                    back
+                </button>
+            </div>
+        </div>
+    </div>
+    
     <script src="assets/js/studentTabs.js"></script>
     <?php include 'footer.php';?>
 </body>

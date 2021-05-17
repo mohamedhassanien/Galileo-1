@@ -6,6 +6,7 @@
   --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --red-color: #bd172e;
   --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 
@@ -113,7 +114,7 @@ section#login .custom-container form > p, section#login .custom-container form .
 }
 
 section#login .custom-container form > p, section#register .custom-container form > p {
-  margin: 0 201px 10px 0.2px;
+  margin: 0 0 10px 0.2px;
   opacity: 0.6;
   font-size: 18px;
   line-height: 1.22;
@@ -121,7 +122,7 @@ section#login .custom-container form > p, section#register .custom-container for
 }
 
 section#login .custom-container form .title, section#register .custom-container form .title {
-  margin: 0 330px 0 0.2px;
+  margin: 0 0 0 0.2px;
   opacity: 0.8;
   font-size: 24px;
   font-weight: 500;
@@ -205,7 +206,7 @@ section#login .custom-container form .mb-3 .form-text1 a, section#register .cust
 }
 
 section#login .custom-container form .mb-3 .form-text2, section#register .custom-container form .mb-3 .form-text2 {
-  margin: 25px 151.2px 0 0;
+  margin: 25px 0;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.16px;
@@ -216,7 +217,7 @@ section#login .custom-container form .mb-3 .form-text2 a, section#register .cust
   color: var(--main-light-color);
 }
 
-section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn {
+section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#login .custom-container form .verication-code, section#login .custom-container form .confirm-btn, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn, section#register .custom-container form .verication-code, section#register .custom-container form .confirm-btn {
   width: 334.8px;
   height: 45px;
   margin: 25px 0 0 0.2px;
@@ -226,6 +227,18 @@ section#login .custom-container form .login-btn, section#login .custom-container
   -webkit-box-shadow: 0 0 12px 0 var(--box-shadow-color);
           box-shadow: 0 0 12px 0 var(--box-shadow-color);
   background-color: var(--main-light-color);
+}
+
+section#login .custom-container form .verication-code, section#register .custom-container form .verication-code {
+  padding: 0;
+}
+
+section#login .custom-container form .verication-code a, section#register .custom-container form .verication-code a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 2.7;
+  color: var(--white-color);
 }
 
 section#login .custom-container .bg-login-img, section#login .custom-container .bg-register-img, section#register .custom-container .bg-login-img, section#register .custom-container .bg-register-img {
@@ -337,14 +350,22 @@ section#register .custom-container form div.profile-photo input.profile-photo-in
   visibility: hidden;
 }
 
+section#register .custom-container .bg-register-img {
+  position: fixed;
+  right: 0;
+}
+
 @media only screen and (min-width: 692px) {
   .custom-container {
     margin: 0 50px;
   }
-  section#login .custom-container form .mb-3 input, section#login .custom-container form .login-btn, section#login .custom-container form .register-btn, section#register .custom-container form .mb-3 input, section#register .custom-container form .login-btn, section#register .custom-container form .register-btn {
+  section#login .custom-container form .mb-3 input, section#login .custom-container form .login-btn, section#login .custom-container form .confirm-btn, section#login .custom-container form .register-btn, section#login .custom-container form .verication-code, section#register .custom-container form .mb-3 input, section#register .custom-container form .login-btn, section#register .custom-container form .confirm-btn, section#register .custom-container form .register-btn, section#register .custom-container form .verication-code {
     width: 668px;
     height: 45px;
     margin: 15px 0 0 0.2px;
+  }
+  section#login .custom-container form .mb-3 input, section#register .custom-container form .mb-3 input {
+    margin: 0 0 0 0.2px;
   }
   section#login .custom-container form .register-btn, section#register .custom-container form .register-btn {
     margin-top: 24px;
@@ -367,11 +388,39 @@ section#register .custom-container form div.profile-photo input.profile-photo-in
   section#login .custom-container form div.profile-photo div,
   section#login .custom-container form .register-btn,
   section#login .custom-container form .login-btn,
+  section#login .custom-container form .confirm-btn,
+  section#login .custom-container form .verication-code,
   section#login .custom-container form .mb-3 input, section#register .custom-container form div.profile-photo div,
   section#register .custom-container form .register-btn,
   section#register .custom-container form .login-btn,
+  section#register .custom-container form .confirm-btn,
+  section#register .custom-container form .verication-code,
   section#register .custom-container form .mb-3 input {
     width: 391px;
+  }
+  section#login .custom-container .bg-login-img, section#register .custom-container .bg-login-img {
+    position: relative;
+  }
+  section#login .custom-container .bg-login-img div, section#register .custom-container .bg-login-img div {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    text-align: center;
+    color: var(--white-color);
+  }
+  section#login .custom-container .bg-login-img div h3, section#register .custom-container .bg-login-img div h3 {
+    margin: 0 70px 16px 69px;
+    font-size: 39px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.39px;
+  }
+  section#login .custom-container .bg-login-img div p, section#register .custom-container .bg-login-img div p {
+    margin: 16px 0 0;
+    opacity: 0.8;
+    font-size: 17px;
+    line-height: 1.41;
+    letter-spacing: 0.17px;
   }
   section#login .custom-container .bg-login-img, section#login .custom-container .bg-register-img, section#register .custom-container .bg-login-img, section#register .custom-container .bg-register-img {
     display: block;

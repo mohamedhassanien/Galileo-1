@@ -8,6 +8,7 @@
     --lighter-color: #f3f6ff;
     --black-color: #000000;
     --white-color: #ffffff;
+    --red-color: #bd172e;
     --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 *, *:after, *:before{
@@ -60,6 +61,7 @@ section#student-account{
         }
         .student-wrapper{
             width: 100%;
+            margin-top: 56px;
             .buttonWrapper{
                 button{
                     margin: 0 40px 1.5px 0;
@@ -185,6 +187,7 @@ section#student-account{
                             margin: 0 0 8px 0;
                         }
                         .body{
+                            height: 54px;
                             display: flex;
                             justify-content: space-between;
                             margin: 0 0 24px;
@@ -193,25 +196,18 @@ section#student-account{
                             background-color: #f9fbff;
                             div.file{
                                 display: flex;
-                                flex: 0 0 90%;
+                                flex: 0 0 86%;
                                 img{
                                     width: 27px;
                                     height: 27px;
                                     margin-right: 27px;
                                 }
-                                input{
-                                    width: -webkit-fill-available;
-                                    border: none;
-                                    background-color: #f9fbff;
+                                a{
                                     opacity: 0.6;
+                                    font-size: 16px;
                                     letter-spacing: 0.16px;
+                                    color: var(--black-color);
                                     line-height: 2;
-                                }
-                                input:focus{
-                                    outline: none;
-                                }
-                                input::-webkit-file-upload-button{
-                                    display: none;
                                 }
                             }
                             .date{
@@ -246,9 +242,12 @@ section#student-account{
                                     }
                                     button.reupload{
                                         color: var(--main-dark-color);
+                                        input{
+                                            display: none;
+                                        }
                                     }
                                     button.delete{
-                                        color: #bd172e;
+                                        color: var(--red-color);
                                         margin: 16px 0 0 0;
                                     }
                                 }
@@ -265,6 +264,7 @@ section#student-account{
                                 letter-spacing: 0.16px;
                             }
                             .upload{
+                                line-height: 1.2;
                                 label{
                                     font-size: 16px;
                                     font-weight: 500;
@@ -284,6 +284,90 @@ section#student-account{
             }
         }
         
+    }
+}
+
+// MODAL STYLING 
+.delete-warning, .done-modal{
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); 
+    display: none;
+    .custom-container{
+        width: fit-content;
+        left: 0;
+        padding: 30px 30px;
+        border-radius: 15px;
+        background-color: #fff;
+        text-align: center;
+        position: relative;
+        margin: auto;
+        top: 25%;
+        .title-warning{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1;
+            color: var(--red-color);
+            margin: 20px 0;
+        }
+        .desc-warning{
+            margin: 16px 0 20px;
+            opacity: 0.7;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .btns-holder{
+            display: flex;
+            justify-content: space-evenly;
+            button{
+                border: none;
+                font-weight: 500;
+                letter-spacing: 0.32px;
+                background-color: transparent;
+                label{
+                    color: white;
+                    background-color: var(--main-light-color);
+                    padding: 7px 15px;
+                    border-radius: 5px;
+                }
+            }
+            button.keep, button.upload{
+                padding: 11.5px 25.7px 11.5px 25.3px;
+                border-radius: 5px;
+                box-shadow: 0 1px 10px 0 rgba(66, 193, 175, 0.2);
+                background-color: var(--main-light-color);
+                color: var(--white-color);
+                margin: 0 48px 0 44px;
+            }
+            button.delete{
+                border: none;
+                background-color: transparent;
+                text-align: left;
+                color: var(--red-color);
+                margin: 11px 48px 11px 44px;
+                padding: 0;
+            }
+            button.upload{
+                line-height: 1;
+            }
+            button.back{
+                color: var(--main-light-color);
+            }
+            label{
+                font-size: 16px;
+            }
+            input[type="file"]{
+                height: 0;
+                width: 0;
+            }
+        }
+    }
+    &.appear{
+        display: block;
     }
 }
 
@@ -343,6 +427,12 @@ section#student-account{
             }
         }  
     }
+    
+    .delete-warning, .done-modal{
+        .custom-container{
+            width: 580px;
+        }
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -364,7 +454,7 @@ section#student-account{
                 height: 768px;
                 padding:0 0 0 30px;
                 .logo-holder{
-                    margin-top: 16px;
+                    margin-top: 45px;
                 }
                 .user{
                     margin: 0 4px 16px 0;
@@ -480,6 +570,8 @@ section#student-account{
                                 flex: 0 0 64%;
                             }
                             .task-list{
+                                position: sticky;
+                                top: 0;
                                 display: block;
                                 flex: 0 0 33%;
                                 border-radius: 10px;
@@ -514,6 +606,7 @@ section#student-account{
                                     div.box{
                                         display: flex;
                                         flex-wrap: wrap;
+                                        justify-content: space-between;
                                         border-bottom: 1px solid #ececec;
                                         padding: 0 16px 0 16px;
                                         margin: 15.5px 0;
@@ -524,7 +617,6 @@ section#student-account{
                                             font-style: normal;
                                             line-height: normal;
                                             color: var(--main-light-color);
-                                            flex: 0 0 70%;
                                         }
                                         .check{
                                             flex: 0 0 30%;
@@ -550,6 +642,7 @@ section#student-account{
                                             font-style: normal;
                                             line-height: normal;
                                             letter-spacing: 0.16px;
+                                            flex: 0 0 100%;
                                         }
                                     }
                                     div.box:last-child{
@@ -567,65 +660,5 @@ section#student-account{
             }
             
         }
-    }
-}
-
-.delete-warning{
-    position: fixed;
-    z-index: 11;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4); 
-    display: none;
-    .custom-container{
-        padding: 30px 30px;
-        border-radius: 15px;
-        background-color: #fff;
-        text-align: center;
-        width: 580px;
-        position: absolute;
-        top: 25%;
-        left: 25%;
-        .title-warning{
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1;
-            color: #bd172e;
-            margin: 20px 0;
-        }
-        .desc-warning{
-            margin: 16px 0 20px;
-            opacity: 0.7;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        .btns-holder{
-            button.keep{
-                padding: 11.5px 25.7px 11.5px 25.3px;
-                border-radius: 5px;
-                box-shadow: 0 1px 10px 0 rgba(66, 193, 175, 0.2);
-                background-color: var(--main-light-color);
-                border: none;
-                font-weight: 500;
-                letter-spacing: 0.32px;
-                color: var(--white-color);
-                margin: 0 48px 0 44px;
-            }
-            button.delete{
-                border: none;
-                background-color: transparent;
-                font-weight: 500;
-                letter-spacing: 0.32px;
-                text-align: left;
-                color: #bd172e;
-                margin: 11px 48px 11px 44px;
-                padding: 0;
-            }
-        }
-    }
-    &.appear{
-        display: block;
     }
 }

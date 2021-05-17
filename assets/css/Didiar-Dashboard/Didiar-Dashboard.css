@@ -6,6 +6,7 @@
   --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --red-color: #bd172e;
   --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 
@@ -59,11 +60,11 @@ h1, h2, h3, h4, h5, p {
 }
 
 /* GLOBAL STYLING*/
-section#manager-dashboard {
+section#manager-dashboard, section#all-countries {
   margin-top: 64px;
 }
 
-section#manager-dashboard .custom-container {
+section#manager-dashboard .custom-container, section#all-countries .custom-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,13 +73,439 @@ section#manager-dashboard .custom-container {
           justify-content: space-between;
 }
 
-section#manager-dashboard .custom-container .side-menu {
+section#manager-dashboard .custom-container .side-menu, section#all-countries .custom-container .side-menu {
   display: none;
+}
+
+section#manager-dashboard .custom-container .data-container, section#all-countries .custom-container .data-container {
+  margin-top: 56px;
+  width: 100%;
+}
+
+section#manager-dashboard .custom-container .data-container h2.title, section#all-countries .custom-container .data-container h2.title {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--main-dark-color);
+  line-height: normal;
+}
+
+section#manager-dashboard .custom-container .data-container .countries, section#all-countries .custom-container .data-container .countries {
+  padding: 16px 16px 24px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 2px 30px 0 rgba(28, 133, 200, 0.12);
+          box-shadow: 0 2px 30px 0 rgba(28, 133, 200, 0.12);
+  background-color: var(--white-color);
+}
+
+section#manager-dashboard .custom-container .data-container .countries .title, section#all-countries .custom-container .data-container .countries .title {
+  margin-bottom: 25px;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .title div, section#all-countries .custom-container .data-container .countries .title div {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 0.63;
+  letter-spacing: normal;
+  color: var(--main-dark-color);
+  display: inline;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .title a, section#all-countries .custom-container .data-container .countries .title a {
+  float: right;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3b86ff;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .body #chart, section#all-countries .custom-container .data-container .countries .body #chart {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .body #chart g[aria-labelledby="id-79-title"], section#all-countries .custom-container .data-container .countries .body #chart g[aria-labelledby="id-79-title"] {
+  display: none;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .body .custom-progress .box, section#all-countries .custom-container .data-container .countries .body .custom-progress .box {
+  margin-bottom: 19px;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .body .custom-progress .box .title, section#all-countries .custom-container .data-container .countries .body .custom-progress .box .title {
+  margin-bottom: 8px;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .body .custom-progress .box .title div, section#all-countries .custom-container .data-container .countries .body .custom-progress .box .title div {
+  opacity: 0.8;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--main-dark-color);
+}
+
+section#manager-dashboard .custom-container .data-container .countries .body .custom-progress .box .title p, section#all-countries .custom-container .data-container .countries .body .custom-progress .box .title p {
+  display: inline;
+  float: right;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .body .custom-progress .box .progress, section#all-countries .custom-container .data-container .countries .body .custom-progress .box .progress {
+  height: 8px;
+}
+
+section#manager-dashboard .custom-container .data-container .countries .body .custom-progress .box .progress .progress-bar, section#all-countries .custom-container .data-container .countries .body .custom-progress .box .progress .progress-bar {
+  height: 8px;
+  border-radius: 5px;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic, section#all-countries .custom-container .data-container .number__statistic {
+  padding: 32px 0 16px 0;
+  border-radius: 10px;
+  margin: 24px 0;
+  -webkit-box-shadow: 0 3px 30px 0 rgba(28, 133, 200, 0.12);
+          box-shadow: 0 3px 30px 0 rgba(28, 133, 200, 0.12);
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .manager-img-holder, section#all-countries .custom-container .data-container .number__statistic .manager-img-holder {
+  width: 116px;
+  height: 116px;
+  margin: auto;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px var(--main-light-color);
+  border-style: solid;
+  border-left-style: dashed;
+  border-left-color: white;
+  -webkit-transform: rotate(-23deg);
+          transform: rotate(-23deg);
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .manager-img-holder img, section#all-countries .custom-container .data-container .number__statistic .manager-img-holder img {
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: rotate(23deg);
+          transform: rotate(23deg);
+  padding: 5px;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .manager-name, section#all-countries .custom-container .data-container .number__statistic .manager-name {
+  margin: 25px 0 24px 0;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  text-align: center;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data, section#all-countries .custom-container .data-container .number__statistic .statistic-data {
+  padding: 0 33px;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data div, section#all-countries .custom-container .data-container .number__statistic .statistic-data div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 17px;
+  line-height: 1.19;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data div .text, section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data div .number, section#all-countries .custom-container .data-container .number__statistic .statistic-data div .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data div .number {
+  opacity: 0.6;
+  margin: 0 0 16px 0;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data div .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data div .text {
+  font-weight: 500;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data div .number, section#all-countries .custom-container .data-container .number__statistic .statistic-data div .number {
+  font-weight: normal;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data .accepted .text, section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data .rejected .text, section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data .in-progress .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data .accepted .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data .rejected .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data .in-progress .text {
+  opacity: 1;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data .accepted .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data .accepted .text {
+  color: #64c672;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data .rejected .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data .rejected .text {
+  color: #d51b1b;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data .in-progress .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data .in-progress .text {
+  color: #70c4c4;
+}
+
+section#manager-dashboard .custom-container .data-container .number__statistic .statistic-data .pending .text, section#all-countries .custom-container .data-container .number__statistic .statistic-data .pending .text {
+  color: #f8df00;
+}
+
+section#manager-dashboard .custom-container .data-container .most, section#all-countries .custom-container .data-container .most {
+  margin: 0 0 24px 0;
+  padding: 8px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 3px 20px 0 rgba(28, 133, 200, 0.12);
+          box-shadow: 0 3px 20px 0 rgba(28, 133, 200, 0.12);
+  background-color: var(--white-color);
+  text-align: center;
+}
+
+section#manager-dashboard .custom-container .data-container .most div, section#all-countries .custom-container .data-container .most div {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+section#manager-dashboard .custom-container .data-container .most div span, section#all-countries .custom-container .data-container .most div span {
+  color: var(--main-dark-color);
+}
+
+section#manager-dashboard .custom-container .data-container .most div p, section#all-countries .custom-container .data-container .most div p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--red-color);
+  margin: 8px 0 0 0;
+}
+
+section#manager-dashboard .custom-container .data-container .most div p span, section#all-countries .custom-container .data-container .most div p span {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+section#manager-dashboard .custom-container .data-container .top, section#all-countries .custom-container .data-container .top {
+  margin: 0 0 24px 0;
+  padding: 10px 0 0;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 2px 30px 0 rgba(28, 133, 200, 0.12);
+          box-shadow: 0 2px 30px 0 rgba(28, 133, 200, 0.12);
+  background-color: var(--white-color);
+}
+
+section#manager-dashboard .custom-container .data-container .top .title, section#all-countries .custom-container .data-container .top .title {
+  border-bottom: 1px solid var(--main-dark-color);
+  padding: 0 16px 10px 16px;
+}
+
+section#manager-dashboard .custom-container .data-container .top .title div, section#all-countries .custom-container .data-container .top .title div {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 0.63;
+  color: var(--main-dark-color);
+  display: inline;
+}
+
+section#manager-dashboard .custom-container .data-container .top .title input, section#all-countries .custom-container .data-container .top .title input {
+  border: none;
+  width: 50px;
+  float: right;
+}
+
+section#manager-dashboard .custom-container .data-container .top .title input:focus, section#all-countries .custom-container .data-container .top .title input:focus {
+  outline: none;
+  border: none;
+}
+
+section#manager-dashboard .custom-container .data-container .top .body .school-list > li, section#all-countries .custom-container .data-container .top .body .school-list > li {
+  padding: 14.5px 16px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  line-height: 1;
+  border-bottom: 1px solid rgba(40, 60, 140, 0.3);
+}
+
+section#manager-dashboard .custom-container .data-container .top .body .school-list > li:last-child, section#all-countries .custom-container .data-container .top .body .school-list > li:last-child {
+  border: none;
+}
+
+section#manager-dashboard .custom-container .data-container .top .body .school-list li.school-name, section#all-countries .custom-container .data-container .top .body .school-list li.school-name {
+  font-size: 14px;
+  line-height: 1;
+  opacity: .8;
+  color: var(--main-dark-color);
+}
+
+section#manager-dashboard .custom-container .data-container .top .body .school-list ul li.school-name, section#all-countries .custom-container .data-container .top .body .school-list ul li.school-name {
+  margin: 0 0 8px 0;
+}
+
+section#all-countries .custom-container .data-container .links {
+  margin-bottom: 30px;
+}
+
+section#all-countries .custom-container .data-container .links a {
+  font-size: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+section#all-countries .custom-container .data-container .links a:first-child {
+  margin: 0 24px 0 0;
+  opacity: 0.3;
+  color: var(--black-color);
+}
+
+section#all-countries .custom-container .data-container .links img {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  width: 15.1px;
+}
+
+section#all-countries .custom-container .data-container .links a:last-child {
+  margin: 0 0 0 24px;
+  color: var(--main-dark-color);
+}
+
+section#all-countries .custom-container .data-container .countries .title input {
+  float: right;
+  border: none;
+  width: 50px;
+}
+
+section#all-countries .custom-container .data-container .countries .body .custom-progress .box .progress {
+  background-color: #f3f6ff;
+}
+
+section#all-countries .custom-container .data-container .countries .body .custom-progress .box .progress .progress-bar {
+  background-color: #283c8c;
 }
 
 @media only screen and (min-width: 692px) {
   .custom-container {
     margin: 0 50px;
+  }
+  section#manager-dashboard .custom-container .data-container, section#all-countries .custom-container .data-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 48.5% 48.5%;
+        grid-template-columns: 48.5% 48.5%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section#manager-dashboard .custom-container .data-container > div, section#all-countries .custom-container .data-container > div {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  section#manager-dashboard .custom-container .data-container .countries, section#all-countries .custom-container .data-container .countries {
+    padding-bottom: 0;
+    margin-bottom: 24px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  section#manager-dashboard .custom-container .data-container .countries .body, section#all-countries .custom-container .data-container .countries .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section#manager-dashboard .custom-container .data-container .countries .body #chart, section#all-countries .custom-container .data-container .countries .body #chart {
+    height: 230px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+    margin: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  section#manager-dashboard .custom-container .data-container .countries .body .custom-progress, section#all-countries .custom-container .data-container .countries .body .custom-progress {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 36%;
+            flex: 0 0 36%;
+  }
+  section#manager-dashboard .custom-container .data-container .number__statistic, section#all-countries .custom-container .data-container .number__statistic {
+    margin: 0 0 24px 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+  }
+  section#manager-dashboard .custom-container .data-container .top .body .school-list ul, section#all-countries .custom-container .data-container .top .body .school-list ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section#manager-dashboard .custom-container .data-container .top .body .school-list ul li.school-name, section#all-countries .custom-container .data-container .top .body .school-list ul li.school-name {
+    margin-bottom: 0;
+  }
+  section#manager-dashboard .custom-container .data-container .top .body .school-list ul li.program, section#all-countries .custom-container .data-container .top .body .school-list ul li.program {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
+  section#manager-dashboard .custom-container .data-container .most, section#all-countries .custom-container .data-container .most {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  section#manager-dashboard .custom-container .data-container .top-searched, section#all-countries .custom-container .data-container .top-searched {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  section#manager-dashboard .custom-container .data-container .top-programs, section#all-countries .custom-container .data-container .top-programs {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+  }
+  section#manager-dashboard .custom-container .data-container .top-schools, section#all-countries .custom-container .data-container .top-schools {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  section#all-countries .custom-container .data-container {
+    display: block;
+  }
+  section#all-countries .custom-container .data-container .countries {
+    padding: 24px 24px;
+  }
+  section#all-countries .custom-container .data-container .countries .body {
+    display: block;
   }
 }
 
@@ -86,10 +513,10 @@ section#manager-dashboard .custom-container .side-menu {
   .custom-container {
     margin: 0 100px;
   }
-  section#manager-dashboard {
+  section#manager-dashboard, section#all-countries {
     margin-top: 0;
   }
-  section#manager-dashboard .custom-container .side-menu {
+  section#manager-dashboard .custom-container .side-menu, section#all-countries .custom-container .side-menu {
     margin-top: -101px;
     padding-top: 0;
     position: fixed;
@@ -101,10 +528,10 @@ section#manager-dashboard .custom-container .side-menu {
     height: 768px;
     padding: 0 0 0 30px;
   }
-  section#manager-dashboard .custom-container .side-menu .logo-holder {
-    margin-top: 16px;
+  section#manager-dashboard .custom-container .side-menu .logo-holder, section#all-countries .custom-container .side-menu .logo-holder {
+    margin-top: 45px;
   }
-  section#manager-dashboard .custom-container .side-menu .user {
+  section#manager-dashboard .custom-container .side-menu .user, section#all-countries .custom-container .side-menu .user {
     margin: 0 4px 16px 0;
     margin-top: 118px;
     opacity: 0.8;
@@ -116,13 +543,16 @@ section#manager-dashboard .custom-container .side-menu {
     letter-spacing: normal;
     color: var(--white-color);
   }
-  section#manager-dashboard .custom-container .side-menu ul li {
+  section#manager-dashboard .custom-container .side-menu ul, section#all-countries .custom-container .side-menu ul {
+    margin-top: 118px;
+  }
+  section#manager-dashboard .custom-container .side-menu ul li, section#all-countries .custom-container .side-menu ul li {
     margin: 16px 0 15px 0;
     font-size: 18px;
     font-weight: 500;
     color: var(--white-color);
   }
-  section#manager-dashboard .custom-container .side-menu ul li span {
+  section#manager-dashboard .custom-container .side-menu ul li span, section#all-countries .custom-container .side-menu ul li span {
     width: 59px;
     height: 15px;
     margin: 0 14px;
@@ -136,18 +566,18 @@ section#manager-dashboard .custom-container .side-menu {
     text-align: center;
     line-height: .9;
   }
-  section#manager-dashboard .custom-container .side-menu ul li a {
+  section#manager-dashboard .custom-container .side-menu ul li a, section#all-countries .custom-container .side-menu ul li a {
     color: var(--white-color);
     display: inline-block;
     width: 100%;
   }
-  section#manager-dashboard .custom-container .side-menu ul li.active {
+  section#manager-dashboard .custom-container .side-menu ul li.active, section#all-countries .custom-container .side-menu ul li.active {
     background-color: #3aa7ec;
     margin-left: -30px;
     position: relative;
     padding: 9px 0 9px 30px;
   }
-  section#manager-dashboard .custom-container .side-menu ul li.active::before {
+  section#manager-dashboard .custom-container .side-menu ul li.active::before, section#all-countries .custom-container .side-menu ul li.active::before {
     content: '';
     width: 13px;
     border-radius: 0 5px 0 0;
@@ -156,6 +586,62 @@ section#manager-dashboard .custom-container .side-menu {
     top: 0;
     bottom: 0;
     left: 0;
+  }
+  section#manager-dashboard .custom-container .data-container, section#all-countries .custom-container .data-container {
+    margin-left: 19%;
+    -ms-grid-columns: 63% 33%;
+        grid-template-columns: 63% 33%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section#manager-dashboard .custom-container .data-container .countries, section#all-countries .custom-container .data-container .countries {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  section#manager-dashboard .custom-container .data-container .number__statistic, section#all-countries .custom-container .data-container .number__statistic {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  section#manager-dashboard .custom-container .data-container .most, section#all-countries .custom-container .data-container .most {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  section#manager-dashboard .custom-container .data-container .top-searched, section#all-countries .custom-container .data-container .top-searched {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  section#manager-dashboard .custom-container .data-container .top-programs, section#all-countries .custom-container .data-container .top-programs {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  section#manager-dashboard .custom-container .data-container .top-schools, section#all-countries .custom-container .data-container .top-schools {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
   }
 }
 /*# sourceMappingURL=Didiar-Dashboard.css.map */

@@ -30,12 +30,28 @@ const deleteWarning = document.getElementById('delete-warning');
 const keep = document.getElementsByClassName('keep')[0]
 deleteBtns = Array.from(document.querySelectorAll('.more-action .actions button.delete'));
 
+//DISPLAY DONE MODAL AFTER DELETE THE UPLOADED DOCUMENT 
+const doneModal = document.getElementById('done-modal');
+const back = document.getElementsByClassName('back')[0];
+const deleteDoc = document.querySelector('#delete-warning button.delete')
+
 // DISPLAY DELETE-WARNING-MODAL 
 deleteBtns.forEach(deleteBtn => {
   deleteBtn.addEventListener('click', function(e){
     e.preventDefault();
     deleteWarning.style.display = 'block'
   })
+})
+
+// DISPLAY DELETE-WARNING-MODAL 
+deleteDoc.addEventListener('click', function(e){
+  e.preventDefault();
+  deleteWarning.style.display = 'none';
+  doneModal.style.display = 'block';
+})
+
+back.addEventListener('click', function(){
+  doneModal.style.display = 'none';
 })
 
 // KEEP FILE : DON'T DELETE IT 
@@ -46,7 +62,8 @@ keep.addEventListener('click', function(e){
 
 // WHEN THE USER CLICKS ANYWHERE OUTSIDE OF THE DELETE-WARNING-MODAL, CLOSE IT
 window.onclick = function(event) {
-  if (event.target == deleteWarning) {
+  if (event.target == deleteWarning || event.target == doneModal) {
     deleteWarning.style.display = "none";
+    doneModal.style.display = "none";
   }
 } 

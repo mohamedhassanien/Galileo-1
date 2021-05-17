@@ -47,8 +47,14 @@ const notificationModal = document.getElementById('notification-modal');
 const modalSendBtn = document.querySelector('#notification-modal .send');
 const notificationDone = document.getElementById('notification-done');
 sendNotificationBtns = Array.from(document.querySelectorAll('.actions div.send-notification'));
+const sendNotificationLink = document.querySelector('a.notify');
 
 // DISPLAY NOTIFICATION MODAL
+sendNotificationLink.addEventListener('click', function(e){
+  e.preventDefault();
+  notificationModal.style.display = 'block'
+})
+
 sendNotificationBtns.forEach(sendNotificationBtn => {
   sendNotificationBtn.addEventListener('click', function(e){
     e.preventDefault();

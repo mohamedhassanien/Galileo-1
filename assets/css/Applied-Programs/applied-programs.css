@@ -6,6 +6,7 @@
   --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --red-color: #bd172e;
   --box-shadow-color: rgba(0, 0, 0, 0.16);
 }
 
@@ -119,8 +120,8 @@ section#applied-programs .custom-container .data-container .programs {
 section#applied-programs .custom-container .data-container .programs .program-holder {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  -ms-grid-columns: 120px 1fr 1fr 130px;
+      grid-template-columns: 120px 1fr 1fr 130px;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   padding: 11px 9px;
@@ -217,19 +218,17 @@ section#applied-programs .custom-container .data-container .programs .program-ho
   grid-row: 3/4;
   -ms-grid-column-align: start;
       justify-self: start;
-  padding: 7.5px 18px;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 10px 0 rgba(65, 65, 65, 0.2);
           box-shadow: 0 1px 10px 0 rgba(65, 65, 65, 0.2);
   background-color: #bd172e;
   margin: 0;
   border-radius: 5px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 
 section#applied-programs .custom-container .data-container .programs .program-holder .cancel button {
+  padding: 7.5px 18px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -238,7 +237,6 @@ section#applied-programs .custom-container .data-container .programs .program-ho
   line-height: normal;
   letter-spacing: 0.32px;
   color: var(--white-color);
-  padding: 0;
 }
 
 section#applied-programs .custom-container .data-container .programs .program-holder div.cancel {
@@ -349,7 +347,7 @@ section#applied-programs .custom-container .data-container .programs .program-ho
     padding: 0 0 0 30px;
   }
   section#applied-programs .custom-container .side-menu .logo-holder {
-    margin-top: 16px;
+    margin-top: 45px;
   }
   section#applied-programs .custom-container .side-menu .user {
     margin: 0 4px 16px 0;

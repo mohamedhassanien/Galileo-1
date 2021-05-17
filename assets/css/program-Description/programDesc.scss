@@ -8,6 +8,7 @@
     --lighter-color: #f3f6ff;
     --black-color: #000000;
     --white-color: #ffffff;
+    --red-color: #bd172e;
 }
 *, *:after, *:before{
     box-sizing: inherit;
@@ -106,9 +107,12 @@ section#about{
                             padding:0;
                             margin: 0;
                             button{
+                                padding: 0;
                                 margin: 0;
                                 border: none;
                                 a{
+                                    padding: 9px 41px;
+                                    display: block;
                                     font-size: 18px;
                                     font-weight: 500;
                                     letter-spacing: 0.36px;
@@ -139,7 +143,6 @@ section#about{
             }
         }
         .wrapper {
-            
             .contentWrapper{
                 #school-info{
                     .title{
@@ -265,7 +268,7 @@ section#about{
                                                 position: relative;
                                                 width: 100px;
                                                 height: 100px;
-                                                z-index: 1000;
+                                                z-index: 5;
                                                 circle{
                                                     width: 100%;
                                                     height: 100%;
@@ -275,9 +278,9 @@ section#about{
                                                     stroke-linecap: round;
                                                 }
                                                 circle:nth-child(2){
-                                                    stroke-dasharray: 440;
-                                                    stroke-dashoffset: 440;
+                                                    stroke-dasharray: 264;
                                                     stroke: var(--main-dark-color);
+                                                    transform: rotate(270deg) translate(-100px);
                                                 }
                                             }
                                             .number{
@@ -536,11 +539,13 @@ section#school__photos{
         }
     }
 }
+
 section#city__photos{
     #city-secondary-slider-list{
         margin: auto !important;
     }
 }
+
 section#about section#school__program{
     .school-custom-container{
         display: flex;
@@ -615,7 +620,14 @@ section#about section#school__program{
         }
     }
 }
-
+section#school__program{
+    .school-custom-container{
+        .contentWrapper{
+            height: 316px;
+            overflow: scroll;
+        }
+    }
+}
 section#review{
     margin-top: 50px;
     .school-custom-container{
@@ -863,6 +875,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
     
         } 
     }
+
     section#about section#school__program{
         .school-custom-container{
             
@@ -871,7 +884,8 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                 height: 331px;
             }
         }
-    } 
+    }
+
     section#review .school-custom-container{
         #review-secondary-slider{
             .splide__track{
@@ -886,6 +900,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
             } 
         }
     }
+
     section#videos{
         .school-custom-container .wrapper{
             display: grid;
@@ -941,6 +956,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                     }
                     .details .apply-btn{
                         flex: 0 0 auto;
+                        align-self: center;
                     }
                     .apply-btn{
                         margin-top: -24px !important;
@@ -981,7 +997,6 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
                     }
                     .desc{
                         width: 968px;
-                        height: 97px;
                         margin: 20px 26px 30px 1px;
                         line-height: 1.39;
                         letter-spacing: 0.18px;
@@ -1086,6 +1101,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
         .school-custom-container{
             display: flex;
             flex-wrap: nowrap;
+            justify-content: space-between;
             .contentWrapper{
                 .program-content{
                     .program{

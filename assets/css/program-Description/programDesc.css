@@ -6,6 +6,7 @@
   --lighter-color: #f3f6ff;
   --black-color: #000000;
   --white-color: #ffffff;
+  --red-color: #bd172e;
 }
 
 *, *:after, *:before {
@@ -132,11 +133,14 @@ section#about .custom-container .head .layer .box .details .apply-btn {
 }
 
 section#about .custom-container .head .layer .box .details .apply-btn button {
+  padding: 0;
   margin: 0;
   border: none;
 }
 
 section#about .custom-container .head .layer .box .details .apply-btn button a {
+  padding: 9px 41px;
+  display: block;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.36px;
@@ -343,7 +347,7 @@ section#about .custom-container .wrapper .contentWrapper #school-info .alumni .w
   position: relative;
   width: 100px;
   height: 100px;
-  z-index: 1000;
+  z-index: 5;
 }
 
 section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live .custom-progress .box .percent svg circle, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .work .custom-progress .box .percent svg circle {
@@ -356,9 +360,10 @@ section#about .custom-container .wrapper .contentWrapper #school-info .alumni .w
 }
 
 section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live .custom-progress .box .percent svg circle:nth-child(2), section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .work .custom-progress .box .percent svg circle:nth-child(2) {
-  stroke-dasharray: 440;
-  stroke-dashoffset: 440;
+  stroke-dasharray: 264;
   stroke: var(--main-dark-color);
+  -webkit-transform: rotate(270deg) translate(-100px);
+          transform: rotate(270deg) translate(-100px);
 }
 
 section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .live .custom-progress .box .percent .number, section#about .custom-container .wrapper .contentWrapper #school-info .alumni .wrapper .work .custom-progress .box .percent .number {
@@ -719,6 +724,11 @@ section#about section#school__program .school-custom-container .map iframe {
   height: 331px;
 }
 
+section#school__program .school-custom-container .contentWrapper {
+  height: 316px;
+  overflow: scroll;
+}
+
 section#review {
   margin-top: 50px;
 }
@@ -1040,6 +1050,9 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   section#about .custom-container .head .layer .box .apply-btn {
     margin-top: -24px !important;
@@ -1072,7 +1085,6 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
   }
   section#about .custom-container .wrapper .contentWrapper #school-info .desc {
     width: 968px;
-    height: 97px;
     margin: 20px 26px 30px 1px;
     line-height: 1.39;
     letter-spacing: 0.18px;
@@ -1152,6 +1164,9 @@ section#about .custom-container .wrapper .contentWrapper #school-info section#ar
     display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   section#about section#school__program .school-custom-container .contentWrapper .program-content .program {
     margin-top: 30px;

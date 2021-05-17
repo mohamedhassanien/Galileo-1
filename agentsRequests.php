@@ -30,7 +30,7 @@
                     assets/images/student-sub-agent-galileo-global-education-logo-vector@3x.png 3x" alt="">
                 </div>
                 <ul>
-                    <li class="side-menu-item"><a href="">Dashboard</a></li>
+                    <li class="side-menu-item"><a href="DidiarDashboard.php">Dashboard</a></li>
                     <li class="side-menu-item"><a href="agentsStatistics.php">Agent Statistics</a></li>
                     <li class="side-menu-item active"><a href="agentsRequests.php">Agent Requests</a></li>
                 </ul>
@@ -131,6 +131,7 @@
         </div>
     </section>
 
+    <script src="assets/js/agent-requests.js"></script>
     <script src="assets/js/student.js"></script>
 </body>
 </html>
